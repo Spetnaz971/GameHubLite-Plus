@@ -61,7 +61,7 @@ Pilotes GPU K11MCHI
 - Empêche Android d'imposer son propre cap de FPS par-dessus Wine-Proton.
 - Réduit le post-traitement d'affichage et la latence d'affichage.
 - 📍 Unreal & DirectX12 Assist : 
-- GHLP détecte automatiquement les jeux Unreal Engine/DirectX12 en gérant dynamiquement le compromis parfait entre température et fluidité.
+ GHLP détecte automatiquement les jeux Unreal Engine/DirectX12 en gérant dynamiquement le compromis parfait entre température et fluidité.
 
 • 👾 Support Natif des systèmes : 
 - RedMagic GameBooster 
