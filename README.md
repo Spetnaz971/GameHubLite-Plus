@@ -47,11 +47,11 @@ Accessible via le menu de gauche → Composants.
 - Vous donne un contrôle total sur les composants utilisés par GHLP — injecter/supprimer DXVK, VKD3D, Box64, FEXCore et GPU Driver qui apparaissent dans les paramètres par jeu.
 
 -🔗 5 Sources intégrées de téléchargement DXVK, VKD3D, Box64, FEXCore et GPU Driver :
-Arihany WCPHub
-Pilotes GPU Whitebelyash
-Pilotes GPU StevenMXZ
-Pilotes GPU MTR
-Pilotes GPU K11MCHI 
+-Arihany WCPHub
+-Pilotes GPU Whitebelyash
+-Pilotes GPU StevenMXZ
+-Pilotes GPU MTR
+-Pilotes GPU K11MCHI 
 
 • 🪫Permet à l'application d'être exclus des optimisations batterie d’Android.
 
