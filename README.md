@@ -3,77 +3,81 @@
 </p>
 
 
-# GameHubLite-Plus
-​"GameHubLite Plus" hérite de tous les avantages de GameHub Lite par rapport à l'original : suppression de la télémétrie, des 31 permissions invasives, des 11 838 fichiers de tracking, pas de login obligatoire, fonctionnement hors ligne, et un APK réduit de 114 Mo à environ 50 Mo
+# GameHubLite-Plus by SpetNaz971
+​## 🌟 À propos de GameHubLite Plus
 
-🆙"GameHubLite Plus" offre plus de performances et de stabilité que :
-• GameHub / GameHub Lite
-• Winlator / Winlator Ludashi
-• GameNative / GameNative Performance
+🔥 **GameHubLite Plus (GHLP)** a été conçu pour repousser les limites matérielles et franchir les barrières entre PC et smartphone (**SANS ROOT**), garantissant les performances maximales possibles lors de vos sessions de jeu prolongées.
 
-🔥GameHubLite Plus a été conçu pour repousser les limites matérielles et franchir les barrières entre PC et smartphone ( SANS ROOT) ,
-garantissant les performances maximales possibles lors de vos sessions de jeu prolongées.
+Il hérite de tous les avantages de GameHub Lite par rapport à l'application originale :
+*   🚫 **Zéro télémétrie :** Suppression de 11 838 fichiers de tracking.
+*   🔒 **Confidentialité et Liberté :** Suppression des 31 permissions invasives, pas de login obligatoire et fonctionnement 100% hors ligne.
+*   🪶 **Poids Plume :** Taille de l'APK réduite de 114 Mo à environ 50 Mo.
 
-⚠️ TOUTE UTILISATION SANS LA CONFIGURATION MINIMALE REQUISE
-PEUT ENTRAÎNER UNE DÉTÉRIORATION DU MATÉRIEL (Surchauffe Batterie/SoC/Écran)⚠️
+🆙 **Performances et Stabilité**
+GHLP offre des performances et une stabilité supérieures par rapport à :
+*   GameHub / GameHub Lite
+*   Winlator / Winlator Ludashi
+*   GameNative / GameNative Performance
 
-🧠Configuration Minimale :
-• Android 14
-• Processeur (SoC) Snapdragon 870
-• GPU Adreno 650
-• Mémoire Vive (RAM) 12Go LPPDR5
-• Stockage UFS 3.1
-• Refroidisseur externe 20 Watts 
+---
 
-🧠Configuration Recommandée :
-• Android 15
-• Processeur (SoC) Snapdragon 8 Gen 3
-• GPU Adreno 740
-• Mémoire Vive (RAM) 16 Go LPPDR5X
-• Stockage UFS 4.0
-• Refroidisseur externe 30 Watts + Plaque de dissipation thermique smartphone 
+## ⚠️ Avertissement Important
 
-➕ Les Plus  :
+> **TOUTE UTILISATION SANS LA CONFIGURATION MINIMALE REQUISE PEUT ENTRAÎNER UNE DÉTÉRIORATION DU MATÉRIEL (Surchauffe Batterie / SoC / Écran).**
 
-• Interface traduite en Francais à 95%🇫🇷
+### 🧠 Configurations Système
 
-• 📝 Prise en compte de la régression des performances GH 5.3.X.
- 
-•  Augmentation Limite VRAM alloué : 6 GB, 8 GB, 12 GB, et 16 GB
+| Composant | 🟢 Minimale | 🔵 Recommandée |
+| :--- | :--- | :--- |
+| **Système d'exploitation** | Android 14 | Android 15 |
+| **Processeur (SoC)** | Snapdragon 870 | Snapdragon 8 Gen 3 |
+| **Puce Graphique (GPU)** | Adreno 650 | Adreno 740 |
+| **Mémoire Vive (RAM)** | 12 Go LPDDR5 | 16 Go LPDDR5X |
+| **Stockage interne** | UFS 3.1 | UFS 4.0 |
+| **Refroidissement** | Refroidisseur externe 20 Watts | Refroidisseur externe 30 Watts + Plaque de dissipation thermique smartphone |
 
-• 🖼️ AI Frame Generation :
-- 6 préréglages : ECO / FLOW / BAL (par défaut) / BOOST / CLEAR / MAX — la sélection d'un préréglage charge automatiquement les valeurs de flowScale et du modèle d'IA ; les préréglages ECO/FLOW/BAL/BOOST utilisent le modèle Standard (plus économique), tandis que CLEAR/MAX utilisent le modèle Clear (traitement du flux optique plus intensif avec moins d'images fantômes)
-⚠️ Snapdragon recommandé ⚠️— Cette option peut apparaître sur les appareils non Adreno, mais la qualité de la génération d'images et les performances varient selon le pilote.
+---
 
-• Accès à la Bibliothèque EpicGame Store 
+## ➕ Les Plus Exclusifs à GHLP
 
-• 🧰 Gestionnaire de composants :
-Accessible via le menu de gauche → Composants.
-- Vous donne un contrôle total sur les composants utilisés par GHLP — injecter/supprimer DXVK, VKD3D, Box64, FEXCore et GPU Driver qui apparaissent dans les paramètres par jeu.
+*   🇫🇷 **Interface :** Traduite en Français à 95%.
+*   📝 **Correction :** Prise en compte de la régression des performances (GH 5.3.X).
+*   🚀 **VRAM Étendue :** Augmentation de la limite de VRAM allouée (6 GB, 8 GB, 12 GB, et 16 GB).
+*   🎮 **Boutique en ligne :** Accès direct à la bibliothèque Epic Games Store.
+*   ⚡ **Architecture UMA :** GHLP inclut une configuration universelle optimisée DirectX 11/12 en appels Vulkan, afin d'exploiter pleinement la puissance de votre SoC et de votre architecture à mémoire unifiée pour l'exécution de jeux PC.
+*   🪫 **Énergie :** Permet à l'application d'être exclue des optimisations batterie restrictives d’Android.
 
--🔗 5 Sources intégrées de téléchargement DXVK, VKD3D, Box64, FEXCore et GPU Driver :
-Arihany WCPHub
-Pilotes GPU Whitebelyash
-Pilotes GPU StevenMXZ
-Pilotes GPU MTR
-Pilotes GPU K11MCHI 
+### 🎯 GHLP Cores : Reconnaissance Native AAA
+Android traite **NATIVEMENT** GHLP comme un jeu vidéo AAA :
+*   **Ressources Débridées :** Android alloue dynamiquement davantage de ressources CPU, GPU et RAM. L'application accède à un mode de performance plus libre qui empêche le CPU de réduire brutalement sa fréquence à cause du *thermal throttling*.
+*   **Priorité Native :** Appliquée aux threads exécutés dynamiquement.
+*   **Liberté de Framerate :** Empêche Android d'imposer son propre cap de FPS par-dessus Wine-Proton.
+*   **Latence Réduite :** Diminue drastiquement le post-traitement et la latence d'affichage.
+*   📍 **Unreal & DirectX12 Assist :** GHLP détecte automatiquement les jeux Unreal Engine/DirectX12 et gère dynamiquement le compromis parfait entre température et fluidité.
 
-• 🪫Permet à l'application d'être exclus des optimisations batterie d’Android.
+### 🖼️ AI Frame Generation
+*   **6 préréglages disponibles :** ECO / FLOW / BAL (par défaut) / BOOST / CLEAR / MAX.
+*   La sélection d'un préréglage charge automatiquement les valeurs de *flowScale* et du modèle d'IA.
+*   Les profils **ECO/FLOW/BAL/BOOST** utilisent le modèle *Standard* (plus économique).
+*   Les profils **CLEAR/MAX** utilisent le modèle *Clear* (traitement du flux optique plus intensif avec moins d'images fantômes).
+> *⚠️ Snapdragon recommandé : Cette option peut apparaître sur les appareils non Adreno, mais la qualité de la génération d'images et les performances varient selon le pilote.*
 
-• 🎯GHLP Cores , Android traite NATIVEMENT GHLP comme un jeu AAA :
-- Android alloue dynamiquement d'avantage de ressources CPU, GPU et RAM, ainsi l'application accéde à un mode de performance plus libre qui empêche le CPU de réduire brutalement sa fréquence à cause du thermal throttling.
-- Priorité NATIVE des threads exécuté dynamiquement.
-- Empêche Android d'imposer son propre cap de FPS par-dessus Wine-Proton.
-- Réduit le post-traitement d'affichage et la latence d'affichage.
-- 📍 Unreal & DirectX12 Assist : 
- GHLP détecte automatiquement les jeux Unreal Engine/DirectX12 en gérant dynamiquement le compromis parfait entre température et fluidité.
+### 🧰 Gestionnaire de Composants
+*(Accessible via le menu de gauche → Composants)*
+Vous donne un contrôle total sur les composants utilisés par GHLP. Injectez ou supprimez à la volée DXVK, VKD3D, Box64, FEXCore et les Pilotes GPU (qui apparaissent dans les paramètres par jeu).
 
-• 👾 Support Natif des systèmes : 
-- RedMagic GameBooster 
-- Samsung Game Booster (GOS)
-- Xiaomi Game Turbo
-- OPPO/Realme HyperBoost
-- Qualcomm Snapdragon Game Space
-- MediaTek DuraSpeed
+🔗 **5 sources intégrées pour télécharger vos composants et pilotes :**
+*   Arihany WCPHub
+*   Pilotes GPU Whitebelyash
+*   Pilotes GPU StevenMXZ
+*   Pilotes GPU MTR
+*   Pilotes GPU K11MCHI 
 
-• ⚡ GHLP inclus une configuration universel optimisé DirectX 11/12 en appels Vulkan , afin d'exploiter pleinement la puissance de votre SoC et de votre architecture UMA (mémoire unifiée) pour l'exécution de jeux PC.
+### 👾 Support Natif des Optimiseurs Android
+GHLP est reconnu et soutenu par les systèmes suivants :
+*   RedMagic GameBooster 
+*   Samsung Game Booster (GOS)
+*   Xiaomi Game Turbo
+*   OPPO/Realme HyperBoost
+*   Qualcomm Snapdragon Game Space
+*   MediaTek DuraSpeed
