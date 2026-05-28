@@ -1,4 +1,7 @@
-![GameHubLite Plus Banner](Logo_GHL+_v3.png)
+<p align="center">
+  <img src="Logo_GHL+_v3.png" alt="GameHubLite Plus Banner" width="100%">
+</p>
+
 
 # GameHubLite-Plus
 ​"GameHubLite Plus" hérite de tous les avantages de GameHub Lite par rapport à l'original : suppression de la télémétrie, des 31 permissions invasives, des 11 838 fichiers de tracking, pas de login obligatoire, fonctionnement hors ligne, et un APK réduit de 114 Mo à environ 50 Mo
