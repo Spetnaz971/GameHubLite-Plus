@@ -113,7 +113,7 @@ J'ai volontairement ajouté uniquement le mot **"Plus"** au nom de mon projet ca
     *   Forçage asynchrone continu **NATIF**.
     *   Priorisation des threads **NATIVE**.
     *   Régulation thermique **NATIVE**.
-*   📋 **Configuration universelle :** Directement fournie et pré-optimisée (*⚠️Snapdragon hautement recommandé⚠️*).
+*   📋 **Configuration universelle :** Directement fournie et pré-optimisée *⚠️Snapdragon hautement recommandé⚠️*.
 
 ### 📥 Où puis-je télécharger GameHubLite Plus ?
 Simplement sur notre serveur Discord officiel, accessible sur demande ! 
