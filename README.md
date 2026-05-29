@@ -111,7 +111,7 @@ J'ai volontairement ajouté uniquement le mot **"Plus"** au nom de mon projet ca
 *   🇫🇷 **Interface :** Traduite en Français à 95%.
 *   🎯 **GHLP Cores (Exclusif) :** C'est ce qui fait toute la différence au niveau des performances :
     *   Forçage asynchrone continu **NATIF**.
-    *   Priorisation des threads **NATIVE**.
+    *   Priorisation **NATIVE** des threads .
     *   Régulation thermique **NATIVE**.
 *   📋 **Configuration universelle :** Directement fournie et pré-optimisée *⚠️Snapdragon hautement recommandé⚠️*.
 
