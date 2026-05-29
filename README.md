@@ -115,7 +115,7 @@ J'ai volontairement ajouté uniquement le mot **"Plus"** au nom de mon projet ca
     *   Régulation thermique **NATIVE**.
 *   📋 **Configuration universelle :** Directement fournie et pré-optimisée *⚠️Snapdragon hautement recommandé⚠️*.
 
-*   ### 🧠 Un smartphone avec 6/8 Go de RAM + RAM Étendue (virtuelle) est-il suffisant ?
+  ### 🎚️ Un smartphone avec 6/8 Go de RAM + RAM Étendue (virtuelle) est-il suffisant ?
 
 **Nuance importante !** La RAM virtuelle n'est absolument pas aussi rapide que la RAM réelle. Dans un environnement lourd et complexe comme celui de GHLP (combinant WINE, FEX, Proton, DXVK, etc.), abuser de la RAM virtuelle peut même s'avérer totalement **contre-productif**.
 
