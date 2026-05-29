@@ -90,3 +90,31 @@ GHLP est reconnu et soutenu par les systèmes suivants :
 *   OPPO/Realme HyperBoost
 *   Qualcomm Snapdragon Game Space
 *   MediaTek DuraSpeed
+
+---
+
+## 💬 Foire Aux Questions (FAQ)
+
+### 👨🏾‍🏫 Qui suis-je ?
+Juste un passionné issu des Antilles Françaises avec 15 années d'expérience en informatique ✌🏾 (et streamer de temps à autre). 
+Après avoir utilisé Winlator de manière intensive pendant plusieurs années, j'ai exploré d'autres applications basées sur le même fonctionnement (GameHub, GameNative, Winlator Ludashi, etc.). 
+
+Je me suis débarrassé de ma console de salon car je suis persuadé que le monde de l'émulation arrive à son paroxysme : tous les jeux qui se lancent sur PC seront bientôt exécutables sur des SoC mobiles performants. J’ai décidé de créer mon propre fork car GameHub reste, selon moi, l'application la plus intuitive à utiliser, même pour un débutant, sans oublier son incroyable communauté sur YouTube et Reddit.
+
+### 🏷️ Pourquoi ce nom "GameHubLite Plus" ?
+J'ai volontairement ajouté uniquement le mot **"Plus"** au nom de mon projet car cela reste un fork. Je respecte énormément le travail de l'équipe originale de GameHub Lite. J'utilise d'ailleurs l'API officielle de GameHub pour mon projet.
+
+### 💰 Est-ce que GHLP est gratuit ?
+**OUI, TOTALEMENT !** 👍🏾 Le projet est 100% gratuit. Évidemment, seuls les jeux que vous possédez (achetés sur Steam, Epic Games Store, etc.) restent à votre charge depuis les plateformes officielles.
+
+### 🔄 Quelle est la différence avec GH, GHL, etc. ?
+*   🇫🇷 **Interface :** Traduite en Français à 95%.
+*   🎯 **GHLP Cores (Exclusif) :** C'est ce qui fait toute la différence au niveau des performances :
+    *   Forçage asynchrone continu **NATIF**.
+    *   Priorisation des threads **NATIVE**.
+    *   Régulation thermique **NATIVE**.
+*   📋 **Configuration universelle :** Directement fournie et pré-optimisée (*⚠️ Snapdragon hautement recommandé ⚠️*).
+
+### 📥 Où puis-je télécharger GameHubLite Plus ?
+Simplement sur notre serveur Discord officiel, accessible sur demande ! 
+*(Reportez-vous à la section Téléchargement en haut de la page pour nous rejoindre).*
