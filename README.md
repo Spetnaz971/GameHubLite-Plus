@@ -8,7 +8,7 @@
 
 🔥 **GameHubLite Plus (GHLP)** a été conçu pour repousser les limites matérielles et franchir les barrières entre PC et smartphone (**SANS ROOT**), garantissant les performances maximales possibles lors de vos sessions de jeu prolongées.
 
-Il hérite de tous les avantages de GameHub Lite par rapport à l'application originale :
+Il hérite de tous les avantages de [GameHub Lite](https://github.com/Producdevity/gamehub-lite/releases) par rapport à l'application originale :
 *   🚫 **Zéro télémétrie :** Suppression de 11 838 fichiers de tracking.
 *   🔒 **Confidentialité et Liberté :** Suppression des 31 permissions invasives, pas de login obligatoire et fonctionnement 100% hors ligne.
 *   🪶 **Poids Plume :** Taille de l'APK réduite de 114 Mo à environ 50 Mo.
