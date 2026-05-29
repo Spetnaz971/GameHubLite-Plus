@@ -76,11 +76,11 @@ Android traite **NATIVEMENT** GHLP comme un jeu vidéo AAA :
 Vous donne un contrôle total sur les composants utilisés par GHLP. Injectez ou supprimez à la volée DXVK, VKD3D, Box64, FEXCore et les Pilotes GPU (qui apparaissent dans les paramètres par jeu).
 
 🔗 **5 sources intégrées pour télécharger vos composants et pilotes :**
-*   Arihany WCPHub
-*   Pilotes GPU Whitebelyash
-*   Pilotes GPU StevenMXZ
-*   Pilotes GPU MTR
-*   Pilotes GPU K11MCHI 
+*   [Arihany WCPHub](https://github.com/Arihany/WinlatorWCPHub?tab=readme-ov-file)
+*   [Pilotes GPU Whitebelyash](https://github.com/whitebelyash/freedreno_turnip-CI/releases)
+*   [Pilotes GPU StevenMXZ](https://github.com/StevenMXZ/Adreno-Tools-Drivers/releases)
+*   [Pilotes GPU K11MCHI](https://github.com/K11MCH1/AdrenoToolsDrivers/releases/)
+*   Pilotes GPU MTR 
 
 ### 👾 Support Natif des Optimiseurs Android
 GHLP est reconnu et soutenu par les systèmes suivants :
