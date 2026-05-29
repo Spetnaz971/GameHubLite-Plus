@@ -102,7 +102,7 @@ Après avoir utilisé Winlator de manière intensive pendant plusieurs années, 
 Je me suis débarrassé de ma console de salon car je suis persuadé que le monde de l'émulation arrive à son paroxysme : tous les jeux qui se lancent sur PC seront bientôt exécutables sur des SoC mobiles performants. J’ai décidé de créer mon propre fork car GameHub reste, selon moi, l'application la plus intuitive à utiliser, même pour un débutant, sans oublier son incroyable communauté sur YouTube et Reddit.
 
 ### 🏷️ Pourquoi ce nom "GameHubLite Plus" ?
-J'ai volontairement ajouté uniquement le mot **"Plus"** au nom de mon projet car cela reste un fork. Je respecte énormément le travail de l'équipe originale de GameHub Lite. J'utilise d'ailleurs l'API officielle de GameHub pour mon projet.
+J'ai volontairement ajouté uniquement le mot **"Plus"** au nom de mon projet car cela reste un fork. Je respecte énormément le travail de l'équipe originale de GameHub Lite. J'utilise d'ailleurs l'API officielle de GameHubLite pour mon projet.
 
 ### 💰 Est-ce que GHLP est gratuit ?
 **OUI, TOTALEMENT !** 👍🏾 Le projet est 100% gratuit. Évidemment, seuls les jeux que vous possédez (achetés sur Steam, Epic Games Store, etc.) restent à votre charge depuis les plateformes officielles.
