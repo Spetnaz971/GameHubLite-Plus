@@ -7,7 +7,6 @@
   <img src="https://img.shields.io/badge/OS-Android_14%2B-3DDC84?style=for-the-badge&logo=android&logoColor=white" alt="Android">
   <img src="https://img.shields.io/badge/Root-Non_Requis-success?style=for-the-badge" alt="No Root">
   <img src="https://img.shields.io/badge/Télémétrie-0%25-red?style=for-the-badge" alt="Zéro Télémétrie">
-  
   <img 
 src="https://img.shields.io/badge/Langue-FR-0055A4?style=for-the-badge" alt="Français">
 </p>
