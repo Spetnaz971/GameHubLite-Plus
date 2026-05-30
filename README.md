@@ -2,6 +2,14 @@
   <img src="Logo_GHL+_v3.png" alt="GameHubLite Plus Banner" width="100%">
 </p>
 
+<p align="center">
+  <img src="https://img.shields.io/badge/Version-5.2.5-blue?style=for-the-badge" alt="Version">
+  <img src="https://img.shields.io/badge/OS-Android_14%2B-3DDC84?style=for-the-badge&logo=android&logoColor=white" alt="Android">
+  <img src="https://img.shields.io/badge/Root-Non_Requis-success?style=for-the-badge" alt="No Root">
+  <img src="https://img.shields.io/badge/Télémétrie-0%25-red?style=for-the-badge" alt="Zéro Télémétrie">
+  <img src="https://img.shields.io/badge/SoC-Snapdragon_Opti-ff6600?style=for-the-badge" alt="Snapdragon">
+  <img src="https://img.shields.io/badge/Langue-FR-0055A4?style=for-the-badge" alt="Français">
+</p>
 
 # GameHubLite-Plus by SpetNaz971
 ​ 🌟 À propos de GameHubLite Plus
