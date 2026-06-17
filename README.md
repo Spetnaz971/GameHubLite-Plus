@@ -11,7 +11,7 @@
 </p>
 
 
-# GameHubLite-Plus by SpetNaz971
+# GameHubLite-Plus
 ​ 🌟 À propos de GameHubLite Plus
 
 🔥 **GameHubLite Plus (GHLP)** a été conçu pour repousser les limites matérielles et franchir les barrières entre PC et smartphone (**SANS ROOT**), garantissant les performances maximales possibles lors de vos sessions de jeu prolongées.
