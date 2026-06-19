@@ -17,15 +17,15 @@
 🔥 **GameHubLite Plus (GHLP)** a été conçu pour repousser les limites matérielles et franchir les barrières entre PC et smartphone (**SANS ROOT**), garantissant les performances maximales possibles lors de vos sessions de jeu prolongées.
 
 Il hérite de tous les avantages de [GameHub Lite](https://github.com/Producdevity/gamehub-lite/releases) par rapport à l'application originale :
-*   🚫 **Zéro télémétrie :** Suppression de 11 838 fichiers de tracking.
-*   🔒 **Confidentialité et Liberté :** Suppression des 31 permissions invasives, pas de login obligatoire et fonctionnement 100% hors ligne.
-*   🪶 **Poids Plume :** Taille de l'APK réduite de 114 Mo à environ 50 Mo.
+* 🚫 **Zéro télémétrie :** Suppression de 11 838 fichiers de tracking.
+* 🔒 **Confidentialité et Liberté :** Suppression des 31 permissions invasives, pas de login obligatoire et fonctionnement 100% hors ligne.
+* 🪶 **Poids Plume :** Taille de l'APK réduite de 114 Mo à environ 50 Mo.
 
 🆙 **Performances et Stabilité**
 GHLP offre des performances et une stabilité supérieures par rapport à :
-*   GameHub / GameHub Lite
-*   Winlator / Winlator Ludashi
-*   GameNative / GameNative Performance
+* GameHub / GameHub Lite
+* Winlator / Winlator Ludashi
+* GameNative / GameNative Performance
 
 ---
 
@@ -50,33 +50,33 @@ GHLP offre des performances et une stabilité supérieures par rapport à :
 
 GameHubLite Plus est proposé en deux déclinaisons distinctes pour s'adapter au mieux à votre appareil :
 
-*   🌍 **Version Global :** Conçue pour tous les modèles de smartphones possédant au moins la **Configuration MINIMALE** requise. Elle offre une compatibilité universelle et stable.
-*   🔴 **Version REDMAGIC :** Exclusivement développée et optimisée pour les utilisateurs d'appareils **REDMAGIC**. Cette version dédiée débloque le plein potentiel du matériel en intégrant des fonctionnalités avancées comme l'**AI Frame Generation**, la **Super Resolution**, et des optimisations exclusives au système.
+* 🌍 **Version Global :** Conçue pour tous les modèles de smartphones possédant au moins la **Configuration MINIMALE** requise. Elle offre une compatibilité universelle et stable.
+* 🔴 **Version REDMAGIC :** Exclusivement développée et optimisée pour les utilisateurs d'appareils **REDMAGIC**. Cette version dédiée débloque le plein potentiel du matériel en intégrant des fonctionnalités avancées comme l'**AI Frame Generation**, la **Super Resolution**, et des optimisations exclusives au système.
    
 ---
 
 ## ➕ Les Plus Exclusifs à GHLP
 
-*   🇫🇷 **Interface :** Traduite en Français à 95%.
-*   📝 **Correction :** Prise en compte de la régression des performances (GH 5.3.X).
-*   🚀 **VRAM Étendue :** Augmentation de la limite de VRAM allouée (6 GB, 8 GB, 12 GB, et 16 GB).
-*   🎮 **Boutique en ligne :** Accès direct à la bibliothèque Epic Games Store.
-*   ⚡ **Architecture UMA :** GHLP inclut une configuration universelle optimisée DirectX 11/12 en appels Vulkan, afin d'exploiter pleinement la puissance de votre SoC et de votre architecture à mémoire unifiée pour l'exécution de jeux PC.
-*   🪫 **Énergie :** Permet à l'application d'être exclue des optimisations batterie restrictives d’Android.
+* 🇫🇷 **Interface :** Traduite en Français à 95%.
+* 📝 **Correction :** Prise en compte de la régression des performances (GH 5.3.X).
+* 🚀 **VRAM Étendue :** Augmentation de la limite de VRAM allouée (6 GB, 8 GB, 12 GB, et 16 GB).
+* 🎮 **Boutique en ligne :** Accès direct à la bibliothèque Epic Games Store.
+* ⚡ **Architecture UMA :** GHLP inclut une configuration universelle optimisée DirectX 11/12 en appels Vulkan, afin d'exploiter pleinement la puissance de votre SoC et de votre architecture à mémoire unifiée pour l'exécution de jeux PC.
+* 🪫 **Énergie :** Permet à l'application d'être exclue des optimisations batterie restrictives d’Android.
 
-### 🎯 GHLP Cores : Reconnaissance Native AAA
+### [🎯 GHLP Cores : Reconnaissance Native AAA](https://spetnaz971.github.io/GameHubLite-Plus/GHLP_Cores_by-SpetNaz971.html)
 Android traite **NATIVEMENT** GHLP comme un jeu vidéo AAA :
-*   **Ressources Débridées :** Android alloue dynamiquement davantage de ressources CPU, GPU et RAM. L'application accède à un mode de performance plus libre qui empêche le CPU de réduire brutalement sa fréquence à cause du *thermal throttling*.
-*   **Priorité Native :** Appliquée aux threads exécutés dynamiquement.
-*   **Liberté de Framerate :** Empêche Android d'imposer son propre cap de FPS par-dessus Wine-Proton.
-*   **Latence Réduite :** Diminue drastiquement le post-traitement et la latence d'affichage.
-*   📍 **Unreal & DirectX12 Assist :** GHLP détecte automatiquement les jeux Unreal Engine/DirectX12 et gère dynamiquement le compromis parfait entre température et fluidité.
+* **Ressources Débridées :** Android alloue dynamiquement davantage de ressources CPU, GPU et RAM. L'application accède à un mode de performance plus libre qui empêche le CPU de réduire brutalement sa fréquence à cause du *thermal throttling*.
+* **Priorité Native :** Appliquée aux threads exécutés dynamiquement.
+* **Liberté de Framerate :** Empêche Android d'imposer son propre cap de FPS par-dessus Wine-Proton.
+* **Latence Réduite :** Diminue drastiquement le post-traitement et la latence d'affichage.
+* 📍 **Unreal & DirectX12 Assist :** GHLP détecte automatiquement les jeux Unreal Engine/DirectX12 et gère dynamiquement le compromis parfait entre température et fluidité.
 
 ### 🖼️ AI Frame Generation
-*   **6 préréglages disponibles :** ECO / FLOW / BAL (par défaut) / BOOST / CLEAR / MAX.
-*   La sélection d'un préréglage charge automatiquement les valeurs de *flowScale* et du modèle d'IA.
-*   Les profils **ECO/FLOW/BAL/BOOST** utilisent le modèle *Standard* (plus économique).
-*   Les profils **CLEAR/MAX** utilisent le modèle *Clear* (traitement du flux optique plus intensif avec moins d'images fantômes).
+* **6 préréglages disponibles :** ECO / FLOW / BAL (par défaut) / BOOST / CLEAR / MAX.
+* La sélection d'un préréglage charge automatiquement les valeurs de *flowScale* et du modèle d'IA.
+* Les profils **ECO/FLOW/BAL/BOOST** utilisent le modèle *Standard* (plus économique).
+* Les profils **CLEAR/MAX** utilisent le modèle *Clear* (traitement du flux optique plus intensif avec moins d'images fantômes).
 > *⚠️ Snapdragon recommandé : Cette option peut apparaître sur les appareils non Adreno, mais la qualité de la génération d'images et les performances varient selon le pilote.*
 
 ### 🧰 Gestionnaire de Composants
@@ -84,20 +84,20 @@ Android traite **NATIVEMENT** GHLP comme un jeu vidéo AAA :
 Vous donne un contrôle total sur les composants utilisés par GHLP. Injectez ou supprimez à la volée DXVK, VKD3D, Box64, FEXCore et les Pilotes GPU (qui apparaissent dans les paramètres par jeu).
 
 🔗 **5 sources intégrées pour télécharger vos composants et pilotes :**
-*   [Arihany WCPHub](https://github.com/Arihany/WinlatorWCPHub?tab=readme-ov-file)
-*   [Pilotes GPU Whitebelyash](https://github.com/whitebelyash/freedreno_turnip-CI/releases)
-*   [Pilotes GPU StevenMXZ](https://github.com/StevenMXZ/Adreno-Tools-Drivers/releases)
-*   [Pilotes GPU K11MCHI](https://github.com/K11MCH1/AdrenoToolsDrivers/releases/)
-*   Pilotes GPU MTR 
+* [Arihany WCPHub](https://github.com/Arihany/WinlatorWCPHub?tab=readme-ov-file)
+* [Pilotes GPU Whitebelyash](https://github.com/whitebelyash/freedreno_turnip-CI/releases)
+* [Pilotes GPU StevenMXZ](https://github.com/StevenMXZ/Adreno-Tools-Drivers/releases)
+* [Pilotes GPU K11MCHI](https://github.com/K11MCH1/AdrenoToolsDrivers/releases/)
+* Pilotes GPU MTR 
 
 ### 👾 Support Natif des Optimiseurs Android
 GHLP est reconnu et soutenu par les systèmes suivants :
-*   RedMagic GameBooster 
-*   Samsung Game Booster (GOS)
-*   Xiaomi Game Turbo
-*   OPPO/Realme HyperBoost
-*   Qualcomm Snapdragon Game Space
-*   MediaTek DuraSpeed
+* RedMagic GameBooster 
+* Samsung Game Booster (GOS)
+* Xiaomi Game Turbo
+* OPPO/Realme HyperBoost
+* Qualcomm Snapdragon Game Space
+* MediaTek DuraSpeed
 
 ---
 
@@ -116,19 +116,19 @@ J'ai volontairement ajouté uniquement le mot **"Plus"** au nom de mon projet ca
 **OUI, TOTALEMENT !** 👍🏾 Le projet est 100% gratuit. Évidemment, seuls les jeux que vous possédez (achetés sur Steam, Epic Games Store, etc.) restent à votre charge depuis les plateformes officielles.
 
 ### 🔄 Quelle est la différence avec GH, GHL, etc. ?
-*   🇫🇷 **Interface :** Traduite en Français à 95%.
-*   🎯 **GHLP Cores (Exclusif) :** C'est ce qui fait toute la différence au niveau des performances :
-    *   Forçage asynchrone continu **NATIF**.
-    *   Priorisation **NATIVE** des threads .
-    *   Régulation thermique **NATIVE**.
-*   📋 **Configuration universelle :** Directement fournie et pré-optimisée *⚠️Snapdragon hautement recommandé⚠️*.
+* 🇫🇷 **Interface :** Traduite en Français à 95%.
+* [🎯 **GHLP Cores (Exclusif)**](https://spetnaz971.github.io/GameHubLite-Plus/GHLP_Cores_by-SpetNaz971.html) **:** C'est ce qui fait toute la différence au niveau des performances :
+    * Forçage asynchrone continu **NATIF**.
+    * Priorisation **NATIVE** des threads .
+    * Régulation thermique **NATIVE**.
+* 📋 **Configuration universelle :** Directement fournie et pré-optimisée *⚠️Snapdragon hautement recommandé⚠️*.
 
   ### 🎚️ Un smartphone avec 6/8 Go de RAM + RAM Étendue (virtuelle) est-il suffisant ?
 
 **Nuance importante !** La RAM virtuelle n'est absolument pas aussi rapide que la RAM réelle. Dans un environnement lourd et complexe comme celui de GHLP (combinant WINE, FEX, Proton, DXVK, etc.), abuser de la RAM virtuelle peut même s'avérer totalement **contre-productif**.
 
-*   **Un simple filet de sécurité :** La RAM étendue n'est exploitée nativement que par le système d'exploitation (Android) pour éviter le crash d'applications basiques en arrière-plan.
-*   **Le Mythe des constructeurs :** LA RAM ÉTENDUE NE FAIT PAS GAGNER EN PERFORMANCES. C'est un pur argument marketing des constructeurs, malheureusement alimenté et répandu par ignorance sur le net.
+* **Un simple filet de sécurité :** La RAM étendue n'est exploitée nativement que par le système d'exploitation (Android) pour éviter le crash d'applications basiques en arrière-plan.
+* **Le Mythe des constructeurs :** LA RAM ÉTENDUE NE FAIT PAS GAGNER EN PERFORMANCES. C'est un pur argument marketing des constructeurs, malheureusement alimenté et répandu par ignorance sur le net.
 
 > ⚠️ **Pas de miracle :** Même avec toute la RAM virtuelle du monde, le moteur **GHLP Cores** ne pourra rien faire si votre configuration matérielle réelle (vrais composants physiques) ne respecte pas la configuration minimale requise.
 > 
