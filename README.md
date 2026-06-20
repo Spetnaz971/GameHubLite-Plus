@@ -73,7 +73,6 @@ Android traite **NATIVEMENT** GHLP comme un jeu vidéo AAA :
 * **Cadencement Fluide :** Micro-ajustements dynamiques continus qui réduisent drastiquement les saccades et la latence.
 * **Gestion Thermique Améliorée :** Contrôle progressif de la température avec ajustement automatique de la cible (45 FPS à chaud, 60 FPS à froid) pour éviter le *thermal throttling* brutal.
 * **Efficacité Énergétique :** Optimisation réduisant la consommation de la batterie et prolongeant vos sessions de jeu.
-* **Sortie Nette :** Restauration automatique de votre appareil dans son état normal après l'exécution.
 
 ### 🖼️ AI Frame Generation
 * **6 préréglages disponibles :** ECO / FLOW / BAL (par défaut) / BOOST / CLEAR / MAX.
