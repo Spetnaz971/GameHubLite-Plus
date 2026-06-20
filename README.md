@@ -133,7 +133,7 @@ J'ai volontairement ajouté uniquement le mot **"Plus"** au nom de mon projet ca
 **Nuance importante !** La RAM virtuelle n'est absolument pas aussi rapide que la RAM réelle. Dans un environnement lourd et complexe comme celui de GHLP (combinant WINE, FEX, Proton, DXVK, etc.), abuser de la RAM virtuelle peut même s'avérer totalement **contre-productif**.
 
 * **Un simple filet de sécurité :** La RAM ÉTENDUE n'est exploitée nativement que par le **système d'exploitation (Android) pour éviter le crash** d'applications basiques en arrière-plan.
-* **Le Mythe des constructeurs :** 🤡**LA RAM VIRTUEL NE FAIT PAS GAGNER EN PERFORMANCES.**🤹🏾‍♂️ C'est un pur argument marketing des constructeurs, malheureusement alimenté et répandu par ignorance sur le net.
+* **Le Mythe des constructeurs :** 🤡**LA RAM VIRTUEL NE FAIT PAS GAGNER EN PERFORMANCES**.🤹🏾‍♂️ C'est un pur argument marketing des constructeurs, malheureusement alimenté et répandu par ignorance sur le net.
 
 > ⚠️ **Pas de miracle :** Même avec toute la RAM virtuelle du monde, le moteur **GHLP Cores** ne pourra rien faire si votre configuration matérielle réelle (vrais composants physiques) ne respecte pas la configuration minimale requise.
 > 
