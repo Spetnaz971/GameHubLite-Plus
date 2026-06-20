@@ -12,7 +12,7 @@
 
 
 # GameHubLite-Plus
-​ 🌟 À propos de GameHubLite Plus
+ 🌟 À propos de GameHubLite Plus
 
 🔥 **GameHubLite Plus (GHLP)** a été conçu pour repousser les limites matérielles et franchir les barrières entre PC et smartphone (**SANS ROOT**), garantissant les performances maximales possibles lors de vos sessions de jeu prolongées.
 
@@ -66,11 +66,14 @@ GameHubLite Plus est proposé en deux déclinaisons distinctes pour s'adapter au
 
 ### [🎯 GHLP Cores : Reconnaissance Native AAA](https://spetnaz971.github.io/GameHubLite-Plus/GHLP_Cores_by-SpetNaz971.html)
 Android traite **NATIVEMENT** GHLP comme un jeu vidéo AAA :
-* **Ressources Débridées :** Android alloue dynamiquement davantage de ressources CPU, GPU et RAM. L'application accède à un mode de performance plus libre qui empêche le CPU de réduire brutalement sa fréquence à cause du *thermal throttling*.
+* **Détection Intelligente :** Reconnaissance automatique des moteurs de jeu (Unity, Unreal, DirectX, VKD3D) pour des profils de performance optimisés.
+* **Ressources Débridées :** Optimisation de l'allocation CPU, GPU et RAM pour maintenir des fréquences élevées stables et empêcher le bridage thermique (*thermal throttling*).
 * **Priorité Native :** Appliquée aux threads exécutés dynamiquement.
-* **Liberté de Framerate :** Empêche Android d'imposer son propre cap de FPS par-dessus Wine-Proton.
-* **Latence Réduite :** Diminue drastiquement le post-traitement et la latence d'affichage.
-* 📍 **Unreal & DirectX12 Assist :** GHLP détecte automatiquement les jeux Unreal Engine/DirectX12 et gère dynamiquement le compromis parfait entre température et fluidité.
+* **Liberté de Framerate :** Empêche Android d'imposer son propre cap de FPS par-dessus l'environnement Wine-Proton.
+* **Cadencement Fluide :** Micro-ajustements dynamiques continus qui réduisent drastiquement les saccades et la latence.
+* **Gestion Thermique Améliorée :** Contrôle progressif de la température avec ajustement automatique de la cible (45 FPS à chaud, 60 FPS à froid) pour éviter le *thermal throttling* brutal.
+* **Efficacité Énergétique :** Optimisation réduisant la consommation de la batterie et prolongeant vos sessions de jeu.
+* **Sortie Nette :** Restauration automatique de votre appareil dans son état normal après l'exécution.
 
 ### 🖼️ AI Frame Generation
 * **6 préréglages disponibles :** ECO / FLOW / BAL (par défaut) / BOOST / CLEAR / MAX.
@@ -91,7 +94,7 @@ Vous donne un contrôle total sur les composants utilisés par GHLP. Injectez ou
 * Pilotes GPU MTR 
 
 ### 👾 Support Natif des Optimiseurs Android
-GHLP est reconnu et soutenu par les systèmes suivants :
+GHLP is reconnu et soutenu par les systèmes suivants :
 * RedMagic GameBooster 
 * Samsung Game Booster (GOS)
 * Xiaomi Game Turbo
@@ -118,9 +121,12 @@ J'ai volontairement ajouté uniquement le mot **"Plus"** au nom de mon projet ca
 ### 🔄 Quelle est la différence avec GH, GHL, etc. ?
 * 🇫🇷 **Interface :** Traduite en Français à 95%.
 * [🎯 **GHLP Cores (Exclusif)**](https://spetnaz971.github.io/GameHubLite-Plus/GHLP_Cores_by-SpetNaz971.html) **:** C'est ce qui fait toute la différence au niveau des performances :
-    * Forçage asynchrone continu **NATIF**.
-    * Priorisation **NATIVE** des threads .
-    * Régulation thermique **NATIVE**.
+    * Détection intelligente des moteurs (Unity, Unreal, DirectX, VKD3D) **NATIVE**.
+    * **Ressources Débridées :** Optimisation de l'allocation CPU, GPU et RAM pour maintenir des fréquences élevées stables et empêcher le bridage thermique (*thermal throttling*).
+    * **Priorité Native :** Appliquée aux threads exécutés dynamiquement.
+    * **Liberté de Framerate :** Empêche Android d'imposer son propre cap de FPS par-dessus l'environnement Wine-Proton.
+    * Micro-ajustements dynamiques pour un cadencement fluide **NATIF**.
+    * Régulation thermique progressive et ajustement automatique **NATIF**.
 * 📋 **Configuration universelle :** Directement fournie et pré-optimisée *⚠️Snapdragon hautement recommandé⚠️*.
 
   ### 🎚️ Un smartphone avec 6/8 Go de RAM + RAM Étendue (virtuelle) est-il suffisant ?
@@ -135,4 +141,3 @@ J'ai volontairement ajouté uniquement le mot **"Plus"** au nom de mon projet ca
 
 ### 📥 Où puis-je télécharger GameHubLite Plus ?
 Simplement sur notre serveur Discord officiel, accessible sur demande ! 
-*(Reportez-vous à la section Téléchargement en haut de la page pour nous rejoindre).*
