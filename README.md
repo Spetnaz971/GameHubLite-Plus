@@ -73,7 +73,7 @@ Android traite **NATIVEMENT** GHLP comme un jeu vidéo AAA :
 * **Gestion Thermique Améliorée :** Contrôle progressif de la température avec ajustement automatique de la cible (45 FPS à chaud, 60 FPS à froid) pour éviter le *thermal throttling* brutal.
 * **Efficacité Énergétique :** Optimisation réduisant la consommation de la batterie et prolongeant vos sessions de jeu.
 
-### 🖼️ AI Frame Generation
+### 🖼️ Opti'Frame Generation
 * **6 préréglages disponibles :** ECO / FLOW / BAL (par défaut) / BOOST / CLEAR / MAX.
 * La sélection d'un préréglage charge automatiquement les valeurs de *flowScale* et du modèle d'IA.
 * Les profils **ECO/FLOW/BAL/BOOST** utilisent le modèle *Standard* (plus économique).
