@@ -65,7 +65,7 @@ GameHubLite Plus est proposé en deux déclinaisons distinctes pour s'adapter au
 
 ### [🎯 GHLP Cores : Reconnaissance Native AAA](https://spetnaz971.github.io/GameHubLite-Plus/GHLP_Cores_by-SpetNaz971.html)
 Android traite **NATIVEMENT** GHLP comme un jeu vidéo AAA :
-* **Détection Intelligente :** Reconnaissance automatique des moteurs de jeu (Unity, Unreal, DirectX, VKD3D) pour des profils de performance optimisés.
+* **Détection Intelligente** : Reconnaissance automatique des moteurs de jeu (Unity, Unreal, DirectX, VKD3D) pour des profils de performance optimisés.
 * **Ressources Débridées :** Optimisation de l'allocation CPU, GPU et RAM pour maintenir des fréquences élevées stables et empêcher le bridage thermique (*thermal throttling*).
 * **Priorité Native :** Appliquée aux threads exécutés dynamiquement.
 * **Liberté de Framerate :** Empêche Android d'imposer son propre cap de FPS par-dessus l'environnement Wine-Proton.
