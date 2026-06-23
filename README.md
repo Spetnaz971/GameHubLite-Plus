@@ -142,5 +142,7 @@ Simplement sur notre serveur Discord officiel, accessible sur demande !
 ## Crédits
 
 • GameHubLite - [Python](https://github.com/) (Créateur original de GameHub Lite) et [Producdevity](https://github.com/Producdevity/gamehub-lite) (Responsable actuel)
+
 • Intégration Epic - [L'équipe GameNative](https://github.com/utkarshdalal/GameNative), le pipeline de la boutique, le flux d'authentification, l'architecture de téléchargement et la synchronisation de la bibliothèque dans GameHubLite Plus sont basés sur leurs recherches et leur implémentation.
+
 • Gestionnaire de Composants - Inspiré de la technique de [The412Banner](https://github.com/The412Banner).
