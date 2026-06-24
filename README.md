@@ -48,7 +48,7 @@ GHLP offre des performances et une stabilité supérieures par rapport à :
 
 GameHubLite Plus est proposé en deux déclinaisons distinctes pour s'adapter au mieux à votre appareil :
 
-* 🌍 **Version Global :** Conçue pour tous les modèles de smartphones possédant au moins la **Configuration MINIMALE** requise. Elle offre une compatibilité universelle et stable.
+* 🌍 **Version Globale :** Conçue pour tous les modèles de smartphones possédant au moins la **Configuration MINIMALE** requise. Elle offre une compatibilité universelle et stable.
 * 🔴 **Version REDMAGIC :** Exclusivement développée et optimisée pour les utilisateurs d'appareils **REDMAGIC**. Cette version dédiée débloque le plein potentiel du matériel en intégrant des fonctionnalités avancées comme l'**AI Frame Generation**, la **Super Resolution**, et des optimisations exclusives au système.
    
 ---
