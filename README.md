@@ -78,6 +78,7 @@ Android traite **NATIVEMENT** GHLP comme un jeu vidéo AAA :
 * Les profils **ECO/FLOW/BAL/BOOST** utilisent le modèle *Standard* (plus économique).
 * Les profils **CLEAR/MAX** utilisent le modèle *Clear* (traitement du flux optique plus intensif avec moins d'images fantômes).
 > *⚠️ Snapdragon recommandé : Cette option peut apparaître sur les appareils non Adreno, mais la qualité de la génération d'images et les performances varient selon le pilote.*
+
 > [!TIP]
 > 🧪 Ce n'est pas l'« AI FrameGen » de GameHub : **Opti'FrameGen est une implémentation propre à GameHubLite Plus** pour une génération d'images optimisée ARM de niveau PC, pensée par moi ([SpetNaz971](https://github.com/Spetnaz971)).
 >
