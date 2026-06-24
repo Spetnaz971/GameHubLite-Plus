@@ -7,6 +7,7 @@
   <img src="https://img.shields.io/badge/OS-Android_14%2B-3DDC84?style=for-the-badge&logo=android&logoColor=white" alt="Android">
   <img src="https://img.shields.io/badge/Root-Non_Requis-success?style=for-the-badge" alt="No Root">
   <img src="https://img.shields.io/badge/Langue-FR-0055A4?style=for-the-badge" alt="Français">
+  <img src="https://img.shields.io/badge/Téléchargements-77k-orange?style=for-the-badge" alt="Téléchargements">
 </p>
 
 
