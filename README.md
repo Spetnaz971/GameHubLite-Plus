@@ -129,7 +129,7 @@ J'ai volontairement ajouté uniquement le mot **"Plus"** au nom de mon projet ca
     * Micro-ajustements dynamiques pour un cadencement fluide **NATIF**.
     * Régulation thermique progressive et ajustement automatique **NATIF**.
 
-* 🧪 **Opti'FrameGen (Exclusif) :** C'est une génération d'images qui respecte conceptuellement et techniquement la norme actuelle sur PC tout en étant optimisée ARM.
+* 🧪 **Opti'FrameGen (Exclusif) :** Technique de génération d'images qui respecte conceptuellement et techniquement la norme actuelle sur PC tout en étant optimisée ARM.
 
 * 📋 **Configuration universelle :** Directement fournie et pré-optimisée *⚠️Snapdragon hautement recommandé⚠️*.
 
