@@ -128,6 +128,9 @@ J'ai volontairement ajouté uniquement le mot **"Plus"** au nom de mon projet ca
     * **Liberté de Framerate :** Empêche Android d'imposer son propre cap de FPS par-dessus l'environnement Wine-Proton.
     * Micro-ajustements dynamiques pour un cadencement fluide **NATIF**.
     * Régulation thermique progressive et ajustement automatique **NATIF**.
+
+* 🧪 **Opti'FrameGen (Exclusif) :** C'est une génération d'images qui respecte conceptuellement et techniquement la norme actuelle sur PC tout en étant optimisée ARM.
+
 * 📋 **Configuration universelle :** Directement fournie et pré-optimisée *⚠️Snapdragon hautement recommandé⚠️*.
 
   ### 🎚️ Un smartphone avec 6/8 Go de RAM + RAM Étendue (VIRTUELLE) est-il suffisant ?
