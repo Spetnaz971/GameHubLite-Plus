@@ -152,9 +152,9 @@ Simplement sur notre serveur Discord officiel, accessible sur demande !
 Les implémentations, scripts et algorithmes développés spécifiquement pour **GameHubLite Plus**, notamment les moteurs **GHLP Cores** et la technologie **Opti'FrameGen**, sont la propriété intellectuelle exclusive de son auteur ([SpetNaz971](https://github.com/Spetnaz971)). Toute extraction, rétro-ingénierie (reverse-engineering), reproduction ou réutilisation de ce code spécifique à des fins publiques ou commerciales est strictement interdite sans autorisation explicite préalable.
 
 **2. Héritage, Crédits et Composants Tiers**
-Ce projet est distribué gratuitement, à but non lucratif, et ne génère aucun revenu. Il s'appuie sur le travail formidable de la communauté :
-* **GameHubLite :** [Python](https://github.com/) (Créateur original) et [Producdevity](https://github.com/Producdevity/gamehub-lite) (Responsable actuel). *(Avertissement d'origine : This project is for educational and personal privacy purposes only. The patches and tooling are provided as-is. GameHub is a product of its respective owners).*
-* **Intégration Epic :** [L'équipe GameNative](https://github.com/utkarshdalal/GameNative). Le pipeline de la boutique, le flux d'authentification, l'architecture de téléchargement et la synchronisation de la bibliothèque sont basés sur leurs recherches et leur implémentation (initialement soumises à la GPL-3.0).
+Ce projet est distribué gratuitement, à but non lucratif, et ne génère aucun revenu. Il s'appuie sur le travail de la communauté :
+* **GameHubLite :** [Python](https://github.com/) (Créateur original) et [Producdevity](https://github.com/Producdevity/gamehub-lite) (Responsable actuel).
+* **Intégration Epic :** [L'équipe GameNative](https://github.com/utkarshdalal/GameNative). La pipeline de la boutique, le flux d'authentification, l'architecture de téléchargement et la synchronisation de la bibliothèque sont basés sur leurs recherches et leur implémentation .
 * **Gestionnaire de Composants :** Inspiré de la technique de [The412Banner](https://github.com/The412Banner).
 * **Outils d'émulation et Pilotes :** Les couches de compatibilité (Wine, Proton, DXVK, VKD3D, Box64, FEXCore) ainsi que les pilotes GPU tiers demeurent la propriété stricte de leurs créateurs respectifs et sont régis par leurs propres licences libres d'origine.
 
