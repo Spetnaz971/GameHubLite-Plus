@@ -1,0 +1,1179 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GameHubLite Plus - &Eacute;mulation PC nouvelle g&eacute;n&eacute;ration</title>
+<meta name="description" content="GameHubLite Plus est l'&eacute;mulateur PC nouvelle g&eacute;n&eacute;ration pour Android. GHLP Cores, Opti'FrameGen, Configuration Universelle. Compatible Snapdragon, MediaTek, et plus.">
+<meta name="keywords" content="GameHubLite, GameHub, &eacute;mulation, Android, Snapdragon, &eacute;mulateur PC, GHLP, gaming mobile">
+<meta property="og:title" content="GameHubLite Plus">
+<meta property="og:description" content="L'&eacute;mulation PC nouvelle g&eacute;n&eacute;ration pour Android">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://spetnaz971.github.io/GameHubLite-Plus/">
+<meta name="theme-color" content="#0a0a0f">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://spetnaz971.github.io/GameHubLite-Plus/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;font-size:16px}
+body{
+  font-family:'Inter',sans-serif;
+  background:#0a0a0f;
+  color:#c8c8c8;
+  overflow-x:hidden;
+  line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale
+}
+img{max-width:100%;height:auto;display:block}
+::selection{background:#76b90033;color:#fff}
+::-webkit-scrollbar{width:8px}
+::-webkit-scrollbar-track{background:#0a0a0f}
+::-webkit-scrollbar-thumb{background:#76b900;border-radius:4px}
+::-webkit-scrollbar-thumb:hover{background:#8ce000}
+.overlay-layer{
+  position:fixed;top:0;left:0;width:100%;height:100%;
+  pointer-events:none;z-index:2;
+}
+.scanline-overlay{
+  background:repeating-linear-gradient(0deg,
+    transparent,transparent 2px,
+    rgba(118,185,0,0.025) 2px,rgba(118,185,0,0.025) 4px
+  );
+  animation:scanlineMove 8s linear infinite;
+}
+@keyframes scanlineMove{
+  0%{transform:translateY(0)}
+  100%{transform:translateY(4px)}
+}
+.grid-overlay{
+  background-image:
+    linear-gradient(rgba(118,185,0,0.04) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(118,185,0,0.04) 1px,transparent 1px);
+  background-size:60px 60px;
+  animation:gridPulse 4s ease-in-out infinite;
+}
+@keyframes gridPulse{
+  0%,100%{opacity:0.6}
+  50%{opacity:1}
+}
+.vignette-overlay{
+  background:radial-gradient(ellipse at center,transparent 50%,rgba(10,10,15,0.6) 100%);
+}
+.hero-glow{
+  position:fixed;top:-30%;left:-10%;width:120%;height:80%;
+  background:radial-gradient(ellipse at center,rgba(118,185,0,0.04) 0%,transparent 70%);
+  pointer-events:none;z-index:0;animation:glowPulse 6s ease-in-out infinite;
+}
+@keyframes glowPulse{
+  0%,100%{opacity:0.5;transform:scale(1)}
+  50%{opacity:1;transform:scale(1.05)}
+}
+#particle-canvas{
+  position:fixed;top:0;left:0;width:100vw;height:100vh;
+  z-index:0;pointer-events:none;
+}
+#hero{
+  position:relative;min-height:100vh;display:flex;
+  align-items:center;justify-content:center;
+  text-align:center;padding:2rem;z-index:1;
+  overflow:hidden;
+}
+.hero-content{position:relative;z-index:3;max-width:900px}
+.hero-logo{
+  margin-bottom:2rem;
+  display:flex;align-items:center;justify-content:center;gap:1rem;
+}
+.hero-logo img{height:177px;width:auto;filter:drop-shadow(0 0 20px rgba(118,185,0,0.3))}
+@media(max-width:768px){.hero-logo img{height:135px}}
+.hero-logo-text{
+  font-family:'Space Grotesk',sans-serif;
+  font-size:3.5rem;font-weight:700;color:#fff;
+  letter-spacing:-0.02em;
+}
+.hero-logo-text .plus{color:#FFD700}
+.hero-logo{opacity:0;transition:none}
+.hero-logo.logo-fade-in{animation:logoFadeIn 1.2s ease-out forwards;opacity:1}
+@keyframes logoFadeIn{0%{opacity:0;transform:scale(0.92);filter:brightness(0.3)} 50%{opacity:0.7;filter:brightness(0.7)} 100%{opacity:1;transform:scale(1);filter:brightness(1)}}
+@media(max-width:768px){.hero-logo-text{font-size:2.2rem}}
+.tagline-container{margin-top:1rem;min-height:220px}
+.tagline-line{
+  font-family:'Space Grotesk',sans-serif;
+  font-size:2.2rem;font-weight:500;
+  color:#fff;min-height:3rem;margin:0.3rem 0;
+  opacity:0;line-height:1.3;
+}
+.tagline-line.line1{text-align:left;padding-left:5%}
+.tagline-line.line2{text-align:center}
+.tagline-line.line3{
+  text-align:right;padding-right:5%;
+  font-weight:700;
+  color:#fff;
+}
+.tagline-line.line3 .plus-highlight{color:#FFD700}
+.cursor-blink{
+  display:inline-block;width:3px;height:1.8em;
+  background:#76b900;margin-left:2px;
+  vertical-align:text-bottom;
+  animation:cursorBlink 0.7s step-end infinite;
+}
+@keyframes cursorBlink{
+  0%,100%{opacity:1}
+  50%{opacity:0}
+}
+.tagline-line.visible{opacity:1}
+.tagline-line.line3.glow-in{
+  animation:glowFadeIn 1.5s ease-out forwards;
+  text-shadow:0 0 30px rgba(118,185,0,0.4),0 0 60px rgba(118,185,0,0.15);
+}
+@keyframes glowFadeIn{
+  0%{opacity:0;transform:translateY(20px);text-shadow:0 0 0 transparent}
+  40%{opacity:1;transform:translateY(0)}
+  100%{opacity:1;text-shadow:0 0 30px rgba(118,185,0,0.4),0 0 60px rgba(118,185,0,0.15)}
+}
+.hero-subtitle{
+  font-size:1.1rem;color:#76b900;margin-top:2.5rem;
+  font-weight:400;letter-spacing:0.15em;text-transform:uppercase;
+  opacity:0;animation:fadeUp 1s ease-out 3s forwards;
+}
+@keyframes fadeUp{
+  0%{opacity:0;transform:translateY(15px)}
+  100%{opacity:1;transform:translateY(0)}
+}
+.hero-cta{
+  display:inline-block;margin-top:2rem;
+  padding:0.9rem 2.5rem;
+  background:linear-gradient(135deg,#76b900,#5a8e00);
+  color:#fff;font-family:'Space Grotesk',sans-serif;
+  font-size:1.05rem;font-weight:600;
+  border:none;border-radius:8px;
+  cursor:pointer;text-decoration:none;
+  transition:all 0.3s ease;
+  opacity:0;animation:fadeUp 1s ease-out 3.5s forwards;
+  box-shadow:0 0 30px rgba(118,185,0,0.2);
+}
+.hero-cta:hover{
+  transform:translateY(-3px);
+  box-shadow:0 0 40px rgba(118,185,0,0.4);
+  background:linear-gradient(135deg,#8ce000,#76b900);
+}
+@media(max-width:768px){
+  .tagline-line{font-size:1.3rem;min-height:2.5rem}
+  .tagline-line.line1{padding-left:2%}
+  .tagline-line.line3{padding-right:2%}
+  .hero-subtitle{font-size:0.85rem}
+}
+#sticky-nav{
+  position:sticky;top:0;z-index:100;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:0.7rem 2rem;
+  background:rgba(10,10,15,0.92);
+  backdrop-filter:blur(12px);
+  -webkit-backdrop-filter:blur(12px);
+  border-bottom:1px solid rgba(118,185,0,0.12);
+  transition:transform 0.3s ease,background 0.3s ease;
+}
+#sticky-nav.hidden{transform:translateY(-100%)}
+.nav-logo{
+  font-family:'Space Grotesk',sans-serif;
+  font-size:1.4rem;font-weight:700;color:#fff;
+}
+.nav-logo .plus{color:#FFD700}
+.nav-links{display:flex;gap:2rem}
+.nav-links a{
+  color:#c8c8c8;text-decoration:none;
+  font-size:0.9rem;font-weight:500;
+  transition:color 0.3s;position:relative;
+}
+.nav-links a::after{
+  content:'';position:absolute;bottom:-4px;left:0;width:0;height:2px;
+  background:#76b900;transition:width 0.3s;
+}
+.nav-links a:hover{color:#76b900}
+.nav-links a:hover::after{width:100%}
+.lang-switcher{display:flex;gap:0.3rem}
+.lang-btn{
+  background:transparent;border:1px solid rgba(118,185,0,0.25);
+  color:#888;font-family:'Inter',sans-serif;
+  font-size:0.72rem;font-weight:500;
+  padding:0.3rem 0.55rem;border-radius:4px;
+  cursor:pointer;transition:all 0.25s;
+  text-transform:uppercase;
+}
+.lang-btn:hover{color:#76b900;border-color:#76b900}
+.lang-btn.active{background:#76b900;color:#0a0a0f;border-color:#76b900;font-weight:600}
+.hamburger{display:none;flex-direction:column;gap:4px;cursor:pointer;background:none;border:none;padding:4px}
+.hamburger span{display:block;width:24px;height:2px;background:#c8c8c8;transition:all 0.3s}
+.hamburger.active span:nth-child(1){transform:rotate(45deg) translate(4px,4px)}
+.hamburger.active span:nth-child(2){opacity:0}
+.hamburger.active span:nth-child(3){transform:rotate(-45deg) translate(4px,-4px)}
+@media(max-width:768px){
+  #sticky-nav{padding:0.6rem 1rem}
+  .nav-links{position:fixed;top:56px;left:0;width:100%;
+    flex-direction:column;gap:0;
+    background:rgba(10,10,15,0.97);backdrop-filter:blur(12px);
+    padding:1rem 0;transform:translateY(-120%);opacity:0;
+    transition:all 0.4s;border-bottom:1px solid rgba(118,185,0,0.12);
+    align-items:center;
+  }
+  .nav-links.open{transform:translateY(0);opacity:1}
+  .nav-links a{padding:0.8rem 1rem;font-size:1rem}
+  .hamburger{display:flex}
+  .lang-switcher{gap:0.2rem}
+  .lang-btn{font-size:0.65rem;padding:0.25rem 0.4rem}
+}
+.section{
+  position:relative;z-index:3;
+  padding:6rem 2rem;max-width:1200px;margin:0 auto;
+}
+.section-header{
+  text-align:center;margin-bottom:4rem;
+}
+.section-title{
+  font-family:'Space Grotesk',sans-serif;
+  font-size:2.5rem;font-weight:700;color:#fff;
+  margin-bottom:1rem;
+}
+.section-title .plus{color:#FFD700}
+.section-subtitle{
+  font-size:1.05rem;color:#999;max-width:600px;margin:0 auto;
+}
+@media(max-width:768px){
+  .section{padding:4rem 1.2rem}
+  .section-title{font-size:1.8rem}
+}
+#stats{
+  position:relative;z-index:3;
+  padding:5rem 2rem;max-width:1200px;margin:0 auto;
+}
+.stats-grid{
+  display:grid;grid-template-columns:repeat(4,1fr);gap:2rem;
+}
+.stat-card{
+  text-align:center;padding:2rem 1rem;
+  background:rgba(26,26,46,0.5);
+  border:1px solid rgba(118,185,0,0.1);
+  border-radius:12px;
+  transition:all 0.4s;
+}
+.stat-card:hover{
+  border-color:rgba(118,185,0,0.3);
+  transform:translateY(-5px);
+  box-shadow:0 10px 40px rgba(0,0,0,0.3);
+}
+.stat-number{
+  font-family:'JetBrains Mono',monospace;
+  font-size:2.8rem;font-weight:700;
+  color:#76b900;display:block;line-height:1.2;
+}
+.stat-number .plus-suffix{color:#FFD700;font-size:2rem}
+.stat-label{
+  font-size:0.9rem;color:#999;margin-top:0.5rem;
+  text-transform:uppercase;letter-spacing:0.05em;
+}
+@media(max-width:768px){
+  .stats-grid{grid-template-columns:repeat(2,1fr);gap:1rem}
+  .stat-number{font-size:2rem}
+}
+@media(max-width:480px){
+  .stats-grid{grid-template-columns:repeat(2,1fr)}
+}
+#features{position:relative;z-index:3}
+.features-grid{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:2rem;
+}
+.feature-card{
+  background:rgba(26,26,46,0.6);
+  border:1px solid rgba(118,185,0,0.08);
+  border-radius:16px;padding:2.5rem 2rem;
+  text-align:center;position:relative;overflow:hidden;
+  transition:all 0.4s;
+}
+.feature-card::before{
+  content:'';position:absolute;top:0;left:0;width:100%;height:3px;
+  background:linear-gradient(90deg,transparent,#76b900,transparent);
+  opacity:0;transition:opacity 0.4s;
+}
+.feature-card:hover::before{opacity:1}
+.feature-card:hover{
+  transform:translateY(-6px);
+  border-color:rgba(118,185,0,0.25);
+  box-shadow:0 15px 50px rgba(0,0,0,0.4);
+}
+.feature-icon{
+  width:64px;height:64px;margin:0 auto 1.5rem;
+  background:rgba(118,185,0,0.08);
+  border-radius:16px;display:flex;align-items:center;justify-content:center;
+  font-size:1.8rem;color:#76b900;
+}
+.feature-title{
+  font-family:'Space Grotesk',sans-serif;
+  font-size:1.3rem;font-weight:600;color:#fff;
+  margin-bottom:1rem;
+}
+.feature-desc{font-size:0.95rem;color:#999;line-height:1.7}
+.feature-desc .highlight{color:#76b900;font-weight:500}
+.feature-desc .plus-ref{color:#FFD700;font-weight:500}
+@media(max-width:900px){
+  .features-grid{grid-template-columns:1fr;gap:1.5rem;max-width:500px;margin:0 auto}
+}
+#advantages{position:relative;z-index:3}
+.advantages-container{
+  background:rgba(26,26,46,0.4);
+  border:1px solid rgba(255,215,0,0.1);
+  border-radius:20px;padding:3rem;
+  max-width:900px;margin:0 auto;
+}
+.advantages-title{
+  font-family:'Space Grotesk',sans-serif;
+  font-size:1.8rem;font-weight:700;color:#fff;
+  text-align:center;margin-bottom:2.5rem;
+}
+.advantages-title .plus{color:#FFD700}
+.advantage-item{
+  display:flex;align-items:flex-start;gap:1rem;
+  padding:0.8rem 0;border-bottom:1px solid rgba(255,255,255,0.04);
+}
+.advantage-item:last-child{border-bottom:none}
+.advantage-icon{font-size:1.4rem;flex-shrink:0;margin-top:2px}
+.advantage-text{color:#bbb;font-size:0.95rem;line-height:1.7}
+.advantage-text strong{color:#fff}
+.advantage-text .highlight{color:#76b900;font-weight:500}
+.advantage-text .plus-ref{color:#FFD700;font-weight:500}
+.advantage-stats{display:flex;flex-wrap:wrap;gap:1rem;margin-top:0.5rem}
+.advantage-stat{
+  background:rgba(118,185,0,0.08);
+  padding:0.3rem 0.8rem;border-radius:6px;
+  font-family:'JetBrains Mono',monospace;
+  font-size:0.85rem;color:#76b900;
+}
+@media(max-width:768px){
+  .advantages-container{padding:1.5rem}
+  .advantages-title{font-size:1.4rem}
+}
+#compatible{position:relative;z-index:3}
+.logos-grid{
+  display:grid;
+  grid-template-columns:repeat(5,1fr);
+  gap:1.5rem;max-width:1000px;margin:0 auto;
+}
+.logo-card{
+  display:flex;flex-direction:column;align-items:center;gap:0.6rem;
+  padding:1.5rem 1rem;
+  background:rgba(26,26,46,0.4);
+  border:1px solid rgba(255,255,255,0.04);
+  border-radius:12px;
+  transition:all 0.4s;cursor:default;
+}
+.logo-card:hover{
+  transform:translateY(-4px);
+  border-color:rgba(118,185,0,0.2);
+  background:rgba(26,26,46,0.7);
+  box-shadow:0 8px 30px rgba(0,0,0,0.3);
+}
+.logo-wrapper{
+  height:48px;display:flex;align-items:center;justify-content:center;
+  transition:transform 0.4s;
+}
+.logo-card:hover .logo-wrapper{transform:scale(1.12)}
+.logo-wrapper img,.logo-wrapper svg{height:36px;width:auto;max-width:100px;object-fit:contain}
+.logo-name{
+  font-size:0.75rem;color:#888;font-weight:500;
+  text-transform:uppercase;letter-spacing:0.05em;
+}
+@media(max-width:768px){
+  .logos-grid{grid-template-columns:repeat(3,1fr);gap:1rem}
+  .logo-card{padding:1rem 0.5rem}
+  .logo-wrapper{height:36px}
+  .logo-wrapper img,.logo-wrapper svg{height:26px}
+}
+#download{position:relative;z-index:3;text-align:center;padding-bottom:6rem}
+.download-box{
+  max-width:650px;margin:0 auto;
+  background:linear-gradient(135deg,rgba(26,26,46,0.6),rgba(26,26,46,0.3));
+  border:1px solid rgba(118,185,0,0.15);
+  border-radius:24px;padding:4rem 3rem;
+  position:relative;overflow:hidden;
+}
+.download-box::before{
+  content:'';position:absolute;top:-50%;left:-50%;width:200%;height:200%;
+  background:conic-gradient(from 0deg,transparent,rgba(118,185,0,0.03),transparent,rgba(118,185,0,0.03),transparent);
+  animation:dloadRotate 10s linear infinite;
+}
+@keyframes dloadRotate{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}
+.download-content{position:relative;z-index:1}
+.download-title{
+  font-family:'Space Grotesk',sans-serif;
+  font-size:2.2rem;font-weight:700;color:#fff;margin-bottom:1rem;
+}
+.download-title .plus{color:#FFD700}
+.download-subtitle{
+  color:#999;font-size:1rem;margin-bottom:2.5rem;
+}
+.download-badge{
+  display:inline-flex;align-items:center;gap:0.8rem;
+  padding:1rem 2.5rem;
+  background:linear-gradient(135deg,#ff4500,#cc3700);
+  color:#fff;font-family:'Space Grotesk',sans-serif;
+  font-size:1.1rem;font-weight:600;
+  border:none;border-radius:12px;
+  cursor:pointer;text-decoration:none;
+  transition:all 0.3s;
+  box-shadow:0 0 30px rgba(255,69,0,0.2);
+}
+.download-badge:hover{
+  transform:translateY(-3px);
+  box-shadow:0 0 50px rgba(255,69,0,0.35);
+}
+.download-badge img,.download-badge svg{height:28px;width:auto}
+.download-note{margin-top:1.2rem;font-size:0.8rem;color:#666;text-align:center}
+@media(max-width:768px){
+  .download-box{padding:3rem 1.5rem}
+  .download-title{font-size:1.6rem}
+}
+footer{
+  position:relative;z-index:3;
+  border-top:1px solid rgba(118,185,0,0.06);
+  padding:3rem 2rem 2rem;
+  max-width:1200px;margin:0 auto;
+}
+.footer-content{
+  display:flex;flex-wrap:wrap;justify-content:space-between;
+  align-items:center;gap:1.5rem;
+}
+.footer-brand{
+  font-family:'Space Grotesk',sans-serif;
+  font-size:1.2rem;font-weight:700;color:#fff;
+}
+.footer-brand .plus{color:#FFD700}
+.footer-disclaimer{font-size:0.78rem;color:#555;max-width:500px;line-height:1.6}
+.footer-links{display:flex;gap:1.5rem}
+.footer-links a{color:#555;font-size:0.8rem;text-decoration:none;transition:color 0.3s}
+.footer-links a:hover{color:#76b900}
+@media(max-width:768px){
+  .footer-content{flex-direction:column;text-align:center}
+  .footer-disclaimer{max-width:100%}
+}
+.reveal{opacity:0;transform:translateY(30px);transition:all 0.8s cubic-bezier(0.25,0.46,0.45,0.94)}
+.reveal.visible{opacity:1;transform:translateY(0)}
+.reveal-delay-1{transition-delay:0.1s}
+.reveal-delay-2{transition-delay:0.2s}
+.reveal-delay-3{transition-delay:0.3s}
+.reveal-delay-4{transition-delay:0.4s}
+</style>
+</head>
+<body>
+
+<div class="overlay-layer scanline-overlay" aria-hidden="true"></div>
+<div class="overlay-layer grid-overlay" aria-hidden="true"></div>
+<div class="overlay-layer vignette-overlay" aria-hidden="true"></div>
+<div class="hero-glow" aria-hidden="true"></div>
+<canvas id="particle-canvas" aria-hidden="true"></canvas>
+
+<!-- HERO -->
+<section id="hero" aria-label="Hero">
+  <div class="hero-content">
+    <div class="hero-logo">
+      <img src="assets/images/ghlp-logo.png" alt="GameHubLite Plus logo" loading="eager">
+    </div>
+    <div class="tagline-container" aria-live="polite">
+      <div class="tagline-line line1" data-fr="Apr&egrave;s GameHub" data-en="After GameHub" data-ru="Posle GameHub" data-es="Despu&eacute;s de GameHub"></div>
+      <div class="tagline-line line2" data-fr="GameHubLite..." data-en="GameHubLite..." data-ru="GameHubLite..." data-es="GameHubLite..."></div>
+      <div class="tagline-line line3" data-fr="Voici GameHubLite <span class='plus-highlight'>Plus</span>" data-en="Here is GameHubLite <span class='plus-highlight'>Plus</span>" data-ru="Predstavlyaem GameHubLite <span class='plus-highlight'>Plus</span>" data-es="Presentamos GameHubLite <span class='plus-highlight'>Plus</span>"></div>
+    </div>
+    <p class="hero-subtitle" data-fr="L'&eacute;mulation PC nouvelle g&eacute;n&eacute;ration" data-en="Next-generation PC emulation" data-ru="Emulyatsiya PK novogo pokoleniya" data-es="Emulaci&oacute;n PC de nueva generaci&oacute;n">L'&eacute;mulation PC nouvelle g&eacute;n&eacute;ration</p>
+    <a href="#" class="hero-cta" role="button" data-fr="D&eacute;couvrir GameHubLite Plus" data-en="Discover GameHubLite Plus" data-ru="Otkryt GameHubLite Plus" data-es="Descubrir GameHubLite Plus">D&eacute;couvrir GameHubLite Plus</a>
+  </div>
+</section>
+
+<!-- STICKY NAV -->
+<nav id="sticky-nav" role="navigation" aria-label="Navigation principale">
+  <div class="nav-logo">GHL<span class="plus">+</span></div>
+  <div class="nav-links" id="navLinks">
+    <a href="#features" data-fr="Fonctionnalit&eacute;s" data-en="Features" data-ru="Funktsii" data-es="Funcionalidades">Fonctionnalit&eacute;s</a>
+    <a href="#compatible" data-fr="Appareils" data-en="Devices" data-ru="Ustroistva" data-es="Dispositivos">Appareils</a>
+    <a href="#advantages" data-fr="Avantages" data-en="Benefits" data-ru="Preimushchestva" data-es="Ventajas">Avantages</a>
+    <a href="#download" data-fr="T&eacute;l&eacute;charger" data-en="Download" data-ru="Skachat" data-es="Descargar">T&eacute;l&eacute;charger</a>
+  </div>
+  <div class="lang-switcher" role="group" aria-label="Language switcher">
+    <button class="lang-btn active" data-lang="fr" aria-pressed="true" aria-label="Fran&ccedil;ais">FR</button>
+    <button class="lang-btn" data-lang="en" aria-pressed="false" aria-label="English">EN</button>
+    <button class="lang-btn" data-lang="ru" aria-pressed="false" aria-label="Russkiy">RU</button>
+    <button class="lang-btn" data-lang="es" aria-pressed="false" aria-label="Espa&ntilde;ol">ES</button>
+  </div>
+  <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- STATS -->
+<section id="stats" aria-label="Statistics">
+  <div class="stats-grid">
+    <div class="stat-card reveal reveal-delay-1">
+      <img src="assets/images/poweruser-logo.png" alt="" style="height:67px;width:67px;display:block;margin:0 auto 0.3rem;">
+      <span class="stat-label" data-fr="Utilisateur avanc&eacute;" data-en="Advanced User" data-ru="Prodvinutyy polzovatel" data-es="Usuario avanzado">Utilisateur avanc&eacute;</span>
+      <span style="display:block;font-size:0.78rem;color:#888;margin-top:0.1rem;" data-fr="Pour les plus exigeants" data-en="For the demanding ones" data-ru="Dlya samykh trebovatelnykh" data-es="Para los m&aacute;s exigentes">Pour les plus exigeants</span>
+    </div>
+    <div class="stat-card reveal reveal-delay-2">
+      <div style="display:flex;flex-direction:column;align-items:center;gap:0.3rem;">
+        <span class="stat-number" data-target="9999" data-suffix="" style="display:none">0</span>
+        <img src="assets/images/cold-face-emoji.png" alt="" style="height:48px;width:48px;display:block;margin:0 auto;">
+        <span class="stat-label" data-fr="Refroidisseur Externe recommand&eacute;" data-en="External Cooler Recommended" data-ru="Rekomenduetsya vneshniy kuler" data-es="Enfriador Externo recomendado">Refroidisseur Externe recommand&eacute;</span>
+      </div>
+    </div>
+    <div class="stat-card reveal reveal-delay-3">
+      <span class="stat-number" data-target="30" data-suffix="%">0</span>
+      <span class="stat-label" data-fr="Gain de performance" data-en="Performance boost" data-ru="Prirust proizvoditelnosti" data-es="Mejora de rendimiento">Gain de performance</span>
+    </div>
+    <div class="stat-card reveal reveal-delay-4">
+      <span class="stat-number" data-target="35" data-suffix="min">0</span>
+      <span class="stat-label" data-fr="Batterie &eacute;conomis&eacute;e" data-en="Battery saved" data-ru="Ekonomiya batarei" data-es="Bater&iacute;a ahorrada">Batterie &eacute;conomis&eacute;e</span>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURES -->
+<section id="features" class="section" aria-label="Features">
+  <div class="section-header reveal">
+    <h2 class="section-title" data-fr="Fonctionnalit&eacute;s <span class='plus'>Plus</span>" data-en="<span class='plus'>Plus</span> Features" data-ru="Funktsii <span class='plus'>Plus</span>" data-es="Funcionalidades <span class='plus'>Plus</span>">Fonctionnalit&eacute;s <span class="plus">Plus</span></h2>
+    <p class="section-subtitle" data-fr="Ce qui rend GameHubLite Plus unique" data-en="What makes GameHubLite Plus unique" data-ru="Chto delaet GameHubLite Plus unikalnym" data-es="Lo que hace &uacute;nico a GameHubLite Plus">Ce qui rend GameHubLite Plus unique</p>
+  </div>
+  <div class="features-grid">
+    <div class="feature-card reveal reveal-delay-1">
+      <div class="feature-icon">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+          <path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/>
+        </svg>
+      </div>
+      <h3 class="feature-title" data-fr="GHLP Cores" data-en="GHLP Cores" data-ru="GHLP Cores" data-es="GHLP Cores">GHLP Cores</h3>
+      <p class="feature-desc" data-fr="<span class='highlight'>+30%</span> de performances, <span class='highlight'>-4&deg;C</span> pendant le jeu, <span class='plus-ref'>+15-35min</span> de batterie suppl&eacute;mentaire" data-en="<span class='highlight'>+30%</span> performance, <span class='highlight'>-4&deg;C</span> while gaming, <span class='plus-ref'>+15-35min</span> extra battery" data-ru="<span class='highlight'>+30%</span> proizvoditelnosti, <span class='highlight'>-4&deg;C</span> vo vremya igry, <span class='plus-ref'>+15-35min</span> dopolnitelnogo vremeni batarei" data-es="<span class='highlight'>+30%</span> rendimiento, <span class='highlight'>-4&deg;C</span> durante el juego, <span class='plus-ref'>+15-35min</span> de bater&iacute;a extra"><span class="highlight">+30%</span> de performances, <span class="highlight">-4&deg;C</span> pendant le jeu, <span class="plus-ref">+15-35min</span> de batterie suppl&eacute;mentaire</p>
+      <p class="feature-desc" style="font-size:0.8rem;color:#666;margin-top:0.5rem" data-fr="*Ces statistiques varient selon votre SoC" data-en="*These statistics vary depending on your SoC" data-ru="*Eti pokazateli zavisyat ot vashego SoC" data-es="*Estas estad&iacute;sticas var&iacute;an seg&uacute;n su SoC">*Ces statistiques varient selon votre SoC</p>
+    </div>
+    <div class="feature-card reveal reveal-delay-2">
+      <div class="feature-icon">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+          <rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/>
+        </svg>
+      </div>
+      <h3 class="feature-title" data-fr="Opti'FrameGen" data-en="Opti'FrameGen" data-ru="Opti'FrameGen" data-es="Opti'FrameGen">Opti'FrameGen</h3>
+      <p class="feature-desc" data-fr="Technique de g&eacute;n&eacute;ration d'images respectant la norme PC tout en &eacute;tant optimis&eacute;e pour <span class='highlight'>ARM</span>" data-en="Frame generation technology respecting PC standards while optimized for <span class='highlight'>ARM</span>" data-ru="Tekhnologiya generatsii kadrov, sootvetstvuyushchaya standartam PK i optimizirovannaya dlya <span class='highlight'>ARM</span>" data-es="Tecnolog&iacute;a de generaci&oacute;n de cuadros que respeta los est&aacute;ndares de PC optimizada para <span class='highlight'>ARM</span>">Technique de g&eacute;n&eacute;ration d'images respectant la norme PC tout en &eacute;tant optimis&eacute;e pour <span class="highlight">ARM</span></p>
+    </div>
+    <div class="feature-card reveal reveal-delay-3">
+      <div class="feature-icon">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+          <circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/>
+        </svg>
+      </div>
+      <h3 class="feature-title" data-fr="Configuration Universelle" data-en="Universal Config" data-ru="Universalnaya konfiguratsiya" data-es="Configuraci&oacute;n Universal">Configuration Universelle</h3>
+      <p class="feature-desc" data-fr="Pr&eacute;-optimis&eacute;e directement fournie. <span class='highlight'>Snapdragon</span> hautement recommand&eacute;" data-en="Pre-optimized and provided directly. <span class='highlight'>Snapdragon</span> highly recommended" data-ru="Predvaritelno optimizirovana. <span class='highlight'>Snapdragon</span> nastoyatelno rekomenduetsya" data-es="Pre-optimizada y proporcionada directamente. <span class='highlight'>Snapdragon</span> altamente recomendado">Pr&eacute;-optimis&eacute;e directement fournie. <span class="highlight">Snapdragon</span> hautement recommand&eacute;</p>
+    </div>
+  </div>
+</section>
+
+<!-- COMPATIBLE DEVICES -->
+<section id="compatible" class="section" aria-label="Compatible devices">
+  <div class="section-header reveal">
+    <h2 class="section-title" data-fr="Appareils compatibles" data-en="Compatible devices" data-ru="Sovmestimye ustroistva" data-es="Dispositivos compatibles">Appareils compatibles</h2>
+    <p class="section-subtitle" data-fr="GameHubLite <span style='color:#FFD700'>Plus</span> fonctionne avec les marques suivantes" data-en="GameHubLite <span style='color:#FFD700'>Plus</span> works with the following brands" data-ru="GameHubLite <span style='color:#FFD700'>Plus</span> rabotaet so sleduyushchimi brendami" data-es="GameHubLite <span style='color:#FFD700'>Plus</span> funciona con las siguientes marcas">GameHubLite <span style="color:#FFD700">Plus</span> fonctionne avec les marques suivantes</p>
+  </div>
+  <div class="logos-grid">
+    <div class="logo-card reveal reveal-delay-1">
+      <div class="logo-wrapper"><img src="assets/images/redmagic-logo.png" alt="RedMagic" loading="lazy" style="height:46px"></div>
+      <span class="logo-name">RedMagic</span>
+    </div>
+    <div class="logo-card reveal reveal-delay-2">
+      <div class="logo-wrapper"><img src="assets/images/iqoo-logo.png" alt="iQOO" loading="lazy" style="filter:invert(1);height:38px"></div>
+      <span class="logo-name">iQOO</span>
+    </div>
+    <div class="logo-card reveal reveal-delay-1">
+      <div class="logo-wrapper"><img src="https://cdn.simpleicons.org/mediatek/76b900" alt="MediaTek" loading="lazy" style="height:78px"></div>
+      <span class="logo-name">MediaTek</span>
+    </div>
+    <div class="logo-card reveal reveal-delay-2">
+      <div class="logo-wrapper"><img src="assets/images/snapdragon-logo.png" alt="Qualcomm Snapdragon" loading="lazy" style="height:144px;display:block;margin:0 auto;"></div>
+      <span class="logo-name">Snapdragon</span>
+    </div>
+    <div class="logo-card reveal reveal-delay-1">
+      <div class="logo-wrapper"><img src="https://cdn.simpleicons.org/xiaomi/ffffff" alt="Xiaomi" loading="lazy"></div>
+      <span class="logo-name">Xiaomi</span>
+    </div>
+    <div class="logo-card reveal reveal-delay-2">
+      <div class="logo-wrapper"><img src="https://cdn.simpleicons.org/oppo/ffffff" alt="OPPO" loading="lazy" style="height:65px"></div>
+      <span class="logo-name">OPPO</span>
+    </div>
+    <div class="logo-card reveal reveal-delay-1">
+      <div class="logo-wrapper"><img src="https://cdn.simpleicons.org/samsung/ffffff" alt="Samsung" loading="lazy" style="height:65px"></div>
+      <span class="logo-name">Samsung</span>
+    </div>
+    <div class="logo-card reveal reveal-delay-2">
+      <div class="logo-wrapper"><img src="https://cdn.simpleicons.org/steam/ffffff" alt="Steam" loading="lazy"></div>
+      <span class="logo-name">Steam</span>
+    </div>
+    <div class="logo-card reveal reveal-delay-1">
+      <div class="logo-wrapper"><img src="https://cdn.simpleicons.org/epicgames/ffffff" alt="Epic Games" loading="lazy"></div>
+      <span class="logo-name">Epic Games</span>
+    </div>
+  </div>
+</section>
+
+<!-- ADVANTAGES -->
+<section id="advantages" class="section" aria-label="Avantages Plus">
+  <div class="advantages-container reveal">
+    <h2 class="advantages-title" data-fr="Avantages GameHubLite <span class='plus'>Plus</span>" data-en="GameHubLite <span class='plus'>Plus</span> advantages" data-ru="Preimushchestva GameHubLite <span class='plus'>Plus</span>" data-es="Ventajas de GameHubLite <span class='plus'>Plus</span>">Avantages GameHubLite <span class="plus">Plus</span></h2>
+    <div class="advantage-item">
+      <span class="advantage-icon">&#x1f4ac;</span>
+      <div class="advantage-text"><strong data-fr="Interface en fran&ccedil;ais" data-en="Interface in French" data-ru="Interfeis na frantsuzskom" data-es="Interfaz en franc&eacute;s">Interface en fran&ccedil;ais</strong></div>
+    </div>
+    <div class="advantage-item">
+      <span class="advantage-icon">&#x1f9e0;</span>
+      <div class="advantage-text">
+        <strong data-fr="GHLP Cores" data-en="GHLP Cores" data-ru="GHLP Cores" data-es="GHLP Cores">GHLP Cores</strong>
+        <div class="advantage-stats">
+          <span class="advantage-stat" data-fr="+30% performances" data-en="+30% performance" data-ru="+30% proizvoditelnosti" data-es="+30% rendimiento">+30% performances</span>
+          <span class="advantage-stat" data-fr="-4&deg;C en jeu" data-en="-4&deg;C while gaming" data-ru="-4&deg;C v igre" data-es="-4&deg;C en juego">-4&deg;C en jeu</span>
+          <span class="advantage-stat" data-fr="+15-35min batterie" data-en="+15-35min battery" data-ru="+15-35min batarei" data-es="+15-35min bater&iacute;a">+15-35min batterie</span>
+        </div>
+      </div>
+    </div>
+    <div class="advantage-item">
+      <span class="advantage-icon">&#x1f5bc;</span>
+      <div class="advantage-text">
+        <strong data-fr="Opti'FrameGen" data-en="Opti'FrameGen" data-ru="Opti'FrameGen" data-es="Opti'FrameGen">Opti'FrameGen</strong>
+        <p style="color:#999;font-size:0.9rem;margin-top:0.3rem" data-fr="Technique de g&eacute;n&eacute;ration d'images respectant la norme PC, optimis&eacute;e ARM" data-en="Frame generation respecting PC standards, optimized for ARM" data-ru="Generatsiya kadrov po standartam PK, optimizirovannaya dlya ARM" data-es="Generaci&oacute;n de cuadros seg&uacute;n est&aacute;ndares PC, optimizada para ARM">Technique de g&eacute;n&eacute;ration d'images respectant la norme PC, optimis&eacute;e ARM</p>
+      </div>
+    </div>
+    <div class="advantage-item">
+      <span class="advantage-icon">&#x267b;&#xfe0f;</span>
+      <div class="advantage-text">
+        <strong data-fr="Configuration Universelle" data-en="Universal Config" data-ru="Universalnaya konfiguratsiya" data-es="Configuraci&oacute;n Universal">Configuration Universelle</strong>
+        <p style="color:#999;font-size:0.9rem;margin-top:0.3rem" data-fr="Pr&eacute;-optimis&eacute;e et fournie directement. <span class='highlight'>Snapdragon hautement recommand&eacute;</span>" data-en="Pre-optimized and provided directly. <span class='highlight'>Snapdragon highly recommended</span>" data-ru="Predvaritelno optimizirovana. <span class='highlight'>Snapdragon nastoyatelno rekomenduetsya</span>" data-es="Pre-optimizada y proporcionada. <span class='highlight'>Snapdragon altamente recomendado</span>">Pr&eacute;-optimis&eacute;e et fournie directement. <span class="highlight">Snapdragon hautement recommand&eacute;</span></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DOWNLOAD -->
+<section id="download" class="section" aria-label="Download">
+  <div class="download-box reveal">
+    <div class="download-content">
+      <h2 class="download-title" data-fr="T&eacute;l&eacute;charger GameHubLite <span class='plus'>Plus</span>" data-en="Download GameHubLite <span class='plus'>Plus</span>" data-ru="Skachat GameHubLite <span class='plus'>Plus</span>" data-es="Descargar GameHubLite <span class='plus'>Plus</span>">T&eacute;l&eacute;charger GameHubLite <span class="plus">Plus</span></h2>
+      <p class="download-subtitle" data-fr="Disponible sur Android" data-en="Available on Android" data-ru="Dostupno na Android" data-es="Disponible en Android">Disponible sur Android</p>
+      <a href="#" class="download-badge" role="button" aria-label="Download GameHubLite Plus">
+        <img src="assets/images/android-logo.png" alt="Android" style="height:38px;width:auto">
+        <span data-fr="T&eacute;l&eacute;charger" data-en="Download" data-ru="Skachat" data-es="Descargar">T&eacute;l&eacute;charger</span>
+      </a>
+      <p class="download-note" data-fr="Acc&egrave;s GRATUIT" data-en="FREE Access" data-ru="BESPLATNYY dostup" data-es="Acceso GRATIS" style="text-align:center">Acc&egrave;s GRATUIT</p>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-content">
+    <div>
+      <div class="footer-brand">GameHubLite <span class="plus">Plus</span></div>
+      <p class="footer-disclaimer" data-fr="GameHubLite Plus est un projet ind&eacute;pendant. Toutes les marques et logos appartiennent &agrave; leurs d&eacute;tenteurs respectifs. L'&eacute;mulation PC sur mobile est un domaine en &eacute;volution constante." data-en="GameHubLite Plus is an independent project. All trademarks and logos belong to their respective owners. PC emulation on mobile is a constantly evolving field." data-ru="GameHubLite Plus - eto nezavisimyi proekt. Vse torgovye marki i logotipy prinadlezhat ikh vladeltsam. Emulyatsiya PK na mobilnykh ustroistvakh - postoyanno razvivayushchayasya oblast." data-es="GameHubLite Plus es un proyecto independiente. Todas las marcas y logotipos pertenecen a sus respectivos due&ntilde;os. La emulaci&oacute;n de PC en dispositivos m&oacute;viles es un campo en constante evoluci&oacute;n.">GameHubLite Plus est un projet ind&eacute;pendant. Toutes les marques et logos appartiennent &agrave; leurs d&eacute;tenteurs respectifs. L'&eacute;mulation PC sur mobile est un domaine en &eacute;volution constante.</p>
+    </div>
+    <div class="footer-links">
+      <a href="#" data-fr="Confidentialit&eacute;" data-en="Privacy" data-ru="Konfidentsialnost" data-es="Privacidad">Confidentialit&eacute;</a>
+      <a href="#" data-fr="Contact" data-en="Contact" data-ru="Kontakt" data-es="Contacto">Contact</a>
+    </div>
+  </div>
+  <div style="text-align:center;margin-top:1.5rem;padding-top:1rem;border-top:1px solid rgba(255,255,255,0.03);font-size:0.75rem;color:#444;">
+    <span data-fr="&copy; 2026 GameHubLite Plus. Tous droits r&eacute;serv&eacute;s." data-en="&copy; 2026 GameHubLite Plus. All rights reserved." data-ru="&copy; 2026 GameHubLite Plus. Vse prava zashchishcheny." data-es="&copy; 2026 GameHubLite Plus. Todos los derechos reservados.">&copy; 2026 GameHubLite Plus. Tous droits r&eacute;serv&eacute;s.</span>
+  </div>
+</footer>
+
+<script>
+(function(){
+'use strict';
+
+const t = {
+  fr: {
+    tagline: ['Apr&egrave;s GameHub', 'GameHubLite...', "Voici GameHubLite <span class='plus-highlight'>Plus</span>"],
+    subtitle: "L'&eacute;mulation PC nouvelle g&eacute;n&eacute;ration",
+    heroCta: 'D&eacute;couvrir GameHubLite Plus',
+    nav: ['Fonctionnalit&eacute;s', 'Appareils', 'Avantages', 'T&eacute;l&eacute;charger'],
+    stats: ['Utilisateur avanc&eacute;', 'Refroidisseur Externe recommand&eacute;', 'Gain de performance', 'Batterie &eacute;conomis&eacute;e'],
+    featuresTitle: "Fonctionnalit&eacute;s <span class='plus'>Plus</span>",
+    featuresSub: 'Ce qui rend GameHubLite Plus unique',
+    features: [
+      'GHLP Cores',
+      "<span class='highlight'>+30%</span> de performances, <span class='highlight'>-4&deg;C</span> pendant le jeu, <span class='plus-ref'>+15-35min</span> de batterie suppl&eacute;mentaire",
+      "Opti'FrameGen",
+      "Technique de g&eacute;n&eacute;ration d'images respectant la norme PC tout en &eacute;tant optimis&eacute;e pour <span class='highlight'>ARM</span>",
+      'Configuration Universelle',
+      "Pr&eacute;-optimis&eacute;e directement fournie. <span class='highlight'>Snapdragon</span> hautement recommand&eacute;",
+      '*Ces statistiques varient selon votre SoC'
+    ],
+    compatTitle: 'Appareils compatibles',
+    compatSub: "GameHubLite <span style='color:#FFD700'>Plus</span> fonctionne avec les marques suivantes",
+    advTitle: "Avantages GameHubLite <span class='plus'>Plus</span>",
+    advItems: ['Interface en fran&ccedil;ais', 'GHLP Cores', "Opti'FrameGen", 'Configuration Universelle'],
+    advSubs: [
+      '',
+      '',
+      'Technique de g&eacute;n&eacute;ration d\'images respectant la norme PC, optimis&eacute;e ARM',
+      "Pr&eacute;-optimis&eacute;e et fournie directement. <span class='highlight'>Snapdragon hautement recommand&eacute;</span>"
+    ],
+    advStats: [['+30% performances'], ['-4&deg;C en jeu'], ['+15-35min batterie']],
+    dloadTitle: "T&eacute;l&eacute;charger GameHubLite <span class='plus'>Plus</span>",
+    dloadSub: 'Disponible sur Android',
+    dloadBtn: 'T&eacute;l&eacute;charger',
+    dloadNote: 'Acc&egrave;s GRATUIT',
+    footer: "GameHubLite Plus est un projet ind&eacute;pendant. Toutes les marques et logos appartiennent &agrave; leurs d&eacute;tenteurs respectifs. L'&eacute;mulation PC sur mobile est un domaine en &eacute;volution constante.",
+    footerLinks: ['Confidentialit&eacute;', 'Contact'],
+    footerCopy: '&copy; 2026 GameHubLite Plus. Tous droits r&eacute;serv&eacute;s.'
+  },
+  en: {
+    tagline: ['After GameHub', 'GameHubLite...', "Here is GameHubLite <span class='plus-highlight'>Plus</span>"],
+    subtitle: 'Next-generation PC emulation',
+    heroCta: 'Discover GameHubLite Plus',
+    nav: ['Features', 'Devices', 'Benefits', 'Download'],
+    stats: ['Advanced User', 'External Cooler Recommended', 'Performance boost', 'Battery saved'],
+    featuresTitle: "<span class='plus'>Plus</span> Features",
+    featuresSub: 'What makes GameHubLite Plus unique',
+    features: [
+      'GHLP Cores',
+      "<span class='highlight'>+30%</span> performance, <span class='highlight'>-4&deg;C</span> while gaming, <span class='plus-ref'>+15-35min</span> extra battery",
+      "Opti'FrameGen",
+      "Frame generation technology respecting PC standards while optimized for <span class='highlight'>ARM</span>",
+      'Universal Config',
+      "Pre-optimized and provided directly. <span class='highlight'>Snapdragon</span> highly recommended",
+      '*These statistics vary depending on your SoC'
+    ],
+    compatTitle: 'Compatible devices',
+    compatSub: "GameHubLite <span style='color:#FFD700'>Plus</span> works with the following brands",
+    advTitle: "GameHubLite <span class='plus'>Plus</span> advantages",
+    advItems: ['Interface in French', 'GHLP Cores', "Opti'FrameGen", 'Universal Config'],
+    advSubs: [
+      '',
+      '',
+      'Frame generation respecting PC standards, optimized for ARM',
+      "Pre-optimized and provided directly. <span class='highlight'>Snapdragon highly recommended</span>"
+    ],
+    advStats: [['+30% performance'], ['-4&deg;C while gaming'], ['+15-35min battery']],
+    dloadTitle: "Download GameHubLite <span class='plus'>Plus</span>",
+    dloadSub: 'Available on Android',
+    dloadBtn: 'Download',
+    dloadNote: 'FREE Access',
+    footer: 'GameHubLite Plus is an independent project. All trademarks and logos belong to their respective owners. PC emulation on mobile is a constantly evolving field.',
+    footerLinks: ['Privacy', 'Contact'],
+    footerCopy: '&copy; 2026 GameHubLite Plus. All rights reserved.'
+  },
+  ru: {
+    tagline: ['Posle GameHub', 'GameHubLite...', "Vot GameHubLite <span class='plus-highlight'>Plus</span>"],
+    subtitle: 'Emulyatsiya PK novogo pokoleniya',
+    heroCta: 'Otkryt GameHubLite Plus',
+    nav: ['Funktsii', 'Ustroistva', 'Preimushchestva', 'Skachat'],
+    stats: ['Prodvinutyy polzovatel', 'Rekomenduetsya vneshniy kuler', 'Prirust proizvoditelnosti', 'Ekonomiya batarei'],
+    featuresTitle: "Funktsii <span class='plus'>Plus</span>",
+    featuresSub: 'Chto delaet GameHubLite Plus unikalnym',
+    features: [
+      'GHLP Cores',
+      "<span class='highlight'>+30%</span> proizvoditelnosti, <span class='highlight'>-4&deg;C</span> vo vremya igry, <span class='plus-ref'>+15-35min</span> dopolnitelnogo vremeni batarei",
+      "Opti'FrameGen",
+      "Tekhnologiya generatsii kadrov, sootvetstvuyushchaya standartam PK i optimizirovannaya dlya <span class='highlight'>ARM</span>",
+      'Universalnaya konfiguratsiya',
+      "Predvaritelno optimizirovana. <span class='highlight'>Snapdragon</span> nastoyatelno rekomenduetsya",
+      '*Eti pokazateli zavisyat ot vashego SoC'
+    ],
+    compatTitle: 'Sovmestimye ustroistva',
+    compatSub: "GameHubLite <span style='color:#FFD700'>Plus</span> rabotaet so sleduyushchimi brendami",
+    advTitle: "Preimushchestva GameHubLite <span class='plus'>Plus</span>",
+    advItems: ['Interfeis na frantsuzskom', 'GHLP Cores', "Opti'FrameGen", 'Universalnaya konfiguratsiya'],
+    advSubs: [
+      '',
+      '',
+      'Generatsiya kadrov po standartam PK, optimizirovannaya dlya ARM',
+      "Predvaritelno optimizirovana. <span class='highlight'>Snapdragon nastoyatelno rekomenduetsya</span>"
+    ],
+    advStats: [['+30% proizvoditelnosti'], ['-4&deg;C v igre'], ['+15-35min batarei']],
+    dloadTitle: "Skachat GameHubLite <span class='plus'>Plus</span>",
+    dloadSub: 'Dostupno na Android',
+    dloadBtn: 'Skachat',
+    dloadNote: 'BESPLATNYY dostup',
+    footer: 'GameHubLite Plus - eto nezavisimyi proekt. Vse torgovye marki i logotipy prinadlezhat ikh vladeltsam. Emulyatsiya PK na mobilnykh ustroistvakh - postoyanno razvivayushchayasya oblast.',
+    footerLinks: ['Konfidentsialnost', 'Kontakt'],
+    footerCopy: '&copy; 2026 GameHubLite Plus. Vse prava zashchishcheny.'
+  },
+  es: {
+    tagline: ['Despu&eacute;s de GameHub', 'GameHubLite...', "Aqu&iacute; GameHubLite <span class='plus-highlight'>Plus</span>"],
+    subtitle: 'Emulaci&oacute;n PC de nueva generaci&oacute;n',
+    heroCta: 'Descubrir GameHubLite Plus',
+    nav: ['Funcionalidades', 'Dispositivos', 'Ventajas', 'Descargar'],
+    stats: ['Usuario avanzado', 'Enfriador Externo recomendado', 'Mejora de rendimiento', 'Bater&iacute;a ahorrada'],
+    featuresTitle: "Funcionalidades <span class='plus'>Plus</span>",
+    featuresSub: 'Lo que hace &uacute;nico a GameHubLite Plus',
+    features: [
+      'GHLP Cores',
+      "<span class='highlight'>+30%</span> rendimiento, <span class='highlight'>-4&deg;C</span> durante el juego, <span class='plus-ref'>+15-35min</span> de bater&iacute;a extra",
+      "Opti'FrameGen",
+      "Tecnolog&iacute;a de generaci&oacute;n de cuadros que respeta los est&aacute;ndares de PC optimizada para <span class='highlight'>ARM</span>",
+      'Configuraci&oacute;n Universal',
+      "Pre-optimizada y proporcionada directamente. <span class='highlight'>Snapdragon</span> altamente recomendado",
+      '*Estas estad&iacute;sticas var&iacute;an seg&uacute;n su SoC'
+    ],
+    compatTitle: 'Dispositivos compatibles',
+    compatSub: "GameHubLite <span style='color:#FFD700'>Plus</span> funciona con las siguientes marcas",
+    advTitle: "Ventajas de GameHubLite <span class='plus'>Plus</span>",
+    advItems: ['Interfaz en franc&eacute;s', 'GHLP Cores', "Opti'FrameGen", 'Configuraci&oacute;n Universal'],
+    advSubs: [
+      '',
+      '',
+      'Generaci&oacute;n de cuadros seg&uacute;n est&aacute;ndares PC, optimizada para ARM',
+      "Pre-optimizada y proporcionada. <span class='highlight'>Snapdragon altamente recomendado</span>"
+    ],
+    advStats: [['+30% rendimiento'], ['-4&deg;C en juego'], ['+15-35min bater&iacute;a']],
+    dloadTitle: "Descargar GameHubLite <span class='plus'>Plus</span>",
+    dloadSub: 'Disponible en Android',
+    dloadBtn: 'Descargar',
+    dloadNote: 'Acceso GRATIS',
+    footer: 'GameHubLite Plus es un proyecto independiente. Todas las marcas y logotipos pertenecen a sus respectivos due&ntilde;os. La emulaci&oacute;n de PC en dispositivos m&oacute;viles es un campo en constante evoluci&oacute;n.',
+    footerLinks: ['Privacidad', 'Contacto'],
+    footerCopy: '&copy; 2026 GameHubLite Plus. Todos los derechos reservados.'
+  }
+};
+
+let currentLang = 'fr';
+
+function setLanguage(lang) {
+  currentLang = lang;
+  const d = t[lang];
+
+  document.querySelectorAll('.tagline-line').forEach(el => {
+    const lines = d.tagline;
+    if (el.classList.contains('line1')) el.setAttribute('data-text', lines[0]);
+    else if (el.classList.contains('line2')) el.setAttribute('data-text', lines[1]);
+    else if (el.classList.contains('line3')) el.innerHTML = lines[2];
+  });
+  if (typeof window.renderTagline === 'function') window.renderTagline();
+
+  document.querySelector('.hero-subtitle').innerHTML = d.subtitle;
+  document.querySelector('.hero-cta').innerHTML = d.heroCta;
+
+  document.querySelectorAll('.nav-links a').forEach((a, i) => {
+    a.innerHTML = d.nav[i] || a.innerHTML;
+  });
+
+  document.querySelectorAll('.stat-label').forEach((el, i) => {
+    if (d.stats[i]) el.innerHTML = d.stats[i];
+  });
+
+  const featTitle = document.querySelector('#features .section-title');
+  if (featTitle) featTitle.innerHTML = d.featuresTitle;
+  const featSub = document.querySelector('#features .section-subtitle');
+  if (featSub) featSub.innerHTML = d.featuresSub;
+
+  const featCards = document.querySelectorAll('.feature-card');
+  featCards.forEach((card, i) => {
+    const idx = i * 2;
+    const title = card.querySelector('.feature-title');
+    const desc = card.querySelectorAll('.feature-desc');
+    if (title && d.features[idx]) title.innerHTML = d.features[idx];
+    if (desc[0] && d.features[idx + 1]) desc[0].innerHTML = d.features[idx + 1];
+    if (desc[1] && d.features[6]) desc[1].innerHTML = d.features[6];
+  });
+
+  const compatTitle = document.querySelector('#compatible .section-title');
+  if (compatTitle) compatTitle.innerHTML = d.compatTitle;
+  const compatSub = document.querySelector('#compatible .section-subtitle');
+  if (compatSub) compatSub.innerHTML = d.compatSub;
+
+  const advTitle = document.querySelector('.advantages-title');
+  if (advTitle) advTitle.innerHTML = d.advTitle;
+  const advItems = document.querySelectorAll('.advantage-item');
+  advItems.forEach((item, i) => {
+    const strong = item.querySelector('strong');
+    const sub = item.querySelector('p');
+    if (strong && d.advItems[i]) strong.innerHTML = d.advItems[i];
+    if (sub && d.advSubs[i]) sub.innerHTML = d.advSubs[i];
+    const statSpans = item.querySelectorAll('.advantage-stat');
+    statSpans.forEach((s, j) => {
+      if (d.advStats[j]) s.innerHTML = d.advStats[j][0];
+    });
+  });
+
+  const dloadTitle = document.querySelector('.download-title');
+  if (dloadTitle) dloadTitle.innerHTML = d.dloadTitle;
+  const dloadSub = document.querySelector('.download-subtitle');
+  if (dloadSub) dloadSub.innerHTML = d.dloadSub;
+  const dloadBtn = document.querySelector('.download-badge span');
+  if (dloadBtn) dloadBtn.innerHTML = d.dloadBtn;
+  const dloadNote = document.querySelector('.download-note');
+  if (dloadNote) dloadNote.innerHTML = d.dloadNote;
+
+  const footerDisc = document.querySelector('.footer-disclaimer');
+  if (footerDisc) footerDisc.innerHTML = d.footer;
+  const footerLinks = document.querySelectorAll('.footer-links a');
+  footerLinks.forEach((a, i) => {
+    if (d.footerLinks[i]) a.innerHTML = d.footerLinks[i];
+  });
+  const footerCopy = document.querySelector('footer div:last-child span');
+  if (footerCopy) footerCopy.innerHTML = d.footerCopy;
+
+  document.querySelectorAll('.lang-btn').forEach(btn => {
+    const isActive = btn.dataset.lang === lang;
+    btn.classList.toggle('active', isActive);
+    btn.setAttribute('aria-pressed', isActive ? 'true' : 'false');
+  });
+
+  document.documentElement.lang = lang;
+}
+
+function initTaglineAnimation() {
+  const line1 = document.querySelector('.tagline-line.line1');
+  const line2 = document.querySelector('.tagline-line.line2');
+  const line3 = document.querySelector('.tagline-line.line3');
+  if (!line1 || !line2 || !line3) return;
+
+  let currentTimeout = null;
+  let isAnimating = false;
+
+  function renderTagline() {
+    if (isAnimating) return;
+    isAnimating = true;
+    if (currentTimeout) { clearTimeout(currentTimeout); currentTimeout = null; }
+
+    line1.innerHTML = ''; line1.classList.remove('visible');
+    line2.innerHTML = ''; line2.classList.remove('visible');
+    line3.classList.remove('visible', 'glow-in');
+    line3.style.opacity = '0';
+
+    const text1 = line1.getAttribute('data-text') || t.fr.tagline[0];
+    const text2 = line2.getAttribute('data-text') || t.fr.tagline[1];
+
+    let i1 = 0, i2 = 0;
+
+    function typeLine1() {
+      if (i1 < text1.length) {
+        line1.innerHTML = text1.substring(0, i1 + 1) + '<span class="cursor-blink"></span>';
+        i1++;
+        currentTimeout = setTimeout(typeLine1, 60);
+      } else {
+        line1.classList.add('visible');
+        line1.innerHTML = text1;
+        currentTimeout = setTimeout(typeLine2, 400);
+      }
+    }
+
+    function typeLine2() {
+      if (i2 < text2.length) {
+        line2.innerHTML = text2.substring(0, i2 + 1) + '<span class="cursor-blink"></span>';
+        i2++;
+        currentTimeout = setTimeout(typeLine2, 80);
+      } else {
+        line2.classList.add('visible');
+        line2.innerHTML = text2;
+        currentTimeout = setTimeout(() => {
+          line3.classList.add('visible', 'glow-in');
+          line3.style.opacity = '1';
+          document.querySelector('.hero-logo').classList.add('logo-fade-in');
+          isAnimating = false;
+        }, 600);
+      }
+    }
+
+    typeLine1();
+  }
+
+  window.renderTagline = renderTagline;
+  renderTagline();
+}
+
+function initCounters() {
+  const counters = document.querySelectorAll('.stat-number');
+  let animated = false;
+
+  function animateCounters() {
+    if (animated) return;
+    animated = true;
+    counters.forEach(counter => {
+      const target = parseInt(counter.dataset.target) || 0;
+      const suffix = counter.dataset.suffix || '';
+      const duration = 2000;
+      const startTime = performance.now();
+
+      function updateCounter(currentTime) {
+        const elapsed = currentTime - startTime;
+        const progress = Math.min(elapsed / duration, 1);
+        const eased = 1 - Math.pow(1 - progress, 3);
+        const current = Math.floor(eased * target);
+        counter.textContent = current + suffix;
+        if (progress < 1) {
+          requestAnimationFrame(updateCounter);
+        } else {
+          counter.textContent = target + suffix;
+        }
+      }
+      requestAnimationFrame(updateCounter);
+    });
+  }
+
+  const statsSection = document.getElementById('stats');
+  if (!statsSection) return;
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        animateCounters();
+        observer.unobserve(statsSection);
+      }
+    });
+  }, { threshold: 0.3 });
+  observer.observe(statsSection);
+}
+
+function initScrollReveal() {
+  const revealEls = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+  revealEls.forEach(el => observer.observe(el));
+}
+
+function initParticles() {
+  const canvas = document.getElementById('particle-canvas');
+  if (!canvas) return;
+  const ctx = canvas.getContext('2d');
+  let w, h, particles = [];
+  let animFrameId = null;
+
+  function resize() {
+    w = canvas.width = window.innerWidth;
+    h = canvas.height = window.innerHeight;
+  }
+
+  class Particle {
+    constructor() { this.reset(); }
+    reset() {
+      this.x = Math.random() * w;
+      this.y = Math.random() * h;
+      this.size = Math.random() * 2 + 0.5;
+      this.speedY = -(Math.random() * 0.4 + 0.1);
+      this.speedX = (Math.random() - 0.5) * 0.15;
+      this.opacity = Math.random() * 0.4 + 0.1;
+      this.pulse = Math.random() * Math.PI * 2;
+    }
+    update() {
+      this.pulse += 0.02;
+      this.x += this.speedX;
+      this.y += this.speedY;
+      if (this.y < -10) { this.y = h + 10; this.x = Math.random() * w; }
+      if (this.x < -10 || this.x > w + 10) { this.x = Math.random() * w; }
+    }
+    draw() {
+      const pOpacity = this.opacity * (0.7 + 0.3 * Math.sin(this.pulse));
+      ctx.beginPath();
+      ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+      ctx.fillStyle = `rgba(118,185,0,${pOpacity})`;
+      ctx.fill();
+    }
+  }
+
+  function initParticleArray() {
+    const count = Math.min(120, Math.floor(w * h / 12000));
+    particles = [];
+    for (let i = 0; i < count; i++) particles.push(new Particle());
+  }
+
+  function animate() {
+    ctx.clearRect(0, 0, w, h);
+    particles.forEach(p => { p.update(); p.draw(); });
+    animFrameId = requestAnimationFrame(animate);
+  }
+
+  resize();
+  initParticleArray();
+  animate();
+
+  let resizeTimer;
+  window.addEventListener('resize', () => {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(() => { resize(); initParticleArray(); }, 250);
+  });
+
+  window.addEventListener('beforeunload', () => {
+    if (animFrameId) cancelAnimationFrame(animFrameId);
+  });
+}
+
+function initStickyNav() {
+  const nav = document.getElementById('sticky-nav');
+  const hero = document.getElementById('hero');
+  const hamburger = document.getElementById('hamburger');
+  const navLinks = document.getElementById('navLinks');
+  let lastY = 0, ticking = false;
+
+  if (!nav || !hero) return;
+
+  function updateNav() {
+    const scrollY = window.scrollY;
+    const heroBottom = hero.offsetHeight;
+    if (scrollY > heroBottom - 80) {
+      if (scrollY > lastY && scrollY > heroBottom) nav.classList.add('hidden');
+      else nav.classList.remove('hidden');
+    } else {
+      nav.classList.remove('hidden');
+    }
+    lastY = scrollY;
+    ticking = false;
+  }
+
+  window.addEventListener('scroll', () => {
+    if (!ticking) { requestAnimationFrame(updateNav); ticking = true; }
+  }, { passive: true });
+
+  if (hamburger && navLinks) {
+    hamburger.addEventListener('click', () => {
+      const isOpen = navLinks.classList.toggle('open');
+      hamburger.classList.toggle('active', isOpen);
+      hamburger.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    });
+    navLinks.querySelectorAll('a').forEach(a => {
+      a.addEventListener('click', () => {
+        navLinks.classList.remove('open');
+        hamburger.classList.remove('active');
+        hamburger.setAttribute('aria-expanded', 'false');
+      });
+    });
+  }
+}
+
+function initLangSwitcher() {
+  document.querySelectorAll('.lang-btn').forEach(btn => {
+    btn.addEventListener('click', () => setLanguage(btn.dataset.lang));
+  });
+}
+
+function initSmoothScroll() {
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+      const target = document.querySelector(a.getAttribute('href'));
+      if (target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth' }); }
+    });
+  });
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  setLanguage('fr');
+  initParticles();
+  initTaglineAnimation();
+  initStickyNav();
+  initLangSwitcher();
+  initCounters();
+  initScrollReveal();
+  initSmoothScroll();
+});
+})();
+</script>
+</body>
+</html>
