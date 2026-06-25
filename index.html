@@ -87,8 +87,8 @@ img{max-width:100%;height:auto;display:block}
   margin-bottom:2rem;
   display:flex;align-items:center;justify-content:center;gap:1rem;
 }
-.hero-logo img{height:230px;width:auto;filter:drop-shadow(0 0 20px rgba(118,185,0,0.3))}
-@media(max-width:768px){.hero-logo img{height:176px}}
+.hero-logo img{height:177px;width:auto;filter:drop-shadow(0 0 20px rgba(118,185,0,0.3))}
+@media(max-width:768px){.hero-logo img{height:135px}}
 .hero-logo-text{
   font-family:'Space Grotesk',sans-serif;
   font-size:3.5rem;font-weight:700;color:#fff;
@@ -414,7 +414,7 @@ img{max-width:100%;height:auto;display:block}
   color:#999;font-size:1rem;margin-bottom:2.5rem;
 }
 .download-badge{
-  display:inline-flex;align-items:center;gap:0.8rem;
+  display:inline-grid;grid-template-columns:auto 1fr;align-items:center;gap:0.8rem;
   padding:1rem 2.5rem;
   background:linear-gradient(135deg,#ff4500,#cc3700);
   color:#fff;font-family:'Space Grotesk',sans-serif;
@@ -424,6 +424,7 @@ img{max-width:100%;height:auto;display:block}
   transition:all 0.3s;
   box-shadow:0 0 30px rgba(255,69,0,0.2);
 }
+.download-badge span{text-align:center}
 .download-badge:hover{
   transform:translateY(-3px);
   box-shadow:0 0 50px rgba(255,69,0,0.35);
@@ -585,7 +586,7 @@ footer{
       <span class="logo-name">RedMagic</span>
     </div>
     <div class="logo-card reveal reveal-delay-2">
-      <div class="logo-wrapper"><img src="assets/images/iqoo-logo.png" alt="iQOO" loading="lazy" style="filter:invert(1);height:22px;display:block;margin:0 auto;"></div>
+      <div class="logo-wrapper"><img src="assets/images/iqoo-logo.png" alt="iQOO" loading="lazy" style="filter:invert(1);height:32px;display:block;margin:0 auto;"></div>
       <span class="logo-name">iQOO</span>
     </div>
     <div class="logo-card reveal reveal-delay-1">
@@ -662,7 +663,7 @@ footer{
       <h2 class="download-title" data-fr="T&eacute;l&eacute;charger GameHubLite <span class='plus'>Plus</span>" data-en="Download GameHubLite <span class='plus'>Plus</span>" data-ru="Skachat GameHubLite <span class='plus'>Plus</span>" data-es="Descargar GameHubLite <span class='plus'>Plus</span>">T&eacute;l&eacute;charger GameHubLite <span class="plus">Plus</span></h2>
       <p class="download-subtitle" data-fr="Disponible sur Android" data-en="Available on Android" data-ru="Dostupno na Android" data-es="Disponible en Android">Disponible sur Android</p>
       <a href="#" class="download-badge" role="button" aria-label="Download GameHubLite Plus">
-        <img src="assets/images/android-logo.png" alt="Android" style="height:38px;width:auto">
+        <img src="assets/images/android-logo.png" alt="Android" style="height:49px;width:auto">
         <span data-fr="T&eacute;l&eacute;charger" data-en="Download" data-ru="Skachat" data-es="Descargar">T&eacute;l&eacute;charger</span>
       </a>
       <p class="download-note" data-fr="Acc&egrave;s GRATUIT" data-en="FREE Access" data-ru="BESPLATNYY dostup" data-es="Acceso GRATIS" style="text-align:center">Acc&egrave;s GRATUIT</p>
