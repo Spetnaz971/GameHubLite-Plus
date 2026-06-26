@@ -7,7 +7,7 @@
   <a href="#"><img src="https://img.shields.io/badge/OS-Android_14%2B-3DDC84?style=for-the-badge&logo=android&logoColor=white" alt="Android"></a>
   <a href="#"><img src="https://img.shields.io/badge/Root-Non_Requis-success?style=for-the-badge" alt="No Root"></a>
   <a href="#"><img src="https://img.shields.io/badge/Langue-FR-0055A4?style=for-the-badge" alt="Français"></a>
-  <a href="#"><img src="https://img.shields.io/badge/Téléchargements-77k-orange?style=for-the-badge" alt="Téléchargements"></a>
+  <a href="#"><img src="https://img.shields.io/badge/Téléchargements-7k-orange?style=for-the-badge" alt="Téléchargements"></a>
 </p>
 
 # GameHubLite-Plus
