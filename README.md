@@ -144,7 +144,7 @@ J'ai volontairement ajouté uniquement le mot **"Plus"** au nom de mon projet ca
 > 
 
 ### 📥 Où puis-je télécharger GameHubLite Plus ?
-Simplement sur notre serveur Discord officiel, accessible sur le site ! 
+Simplement sur notre serveur Discord officiel, accessible sur le [site](https://spetnaz971.github.io/GameHubLite-Plus/) ! 
 
 ## 📜 Propriété Intellectuelle, Crédits et Avertissement Légal
 
