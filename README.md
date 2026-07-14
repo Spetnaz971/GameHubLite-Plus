@@ -19,7 +19,7 @@ Il hérite de tous les avantages de [GameHub Lite](https://github.com/Producdevi
 * 🔒 **Confidentialité et Liberté :** Suppression des 31 permissions invasives, pas de login obligatoire et fonctionnement 100% hors ligne.
 * 🪶 **Poids Plume :** Taille de l'APK réduite de 114 Mo à environ 50 Mo.
 
-🆙 **Performances et Stabilité**
+🆙 **Performances et Stabilité** :
 GHLP a été conçu pour offrir une stabilité supérieures à celles des solutions équivalentes du marché, grâce à un moteur de reconnaissance native propriétaire, une gestion thermique proactive et une allocation dynamique des ressources CPU/GPU/RAM. Résultat : moins de saccades, une meilleure tenue des fréquences dans la durée, et une stabilité qui se maintient même lors de sessions de jeu prolongées, là où des solutions plus génériques montrent rapidement leurs limites.
 
 ---
