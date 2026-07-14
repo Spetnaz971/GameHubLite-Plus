@@ -21,6 +21,7 @@ Il hérite de tous les avantages de [GameHub Lite](https://github.com/Producdevi
 
 🆙 **Performances et Stabilité** :
 GHLP a été conçu pour offrir plus de stabilité , grâce à un moteur de reconnaissance native propriétaire, une gestion thermique proactive et une allocation dynamique des ressources CPU/GPU/RAM.
+
 Résultat : moins de saccades, une meilleure tenue des fréquences dans la durée, et une stabilité qui se maintient même lors de sessions de jeu prolongées.
 
 ---
