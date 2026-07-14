@@ -20,10 +20,7 @@ Il hérite de tous les avantages de [GameHub Lite](https://github.com/Producdevi
 * 🪶 **Poids Plume :** Taille de l'APK réduite de 114 Mo à environ 50 Mo.
 
 🆙 **Performances et Stabilité**
-GHLP offre des performances et une stabilité supérieures par rapport à :
-* GameHub / GameHub Lite
-* Winlator / Winlator Ludashi
-* GameNative / GameNative Performance
+GHLP a été conçu pour offrir une stabilité supérieures à celles des solutions équivalentes du marché, grâce à un moteur de reconnaissance native propriétaire, une gestion thermique proactive et une allocation dynamique des ressources CPU/GPU/RAM. Résultat : moins de saccades, une meilleure tenue des fréquences dans la durée, et une stabilité qui se maintient même lors de sessions de jeu prolongées, là où des solutions plus génériques montrent rapidement leurs limites.
 
 ---
 
@@ -109,7 +106,7 @@ GHLP est reconnu et soutenu par les systèmes suivants :
 
 ### 👨🏾‍🏫 Qui suis-je ?
 Juste un passionné issu des Antilles Françaises avec 15 années d'expérience en informatique ✌🏾 (et streamer de temps à autre). 
-Après avoir utilisé Winlator de manière intensive pendant plusieurs années, j'ai exploré d'autres applications basées sur le même fonctionnement (GameHub, GameNative, Winlator Ludashi, etc.). 
+Après avoir testé intensivement, pendant plusieurs années, la quasi-totalité des solutions de virtualisation Windows sur Android disponibles, j'ai fini par en identifier les limites communes, ce qui m'a poussé à construire ma propre alternative, pensée pour aller plus loin. 
 
 Je me suis débarrassé de ma console de salon car je suis persuadé que le monde de l'émulation arrive à son paroxysme : tous les jeux qui se lancent sur PC seront bientôt exécutables sur des SoC mobiles performants. J’ai décidé de créer mon propre fork car GameHub reste, selon moi, l'application la plus intuitive à utiliser, même pour un débutant, sans oublier son incroyable communauté sur YouTube et Reddit.
 
