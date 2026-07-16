@@ -155,6 +155,7 @@ Ce projet est distribué gratuitement, à but non lucratif, et ne génère aucun
 * **GameHubLite :** [Python](https://github.com/) (Créateur original) et [Producdevity](https://github.com/Producdevity/gamehub-lite) (Responsable actuel).
 * **Intégration Epic :** [L'équipe GameNative](https://github.com/utkarshdalal/GameNative). La pipeline de la boutique, le flux d'authentification, l'architecture de téléchargement et la synchronisation de la bibliothèque sont basés sur leurs recherches et leur implémentation .
 * **Gestionnaire de Composants :** Inspiré de la technique de [The412Banner](https://github.com/The412Banner).
+* **GameHubLite Plus v6.0.4 :** Basée sur les recherches de [Bannerhub v6](https://github.com/The412Banner/bannerhub-revanced/releases/tag/v1.1.0-608).
 * **Outils d'émulation et Pilotes :** Les couches de compatibilité (Wine, Proton, DXVK, VKD3D, Box64, FEXCore) ainsi que les pilotes GPU tiers demeurent la propriété stricte de leurs créateurs respectifs et sont régis par leurs propres licences libres d'origine.
 
 **3. Clause de non-responsabilité (As-is)**
