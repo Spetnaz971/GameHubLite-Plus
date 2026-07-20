@@ -20,7 +20,7 @@ Il hérite de tous les avantages de [GameHub Lite](https://github.com/Producdevi
 * 🪶 **Poids Plume :** Taille de l'APK réduite de 114 Mo à environ 50 Mo.
 
 🆙 **Performances et Stabilité** :
-GHLP a été conçu pour offrir plus de stabilité , grâce à un moteur de reconnaissance native propriétaire, une gestion thermique proactive et une allocation dynamique des ressources CPU/GPU/RAM.
+GHLP a été conçu pour offrir plus de stabilité , grâce à un moteur de reconnaissance native propriétaire et une allocation dynamique des ressources CPU/GPU/RAM.
 
 Résultat : moins de saccades, une meilleure tenue des fréquences dans la durée, et une stabilité qui se maintient même lors de sessions de jeu prolongées.
 
@@ -68,7 +68,6 @@ Android traite **NATIVEMENT** GHLP comme un jeu vidéo AAA :
 * **Priorité Native :** Appliquée aux threads exécutés dynamiquement.
 * **Liberté de Framerate :** Empêche Android d'imposer son propre cap de FPS par-dessus l'environnement Wine-Proton.
 * **Cadencement Fluide :** Micro-ajustements dynamiques continus qui réduisent drastiquement les saccades et la latence.
-* **Gestion Thermique Améliorée :** Contrôle progressif de la température avec ajustement automatique de la cible (45 FPS à chaud, 60 FPS à froid) pour éviter le *thermal throttling* brutal.
 * **Efficacité Énergétique :** Optimisation réduisant la consommation de la batterie et prolongeant vos sessions de jeu.
 
 ### 🖼️ Opti'Frame Generation
