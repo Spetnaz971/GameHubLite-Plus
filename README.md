@@ -45,9 +45,10 @@ Résultat : moins de saccades, une meilleure tenue des fréquences dans la duré
 
 ## 📦 Versions Disponibles
 
-GameHubLite Plus est proposé en deux déclinaisons distinctes pour s'adapter au mieux à votre appareil :
+GameHubLite Plus est proposé en trois déclinaisons distinctes pour s'adapter au mieux à votre appareil :
 
 * 🌍 **Version Globale :** Conçue pour tous les modèles de smartphones possédant au moins la **Configuration MINIMALE** requise. Elle offre une compatibilité universelle et stable.
+* 🌡️ **Version AnTuTu :** C'est la même version que la Globale, à la différence que le nom du package *com.antutu.ABenchMark* y a été remplacé, permettant au matériel de débrider ses limitations matérielles afin de stimuler les résultats d'un benchmark.
 * 🔴 **Version REDMAGIC :** Exclusivement développée et optimisée pour les utilisateurs d'appareils **REDMAGIC**. Cette version dédiée débloque le plein potentiel du matériel en intégrant des fonctionnalités avancées comme l'**AI Frame Generation**, la **Super Resolution**, et des optimisations exclusives au système.
    
 ---
