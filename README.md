@@ -82,7 +82,7 @@ GameHubLite Plus est proposé en trois déclinaisons pour s'adapter au mieux à 
 <a id="fonctionnalités-exclusives"></a>
 ## ➕ Fonctionnalités exclusives à GHLP
 
-* 🇫🇷 **Interface :** traduite en français à 95 %.
+* 🇫🇷 **Interface :** traduite en français à 95%.
 * 📝 **Correction :** prise en compte de la régression des performances (GH 5.3.X).
 * 🚀 **VRAM étendue :** augmentation de la limite de VRAM allouée (6, 8, 12 et 16 Go).
 * 🎮 **Boutique en ligne :** accès direct à la bibliothèque Epic Games Store.
