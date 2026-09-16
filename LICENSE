@@ -1,0 +1,35 @@
+GameHubLite Plus (GHLP) — Software License
+
+Copyright (c) 2026 SpetNaz971. All rights reserved.
+
+1. Proprietary Code
+
+The modules, scripts, optimization engines, and algorithms developed specifically for GameHubLite Plus — including but not limited to "GHLP Cores" and "Opti'FrameGen" — are the exclusive intellectual property of SpetNaz971.
+
+Any extraction, decompilation, reverse engineering, modification, or redistribution of these specific components, whether for public or commercial purposes, is strictly prohibited without prior written authorization from the copyright holder.
+
+2. Third-Party Components
+
+GameHub and GameHub-Lite remain the property of their respective creators and are not covered by this license.
+
+Compatibility layers and drivers (Wine, Proton, DXVK, VKD3D, Box64, FEXCore) remain governed by their own original licenses (LGPL, MIT, or other, as applicable), which continue to apply in full to those components.
+
+3. Access to Documentation and Presentation Materials
+
+The repository's documentation and presentation materials (including the README and associated web pages) may be consulted and referenced for informational purposes. This does not extend any right to use, reproduce, or redistribute the proprietary code described in Section 1.
+
+4. Source Code Availability
+
+The application's source code is not publicly distributed. It may be communicated on a case-by-case basis, at the sole discretion of SpetNaz971, upon request through the project's official Discord server. Any such disclosure does not constitute a grant of license, and the restrictions set out in Section 1 continue to apply to any code shared under this provision.
+
+5. Disclaimer of Warranty and Limitation of Liability
+
+GameHubLite Plus is provided "AS IS", without warranty of any kind, express or implied, including but not limited to warranties of merchantability, fitness for a particular purpose, and non-infringement. The software is intended for experienced ("power") users.
+
+In no event shall SpetNaz971 be liable for any damages, including but not limited to hardware damage (SoC overheating, battery degradation, screen burn-in), data loss, or any other direct, indirect, incidental, or consequential damages arising from the use or inability to use this software. Use of this software is entirely at the user's own risk.
+
+6. No Waiver
+
+Failure to enforce any provision of this license shall not be construed as a waiver of that provision or of any other provision.
+
+Contact: https://github.com/Spetnaz971

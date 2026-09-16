@@ -169,7 +169,7 @@ Voir la section [Téléchargement](#téléchargement) ci-dessous.
 
 GameHubLite Plus est distribué via notre serveur Discord officiel, accessible depuis le [site du projet](https://spetnaz971.github.io/GameHubLite-Plus/).
 
-Le code source de l'application est communicable sur demande via ce même Discord, dans les conditions décrites dans le fichier [`LICENSE-PROPRIETARY.md`](LICENSE-PROPRIETARY.md) (section 4).
+Le code source de l'application est communicable sur demande via ce même Discord, dans les conditions décrites dans le fichier [`LICENSE`](LICENSE) (section 4).
 
 ---
 
@@ -182,8 +182,7 @@ Le code source de l'application est communicable sur demande via ce même Discor
 | `docs/HTML` | Documentation HTML complémentaire (pages de présentation détaillées du projet) |
 | `assets/images` | Ressources visuelles utilisées par le site et la documentation (captures d'écran, icônes, illustrations) |
 | `README.md` | Documentation principale du projet |
-| [`LICENSE`](LICENSE) | Licence MIT — couvre la documentation et les éléments de présentation du dépôt |
-| [`LICENSE-PROPRIETARY.md`](LICENSE-PROPRIETARY.md) | Tous droits réservés — GHLP Cores, Opti'FrameGen et conditions d'accès au code source sur demande |
+| [`LICENSE`](LICENSE) | Licence propriétaire — Tous droits réservés (GHLP Cores, Opti'FrameGen), composants tiers sous licences d'origine, conditions d'accès au code source sur demande |
 | `Logo_GHL+_v3.png` | Bannière/logo du projet |
 | `GHLP_Cores_by-SpetNaz971.html` | Page de présentation détaillée du moteur GHLP Cores |
 
@@ -192,7 +191,7 @@ Le code source de l'application est communicable sur demande via ce même Discor
 <a id="propriété-intellectuelle-crédits-et-avertissement-légal"></a>
 ## 📜 Propriété intellectuelle, crédits et avertissement légal
 
-> 📄 Les termes légaux complets et formels sont disponibles à la racine du dépôt : [`LICENSE`](LICENSE) (licence MIT pour la documentation/présentation) et [`LICENSE-PROPRIETARY.md`](LICENSE-PROPRIETARY.md) (droits réservés pour GHLP Cores et Opti'FrameGen, et conditions de consultation du code source sur demande).
+> 📄 Les termes légaux complets et formels sont disponibles à la racine du dépôt : [`LICENSE`](LICENSE) — licence propriétaire couvrant les droits réservés sur GHLP Cores et Opti'FrameGen, le statut des composants tiers, et les conditions de consultation du code source sur demande.
 
 **1. Droits d'auteur spécifiques (tous droits réservés)**
 Les implémentations, scripts et algorithmes développés spécifiquement pour **GameHubLite Plus**, notamment les moteurs **GHLP Cores** et la technologie **Opti'FrameGen**, sont la propriété intellectuelle exclusive de leur auteur ([SpetNaz971](https://github.com/Spetnaz971)). Toute extraction, rétro-ingénierie, reproduction ou réutilisation de ce code à des fins publiques ou commerciales est strictement interdite sans autorisation explicite préalable.
