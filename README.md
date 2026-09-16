@@ -8,7 +8,6 @@
   <a href="#"><img src="https://img.shields.io/badge/Root-Non_Requis-success?style=for-the-badge" alt="No Root"></a>
   <a href="#"><img src="https://img.shields.io/badge/Langue-FR-0055A4?style=for-the-badge" alt="Français"></a>
   <a href="#"><img src="https://img.shields.io/badge/Téléchargements-8k-orange?style=for-the-badge" alt="Téléchargements"></a>
-  <a href="LICENSE-PROPRIETARY.md"><img src="https://img.shields.io/badge/GHLP_Cores_%26_Opti'FrameGen-Propriétaire-orange?style=for-the-badge" alt="Licence propriétaire"></a>
 </p>
 
 <h1 align="center">GameHubLite-Plus</h1>
