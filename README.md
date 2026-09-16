@@ -7,7 +7,8 @@
   <a href="#"><img src="https://img.shields.io/badge/OS-Android_14%2B-3DDC84?style=for-the-badge&logo=android&logoColor=white" alt="Android"></a>
   <a href="#"><img src="https://img.shields.io/badge/Root-Non_Requis-success?style=for-the-badge" alt="No Root"></a>
   <a href="#"><img src="https://img.shields.io/badge/Langue-FR-0055A4?style=for-the-badge" alt="Français"></a>
-  <a href="LICENSE"><img src="https://img.shields.io/badge/Licence-MIT_%2B_Propriétaire-blue?style=for-the-badge" alt="Licence mixte"></a>
+  <a href="#"><img src="https://img.shields.io/badge/Téléchargements-8k-orange?style=for-the-badge" alt="Téléchargements"></a>
+  <a href="LICENSE-PROPRIETARY.md"><img src="https://img.shields.io/badge/GHLP_Cores_%26_Opti'FrameGen-Propriétaire-orange?style=for-the-badge" alt="Licence propriétaire"></a>
 </p>
 
 <h1 align="center">GameHubLite-Plus</h1>
@@ -169,7 +170,7 @@ Voir la section [Téléchargement](#téléchargement) ci-dessous.
 
 GameHubLite Plus est distribué via notre serveur Discord officiel, accessible depuis le [site du projet](https://spetnaz971.github.io/GameHubLite-Plus/).
 
-Le code source de l'application est communicable sur demande via ce même Discord, dans les conditions décrites dans le fichier [`LICENSE`](LICENSE) (section 4).
+Le code source de l'application est communicable sur demande via ce même Discord, dans les conditions décrites dans le fichier [`LICENSE-PROPRIETARY.md`](LICENSE-PROPRIETARY.md) (section 4).
 
 ---
 
@@ -182,7 +183,8 @@ Le code source de l'application est communicable sur demande via ce même Discor
 | `docs/HTML` | Documentation HTML complémentaire (pages de présentation détaillées du projet) |
 | `assets/images` | Ressources visuelles utilisées par le site et la documentation (captures d'écran, icônes, illustrations) |
 | `README.md` | Documentation principale du projet |
-| `LICENSE` | Licence mixte : MIT pour la documentation/présentation, tous droits réservés pour GHLP Cores et Opti'FrameGen |
+| [`LICENSE`](LICENSE) | Licence MIT — couvre la documentation et les éléments de présentation du dépôt |
+| [`LICENSE-PROPRIETARY.md`](LICENSE-PROPRIETARY.md) | Tous droits réservés — GHLP Cores, Opti'FrameGen et conditions d'accès au code source sur demande |
 | `Logo_GHL+_v3.png` | Bannière/logo du projet |
 | `GHLP_Cores_by-SpetNaz971.html` | Page de présentation détaillée du moteur GHLP Cores |
 
@@ -191,7 +193,7 @@ Le code source de l'application est communicable sur demande via ce même Discor
 <a id="propriété-intellectuelle-crédits-et-avertissement-légal"></a>
 ## 📜 Propriété intellectuelle, crédits et avertissement légal
 
-> 📄 Les termes légaux complets et formels sont disponibles dans le fichier [`LICENSE`](LICENSE) à la racine du dépôt (licence MIT pour la documentation/présentation, droits réservés pour GHLP Cores et Opti'FrameGen, et conditions de consultation du code source sur demande).
+> 📄 Les termes légaux complets et formels sont disponibles à la racine du dépôt : [`LICENSE`](LICENSE) (licence MIT pour la documentation/présentation) et [`LICENSE-PROPRIETARY.md`](LICENSE-PROPRIETARY.md) (droits réservés pour GHLP Cores et Opti'FrameGen, et conditions de consultation du code source sur demande).
 
 **1. Droits d'auteur spécifiques (tous droits réservés)**
 Les implémentations, scripts et algorithmes développés spécifiquement pour **GameHubLite Plus**, notamment les moteurs **GHLP Cores** et la technologie **Opti'FrameGen**, sont la propriété intellectuelle exclusive de leur auteur ([SpetNaz971](https://github.com/Spetnaz971)). Toute extraction, rétro-ingénierie, reproduction ou réutilisation de ce code à des fins publiques ou commerciales est strictement interdite sans autorisation explicite préalable.
