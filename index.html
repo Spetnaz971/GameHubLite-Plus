@@ -182,6 +182,12 @@ svg.i{width:1rem;height:1rem;flex:none;fill:none;stroke:currentColor;stroke-widt
   font-size:clamp(2rem,5.4vw,4.75rem);
 }
 .hero-title>span{display:block;overflow-wrap:break-word}
+.tw-caret{display:inline-block;width:0;height:0;position:relative}
+.tw-caret::after{
+  content:"";position:absolute;left:.03em;bottom:-.02em;width:.075em;height:.78em;
+  background:#ffc832;animation:tw-blink 1s linear infinite;
+}
+@keyframes tw-blink{0%,49%{opacity:1}50%,100%{opacity:0}}
 .hero-sub{margin-top:1.5rem;max-width:28rem;font-size:.875rem;line-height:1.7;color:rgba(255,255,255,.7)}
 .hero-sub strong{color:#fff;font-weight:700}
 @media(min-width:640px){.hero-sub{font-size:1rem}}
@@ -849,11 +855,69 @@ function initNav() {
   window.matchMedia('(min-width: 1200px)').addEventListener('change', e => { if (e.matches) setMenu(false); });
 }
 
+function initTypewriter() {
+  const KEY = 'ghlp_intro_seen';
+  const title = document.querySelector('.hero-title');
+  if (!title || reduceMotion) return;
+  try { if (localStorage.getItem(KEY)) return; } catch (e) {}
+  try { localStorage.setItem(KEY, '1'); } catch (e) {}
+
+  const lines = Array.from(title.children);
+  const originals = lines.map(l => l.innerHTML);
+  const segs = [];
+  lines.forEach((line, li) => {
+    const walker = document.createTreeWalker(line, NodeFilter.SHOW_TEXT);
+    const nodes = [];
+    while (walker.nextNode()) nodes.push(walker.currentNode);
+    nodes.forEach(n => {
+      if (!n.nodeValue) return;
+      const on = document.createElement('span');
+      const off = document.createElement('span');
+      off.style.visibility = 'hidden';
+      off.textContent = n.nodeValue;
+      n.replaceWith(on, off);
+      segs.push({ on, off, text: n.nodeValue, line: li });
+    });
+  });
+  if (!segs.length) return;
+
+  title.setAttribute('aria-live', 'off');
+  const caret = document.createElement('span');
+  caret.className = 'tw-caret';
+  caret.setAttribute('aria-hidden', 'true');
+  segs[0].off.before(caret);
+
+  let seg = 0, i = 0;
+  function finish() {
+    if (!segs[0].on.isConnected) return;
+    lines.forEach((l, k) => { l.innerHTML = originals[k]; });
+    title.setAttribute('aria-live', 'polite');
+  }
+  function tick() {
+    if (!segs[0].on.isConnected) return; /* langue changee pendant l'animation */
+    const s = segs[seg];
+    i++;
+    s.on.textContent = s.text.slice(0, i);
+    s.off.textContent = s.text.slice(i);
+    let delay = 25 + Math.random() * 30;
+    if (s.text[i - 1] === '.') delay += 110;
+    if (i >= s.text.length) {
+      seg++; i = 0;
+      if (seg >= segs.length) { setTimeout(finish, 1000); return; }
+      segs[seg].off.before(caret);
+      if (segs[seg].line !== s.line) delay += 220;
+    }
+    setTimeout(tick, delay);
+  }
+  setTimeout(tick, 700);
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   initLangSwitcher();
   initVideo();
   initCounters();
   initNav();
+  initTypewriter();
 });
 })();
 </script>
