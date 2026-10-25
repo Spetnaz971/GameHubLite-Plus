@@ -202,9 +202,49 @@ button,a{touch-action:manipulation;-webkit-tap-highlight-color:transparent}
   .card{background:linear-gradient(145deg,rgba(28,28,28,.9),rgba(16,16,16,.9))}
   .card:hover,.ecard:hover,.mcard:hover{transform:none;box-shadow:none;border-color:rgba(255,255,255,.06)}
 }
+
+/* ===== Enhancements : Lenis / GSAP / effets inspires de React Bits ===== */
+html.lenis,html.lenis body{height:auto}
+.lenis.lenis-smooth{scroll-behavior:auto!important}
+.lenis.lenis-smooth [data-lenis-prevent]{overscroll-behavior:contain}
+.lenis.lenis-stopped{overflow:clip}
+.lenis.lenis-smooth iframe{pointer-events:none}
+
+/* Barre de progression */
+.progress{position:fixed;top:0;left:0;right:0;height:2px;z-index:60;pointer-events:none}
+.progress span{display:block;height:100%;width:100%;transform-origin:0 50%;transform:scaleX(0);
+  background:linear-gradient(90deg,hsl(var(--primary)/.2),hsl(var(--primary)));box-shadow:0 0 12px hsl(var(--primary)/.7)}
+
+/* ShinyText sur les "Plus" (esprit React Bits) */
+@keyframes shine{0%{background-position:160% 0}100%{background-position:-60% 0}}
+.nlogo .pl,.flogo a span[style*="ffc832"]{
+  background:linear-gradient(110deg,#ffc832 0%,#ffc832 42%,#fff3c4 50%,#ffc832 58%,#ffc832 100%);
+  background-size:260% 100%;
+  -webkit-background-clip:text;background-clip:text;
+  color:transparent!important;-webkit-text-fill-color:transparent;
+  animation:shine 5s linear infinite;
+}
+@media(prefers-reduced-motion:reduce){
+  .nlogo .pl,.flogo a span[style*="ffc832"]{animation:none;background:none;color:#ffc832!important;-webkit-text-fill-color:#ffc832}
+}
+
+/* SpotlightCard (esprit React Bits) : halo vert qui suit le curseur */
+.card,.ecard,.mcard,.rcard,.vitem,.cwrap{position:relative;isolation:isolate}
+.card::after,.ecard::after,.mcard::after,.rcard::after,.vitem::after,.cwrap::after{
+  content:"";position:absolute;inset:0;border-radius:inherit;z-index:-1;pointer-events:none;
+  background:radial-gradient(300px circle at var(--mx,50%) var(--my,50%),hsl(var(--primary)/.11),transparent 70%);
+  opacity:0;transition:opacity .35s;
+}
+@media(hover:hover) and (pointer:fine){
+  .card:hover::after,.ecard:hover::after,.mcard:hover::after,.rcard:hover::after,.vitem:hover::after,.cwrap:hover::after{opacity:1}
+}
+
+/* Parallaxe du hero */
+.hero .scene{transform-origin:50% 50%;will-change:transform}
 </style>
 </head>
 <body>
+<div class="progress" aria-hidden="true"><span></span></div>
 <canvas id="particle-canvas"></canvas>
 <nav class="nav fi" id="nav" style="animation-delay:.1s">
 <a class="nlogo" href="#top">GameHubLite <span class="pl" style="color:#ffc832">Plus</span> <span class="core">— GHLP Cores</span></a>
@@ -709,8 +749,8 @@ function armBars(panel) {
     var pt = parseFloat(getComputedStyle(content).paddingTop) || 0;
     return Math.max(0, content.getBoundingClientRect().top + window.scrollY + pt - nav.offsetHeight - 16);
   }
-  function jump(y) { root.style.scrollBehavior = 'auto'; window.scrollTo(0, y); root.style.scrollBehavior = ''; }
-  function glide(y) { if (mqReduce.matches) jump(y); else window.scrollTo({ top: y, behavior: 'smooth' }); }
+  function jump(y) { if (window.__lenis) { window.__lenis.scrollTo(y, { immediate: true, force: true }); return; } root.style.scrollBehavior = 'auto'; window.scrollTo(0, y); root.style.scrollBehavior = ''; }
+  function glide(y) { if (mqReduce.matches) jump(y); else if (window.__lenis) window.__lenis.scrollTo(y, { duration: 1.1 }); else window.scrollTo({ top: y, behavior: 'smooth' }); }
 
   // Recentre l'onglet actif dans la rangée défilante (mobile)
   function centerTab(btn) {
@@ -788,6 +828,148 @@ function initSpline(){
   }).catch(function(e){console.warn('Spline background failed',e)});
 }
 (function(){var go=function(){(window.requestIdleCallback||function(f){setTimeout(f,200)})(initSpline,{timeout:2000})};if(document.readyState==='complete')go();else window.addEventListener('load',go);})();
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.3.27/dist/lenis.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js" defer></script>
+<script>
+/* Enhancements : Lenis + GSAP/ScrollTrigger + effets inspires de React Bits.
+   Optionnel : si une librairie ne charge pas, la page se comporte exactement comme avant. */
+(function(){
+'use strict';
+
+function enhance(){
+  var hasGsap = typeof window.gsap !== 'undefined' && typeof window.ScrollTrigger !== 'undefined';
+  var hasLenis = typeof window.Lenis !== 'undefined';
+  var fine = window.matchMedia('(hover:hover) and (pointer:fine)').matches;
+
+  /* ---- Spotlight : delegation, sans librairie ---- */
+  if (fine) {
+    var SPOT = '.card,.ecard,.mcard,.rcard,.vitem,.cwrap';
+    document.addEventListener('pointermove', function(e){
+      var el = e.target.closest && e.target.closest(SPOT);
+      if (!el) return;
+      var r = el.getBoundingClientRect();
+      el.style.setProperty('--mx', (e.clientX - r.left) + 'px');
+      el.style.setProperty('--my', (e.clientY - r.top) + 'px');
+    }, { passive: true });
+  }
+
+  /* ---- Barre de progression ---- */
+  var bar = document.querySelector('.progress span');
+  function setProgress(){
+    if (!bar) return;
+    var max = document.documentElement.scrollHeight - window.innerHeight;
+    var p = max > 0 ? Math.min(1, Math.max(0, window.scrollY / max)) : 0;
+    bar.style.transform = 'scaleX(' + p + ')';
+  }
+  window.addEventListener('scroll', setProgress, { passive: true });
+  window.addEventListener('resize', setProgress);
+  setProgress();
+
+  /* ---- Lenis ---- */
+  var lenis = null;
+  if (hasLenis) {
+    lenis = new Lenis({ autoRaf: !hasGsap, lerp: 0.1, wheelMultiplier: 1 });
+    window.__lenis = lenis;   /* utilise par jump()/glide() de la navigation par onglets */
+  }
+
+  if (!hasGsap) return;
+
+  gsap.registerPlugin(ScrollTrigger);
+  ScrollTrigger.config({ ignoreMobileResize: true });
+
+  if (lenis) {
+    lenis.on('scroll', ScrollTrigger.update);
+    gsap.ticker.add(function(time){ lenis.raf(time * 1000); });
+    gsap.ticker.lagSmoothing(0);
+  }
+
+  var REVEAL = '.stitle,.ssub,.sdiv,h3,.card:not(.proc-card),.cp,.egrid .ecard,.mrow .mcard,.cwrap,.st tbody tr,.vitem,.rcard,.fitem,#sdCards,#mtkCards,#exynosCards';
+  var COUNT = '.cc .bn,.mcard .mv';
+
+  function firstText(el){
+    for (var n = el.firstChild; n; n = n.nextSibling) if (n.nodeType === 3 && /\d/.test(n.nodeValue)) return n;
+    return null;
+  }
+
+  /* CountUp (esprit React Bits) : anime le premier nombre de l'element, conserve prefixe/suffixe */
+  function armCount(el){
+    var tn = firstText(el); if (!tn) return;
+    var m = /^(\D*?)(\d+(?:\.\d+)?)([\s\S]*)$/.exec(tn.nodeValue); if (!m) return;
+    var pre = m[1], target = parseFloat(m[2]), post = m[3], dec = (m[2].split('.')[1] || '').length, obj = { v: 0 };
+    var original = tn.nodeValue;
+    tn.nodeValue = pre + (0).toFixed(dec) + post;
+    ScrollTrigger.create({
+      trigger: el, start: 'top 94%', once: true,
+      onEnter: function(){
+        gsap.to(obj, {
+          v: target, duration: 1.6, ease: 'power2.out',
+          onUpdate: function(){ tn.nodeValue = pre + obj.v.toFixed(dec) + post; },
+          onComplete: function(){ tn.nodeValue = original; }
+        });
+      }
+    });
+  }
+
+  /* Reveal d'un onglet : cascade au scroll, une seule fois par onglet */
+  function reveal(panel){
+    if (!panel || panel.dataset.gx) return;
+    panel.dataset.gx = '1';
+    panel.style.animation = 'none';      /* l'onglet entier ne fait plus son fondu : ses elements s'animent un a un */
+    var els = [].slice.call(panel.querySelectorAll(REVEAL));
+    els.forEach(function(el){
+      if (el.matches('.sdiv')) gsap.set(el, { opacity: 0, scaleX: 0, transformOrigin: '0 50%' });
+      else if (el.matches('.vitem')) gsap.set(el, { opacity: 0, x: -28 });
+      else if (el.matches('.st tbody tr')) gsap.set(el, { opacity: 0, y: 12 });
+      else gsap.set(el, { opacity: 0, y: 30 });
+    });
+    ScrollTrigger.batch(els, {
+      start: 'top 94%', once: true, interval: 0.08, batchMax: 8,
+      onEnter: function(batch){
+        gsap.to(batch, { opacity: 1, x: 0, y: 0, scaleX: 1, duration: 0.8, ease: 'power3.out', stagger: 0.07, overwrite: true, clearProps: 'transform,opacity' });
+      }
+    });
+    panel.querySelectorAll(COUNT).forEach(armCount);
+  }
+
+  var mm = gsap.matchMedia();
+  mm.add('(prefers-reduced-motion: no-preference)', function(self){
+
+    /* ---- Hero : parallaxe de la scene + du texte ---- */
+    var trig = { trigger: '.hero', start: 'top top', end: 'bottom top', scrub: true };
+    var scene = document.querySelector('.hero .scene');
+    var inner = document.querySelector('.hero .inner');
+    if (scene) gsap.fromTo(scene, { scale: 1.12, yPercent: 0 }, { scale: 1.12, yPercent: 6, ease: 'none', scrollTrigger: trig });
+    if (inner) gsap.to(inner, { yPercent: -6, opacity: 0.35, ease: 'none', scrollTrigger: trig });
+
+    /* ---- Onglets : reveal a chaque premiere ouverture ---- */
+    var panels = [].slice.call(document.querySelectorAll('.tab'));
+    var mo = new MutationObserver(function(list){
+      list.forEach(function(r){
+        var p = r.target;
+        if (p.classList.contains('act') && !p.dataset.gx) self.add(function(){ reveal(p); });
+      });
+    });
+    panels.forEach(function(p){ mo.observe(p, { attributes: true, attributeFilter: ['class'] }); });
+    panels.forEach(function(p){ if (p.classList.contains('act')) reveal(p); });
+
+    return function(){ mo.disconnect(); };
+  });
+
+  /* Recalcul des positions quand la mise en page change (polices, langue) */
+  var rt;
+  function refreshSoon(){ clearTimeout(rt); rt = setTimeout(function(){ ScrollTrigger.refresh(); }, 80); }
+  window.addEventListener('load', refreshSoon);
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(refreshSoon);
+  var ltog = document.querySelector('.ltog');
+  if (ltog) ltog.addEventListener('click', refreshSoon);
+}
+
+if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', enhance);
+else enhance();
+})();
 </script>
 </body>
 </html>
