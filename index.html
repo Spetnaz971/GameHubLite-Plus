@@ -358,7 +358,9 @@ a.row:hover .go{transform:translate(3px,-3px);color:#fff}
 .dl-badge:hover{transform:translateY(-3px);box-shadow:0 0 50px rgba(255,69,0,.35)}
 .dl-badge span{text-align:center}
 .dl-note{margin-top:1rem;font-size:.8rem;text-align:center;color:rgba(255,255,255,.5)}
-.dl-channel{margin-top:.35rem;text-align:center;font-family:var(--podium);font-weight:800;font-size:.75rem;letter-spacing:.1em;text-transform:uppercase;color:#ffc832}
+.dl-arrow{display:flex;justify-content:center;margin-top:.4rem;color:#ffc832}
+.dl-arrow svg.i{width:1.25rem;height:1.25rem;stroke-width:2.25}
+.dl-channel{margin-top:.15rem;text-align:center;font-family:var(--podium);font-weight:800;font-size:.75rem;letter-spacing:.1em;text-transform:uppercase;color:#ffc832}
 
 /* Footer */
 footer{border-top:1px solid var(--line);padding:3rem 0 2rem}
@@ -668,6 +670,7 @@ html.lenis,html.lenis body{height:auto}
           <span data-i18n="dlBtn">T&eacute;l&eacute;charger</span>
         </a>
         <p class="dl-note" data-i18n="dlNote2">Acc&egrave;s GRATUIT via Discord</p>
+        <div class="dl-arrow" aria-hidden="true"><svg class="i" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></div>
         <p class="dl-channel" data-i18n="dlChan">salon T&Eacute;L&Eacute;CHARGEMENTS</p>
       </div>
     </div>
