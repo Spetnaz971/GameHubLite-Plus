@@ -63,7 +63,6 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 .plus-ref{color:#ffc832;font-weight:600}
 svg.i{width:1rem;height:1rem;flex:none;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
 
-/* ---------- Animations ---------- */
 @keyframes fade-up{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}
 @keyframes fade-in{from{opacity:0}to{opacity:1}}
 @keyframes scale-in{from{opacity:0;transform:scale(.9)}to{opacity:1;transform:scale(1)}}
@@ -79,7 +78,6 @@ svg.i{width:1rem;height:1rem;flex:none;fill:none;stroke:currentColor;stroke-widt
   [class*="animate-"]{animation:none!important;opacity:1!important;transform:none!important}
 }
 
-/* ---------- Navbar ---------- */
 .nav{
   position:fixed;top:0;left:0;right:0;z-index:40;
   display:flex;align-items:center;justify-content:space-between;gap:1.5rem;
@@ -134,7 +132,6 @@ svg.i{width:1rem;height:1rem;flex:none;fill:none;stroke:currentColor;stroke-widt
   .hamburger{display:none}
 }
 
-/* ---------- Mobile menu ---------- */
 .menu{
   position:fixed;inset:0;z-index:50;
   display:flex;flex-direction:column;
@@ -161,7 +158,6 @@ svg.i{width:1rem;height:1rem;flex:none;fill:none;stroke:currentColor;stroke-widt
 .menu .btn-outline{margin-top:.5rem}
 .menu .lang button{font-size:.75rem;padding:.5rem .75rem}
 
-/* ---------- Hero ---------- */
 #hero{
   position:relative;min-height:100vh;min-height:100svh;
   display:flex;flex-direction:column;justify-content:center;
@@ -234,7 +230,6 @@ svg.i{width:1rem;height:1rem;flex:none;fill:none;stroke:currentColor;stroke-widt
 }
 @media(min-width:640px){.stat-label{font-size:.75rem}}
 
-/* ---------- Sections ---------- */
 .wrap{max-width:80rem;margin:0;padding:0 var(--px)}
 .section{padding:5rem 0;scroll-margin-top:3rem}
 @media(min-width:1024px){.section{padding:8rem 0}}
@@ -247,7 +242,6 @@ svg.i{width:1rem;height:1rem;flex:none;fill:none;stroke:currentColor;stroke-widt
 }
 .sec-sub{margin-top:1.25rem;max-width:34rem;color:rgba(255,255,255,.6)}
 
-/* Features */
 .row{
   display:grid;grid-template-columns:minmax(0,1fr);gap:1rem;
   margin:0 -1rem;padding:2rem 1rem;
@@ -267,7 +261,6 @@ a.row:hover .go{transform:translate(3px,-3px);color:#fff}
 .row-desc{max-width:36rem;line-height:1.7;color:rgba(255,255,255,.7)}
 .row-note{margin-top:.75rem;max-width:36rem;font-size:.8rem;color:rgba(255,255,255,.4)}
 
-/* Compatible devices */
 .logo-wall{
   display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.75rem;
   max-width:64rem;
@@ -302,7 +295,6 @@ a.row:hover .go{transform:translate(3px,-3px);color:#fff}
 @media(max-width:768px){.logo-wrapper{height:36px}.logo-wrapper img,.logo-wrapper svg{height:26px}}
 .logo-name{font-size:.75rem;letter-spacing:.1em;text-transform:uppercase;font-weight:500;color:rgba(255,255,255,.5);transition:color .35s}
 
-/* Advantages */
 .adv{display:grid;grid-template-columns:minmax(0,1fr);gap:3rem}
 @media(min-width:900px){
   .adv{grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:5rem;align-items:start}
@@ -339,7 +331,6 @@ a.row:hover .go{transform:translate(3px,-3px);color:#fff}
   background:#ffc832;box-shadow:0 0 0 3px rgba(255,200,50,.18);
 }
 
-/* Download */
 .dl{display:grid;grid-template-columns:minmax(0,1fr);gap:2.5rem;border-top:1px solid var(--line);padding-top:3.5rem}
 @media(min-width:900px){.dl{grid-template-columns:minmax(0,1fr) auto;align-items:end;gap:4rem}}
 .dl-title{
@@ -362,7 +353,6 @@ a.row:hover .go{transform:translate(3px,-3px);color:#fff}
 .dl-arrow svg.i{width:1.25rem;height:1.25rem;stroke-width:2.25}
 .dl-channel{margin-top:.15rem;text-align:center;font-family:var(--podium);font-weight:800;font-size:.75rem;letter-spacing:.1em;text-transform:uppercase;color:#ffc832}
 
-/* Footer */
 footer{border-top:1px solid var(--line);padding:3rem 0 2rem}
 .foot{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-start;gap:2rem}
 .foot-brand{font-family:var(--podium);font-weight:700;color:#fff;text-transform:uppercase;letter-spacing:.05em;font-size:1.25rem}
@@ -371,19 +361,16 @@ footer{border-top:1px solid var(--line);padding:3rem 0 2rem}
 .foot-links a:hover{color:#fff}
 .copy{margin-top:2rem;padding-top:1.25rem;border-top:1px solid var(--line);font-size:.75rem;color:rgba(255,255,255,.35)}
 
-/* ---------- Lenis (smooth scroll) ---------- */
 html.lenis,html.lenis body{height:auto}
 .lenis.lenis-smooth{scroll-behavior:auto!important}
 .lenis.lenis-smooth [data-lenis-prevent]{overscroll-behavior:contain}
 .lenis.lenis-stopped{overflow:clip}
 .lenis.lenis-smooth iframe{pointer-events:none}
 
-/* ---------- Scroll progress ---------- */
 .progress{position:fixed;top:0;left:0;right:0;height:2px;z-index:60;pointer-events:none;background:transparent}
 .progress span{display:block;height:100%;width:100%;transform-origin:0 50%;transform:scaleX(0);
   background:linear-gradient(90deg,rgba(255,200,50,.2),#ffc832);box-shadow:0 0 12px rgba(255,200,50,.6)}
 
-/* ---------- Shiny "Plus" (inspired by React Bits ShinyText) ---------- */
 @keyframes shine{0%{background-position:160% 0}100%{background-position:-60% 0}}
 .brand span[style*="ffc832"],.foot-brand span[style*="ffc832"],
 .sec-title span[style*="ffc832"],.dl-title span[style*="ffc832"]{
@@ -398,7 +385,6 @@ html.lenis,html.lenis body{height:auto}
   .sec-title span[style*="ffc832"],.dl-title span[style*="ffc832"]{animation:none;background:none;color:#ffc832!important;-webkit-text-fill-color:#ffc832}
 }
 
-/* ---------- Spotlight (inspired by React Bits SpotlightCard) ---------- */
 .row{position:relative;isolation:isolate}
 .row::after,.logo-cell::after{
   content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;
@@ -409,7 +395,6 @@ html.lenis,html.lenis body{height:auto}
   .row:hover::after,.logo-cell:hover::after{opacity:1}
 }
 
-/* ---------- Download button ring ---------- */
 .dl-badge{position:relative}
 .dl-badge::after{
   content:"";position:absolute;inset:-5px;border-radius:999px;pointer-events:none;
@@ -418,7 +403,6 @@ html.lenis,html.lenis body{height:auto}
 @keyframes ring{0%{opacity:.7;transform:scale(.98)}70%,100%{opacity:0;transform:scale(1.08)}}
 @media(prefers-reduced-motion:reduce){.dl-badge::after{animation:none}}
 
-/* ---------- Hero parallax helpers ---------- */
 .hero-video{transform-origin:50% 50%;will-change:transform}
 </style>
 </head>
@@ -426,7 +410,6 @@ html.lenis,html.lenis body{height:auto}
 
 <div class="progress" aria-hidden="true"><span></span></div>
 
-<!-- NAVBAR -->
 <nav class="nav" id="nav" aria-label="Navigation principale">
   <a href="#hero" class="brand">GameHubLite <span style="color:#ffc832">Plus</span></a>
   <div class="nav-links">
@@ -448,7 +431,6 @@ html.lenis,html.lenis body{height:auto}
   </button>
 </nav>
 
-<!-- MOBILE MENU -->
 <div class="menu" id="menu" aria-hidden="true" data-lenis-prevent>
   <div class="menu-head">
     <a href="#hero" class="brand" data-close>GameHubLite <span style="color:#ffc832">Plus</span></a>
@@ -470,7 +452,6 @@ html.lenis,html.lenis body{height:auto}
   </div>
 </div>
 
-<!-- HERO -->
 <section id="hero" aria-label="Hero">
   <video class="hero-video" autoplay muted loop playsinline preload="auto" disablepictureinpicture aria-hidden="true" tabindex="-1">
     <source src="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260606_154941_df1a96e1-a06f-450c-bd02-d863414cc1a0.mp4" type="video/mp4">
@@ -527,7 +508,6 @@ html.lenis,html.lenis body{height:auto}
 </section>
 
 <main>
-<!-- FEATURES -->
 <section id="features" class="section" aria-label="Features">
   <div class="wrap">
     <div class="sec-head">
@@ -569,7 +549,6 @@ html.lenis,html.lenis body{height:auto}
   </div>
 </section>
 
-<!-- COMPATIBLE DEVICES -->
 <section id="compatible" class="section" aria-label="Compatible devices">
   <div class="wrap">
     <div class="sec-head">
@@ -617,7 +596,6 @@ html.lenis,html.lenis body{height:auto}
   </div>
 </section>
 
-<!-- ADVANTAGES -->
 <section id="advantages" class="section" aria-label="Avantages Plus">
   <div class="wrap adv">
     <div class="adv-head">
@@ -656,7 +634,6 @@ html.lenis,html.lenis body{height:auto}
   </div>
 </section>
 
-<!-- DOWNLOAD -->
 <section id="download" class="section" aria-label="Download">
   <div class="wrap">
     <div class="dl">
@@ -678,7 +655,6 @@ html.lenis,html.lenis body{height:auto}
 </section>
 </main>
 
-<!-- FOOTER -->
 <footer>
   <div class="wrap">
     <div class="foot">
@@ -967,7 +943,7 @@ function initTypewriter() {
     title.setAttribute('aria-live', 'polite');
   }
   function tick() {
-    if (!segs[0].on.isConnected) return; /* langue changee pendant l'animation */
+    if (!segs[0].on.isConnected) return;
     const s = segs[seg];
     i++;
     s.on.textContent = s.text.slice(0, i);
@@ -999,8 +975,6 @@ document.addEventListener('DOMContentLoaded', () => {
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js" defer></script>
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js" defer></script>
 <script>
-/* Enhancements: Lenis + GSAP/ScrollTrigger + effets inspires de React Bits.
-   Tout est optionnel : si une librairie ne charge pas, la page reste identique a la version sans effets. */
 (function(){
 'use strict';
 
@@ -1009,7 +983,6 @@ function init(){
   var hasLenis = typeof window.Lenis !== 'undefined';
   var fine = window.matchMedia('(hover:hover) and (pointer:fine)').matches;
 
-  /* ---- Spotlight : pur CSS + variables, sans librairie ---- */
   if (fine) {
     document.querySelectorAll('.row, .logo-cell').forEach(function(el){
       el.addEventListener('pointermove', function(e){
@@ -1022,14 +995,13 @@ function init(){
 
   var bar = document.querySelector('.progress span');
 
-  /* ---- Lenis ---- */
   var lenis = null;
   if (hasLenis) {
     lenis = new Lenis({
-      autoRaf: !hasGsap,          /* si GSAP est la, on pilote Lenis depuis son ticker */
+      autoRaf: !hasGsap,
       lerp: 0.1,
       wheelMultiplier: 1,
-      anchors: { offset: -48 },   /* equivalent du scroll-margin-top:3rem des sections */
+      anchors: { offset: -48 },
       stopInertiaOnNavigate: true
     });
   }
@@ -1059,7 +1031,6 @@ function init(){
 
   mm.add('(prefers-reduced-motion: no-preference)', function(){
 
-    /* ---- Hero : parallaxe video + contenu ---- */
     var video = document.querySelector('.hero-video');
     var heroInner = document.querySelector('.hero-inner');
     var heroTrig = { trigger: '#hero', start: 'top top', end: 'bottom top', scrub: true };
@@ -1070,7 +1041,6 @@ function init(){
       gsap.to(heroInner, { yPercent: -7, opacity: 0.35, ease: 'none', scrollTrigger: heroTrig });
     }
 
-    /* ---- Titres de section : montee + flou (esprit BlurText) ---- */
     gsap.utils.toArray('.sec-title, .dl-title').forEach(function(el){
       gsap.from(el, {
         y: 44, opacity: 0, filter: 'blur(10px)', duration: 1, ease: 'power3.out', clearProps: 'transform,opacity,filter',
@@ -1084,7 +1054,6 @@ function init(){
       });
     });
 
-    /* ---- Fonctionnalites : lignes en cascade ---- */
     gsap.utils.toArray('#features .row').forEach(function(row){
       gsap.from(row, {
         y: 36, opacity: 0, duration: 0.9, ease: 'power3.out', clearProps: 'transform,opacity',
@@ -1092,7 +1061,6 @@ function init(){
       });
     });
 
-    /* ---- Appareils : grille en vague ---- */
     var cells = gsap.utils.toArray('.logo-cell');
     gsap.set(cells, { opacity: 0, y: 36, scale: 0.95 });
     ScrollTrigger.batch(cells, {
@@ -1106,7 +1074,6 @@ function init(){
       }
     });
 
-    /* ---- Avantages : items en cascade + pastilles ---- */
     gsap.utils.toArray('.adv-item').forEach(function(item){
       var tl = gsap.timeline({ scrollTrigger: { trigger: item, start: 'top 90%', once: true } });
       tl.from(item, { y: 30, opacity: 0, duration: 0.8, ease: 'power3.out', clearProps: 'transform,opacity' });
@@ -1116,7 +1083,6 @@ function init(){
       }
     });
 
-    /* ---- Telechargement + pied de page ---- */
     var dlBadge = document.querySelector('.dl-badge');
     if (dlBadge) {
       gsap.from(dlBadge, {
@@ -1129,7 +1095,6 @@ function init(){
       scrollTrigger: { trigger: 'footer', start: 'top 95%', once: true }
     });
 
-    /* ---- Boutons magnetiques (souris uniquement) ---- */
     if (fine) {
       gsap.utils.toArray('.btn-black, .nav-right .btn-outline').forEach(function(btn){
         var qx = gsap.quickTo(btn, 'x', { duration: 0.5, ease: 'power3.out' });
@@ -1143,10 +1108,9 @@ function init(){
       });
     }
 
-    return function(){ /* nettoyage gere par gsap.matchMedia */ };
+    return function(){ };
   });
 
-  /* Recalcul une fois les polices et le contenu charges */
   window.addEventListener('load', function(){ ScrollTrigger.refresh(); });
   if (document.fonts && document.fonts.ready) document.fonts.ready.then(function(){ ScrollTrigger.refresh(); });
 }
