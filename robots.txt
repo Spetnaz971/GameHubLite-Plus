@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://spetnaz971.github.io/GameHubLite-Plus/sitemap.xml
