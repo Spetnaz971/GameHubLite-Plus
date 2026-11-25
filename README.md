@@ -74,19 +74,19 @@ GHLP hérite de tous les avantages de [GameHub Lite](https://github.com/Producde
 GameHubLite Plus est proposé en trois déclinaisons pour s'adapter au mieux à votre appareil :
 
 * 🌍 **Version Globale :** compatible avec tout appareil respectant au moins la configuration minimale requise.
-* 🌡️ **Version AnTuTu :** identique à la version Globale, à la différence que le nom du package `com.antutu.ABenchMark` a été remplacé, ce qui permet au matériel de débrider ses limitations pour stimuler les résultats d'un benchmark.
-* 🎮 **Version REDMAGIC :** exclusivement optimisée pour les appareils REDMAGIC. Débloque le plein potentiel du matériel via l'**AI Frame Generation**, la **Super Resolution**, et des optimisations exclusives au système.
+* 🌡️ **Version AnTuTu :** identique à la version Globale, à ceci près que le nom du package `com.antutu.ABenchMark` a été remplacé, ce qui permet au matériel de lever ses limitations et d'améliorer les résultats d'un benchmark.
+* 🎮 **Version REDMAGIC :** exclusivement optimisée pour les appareils REDMAGIC. Débloque le plein potentiel du matériel via l'**AI Frame Generation**, la **Super Resolution** et des optimisations exclusives au système.
 
 ---
 
 <a id="fonctionnalités-exclusives"></a>
 ## ➕ Fonctionnalités exclusives à GHLP
 
-* 🇫🇷 **Interface :** traduite en français à 95%.
-* 📝 **Correction :** prise en compte de la régression des performances (GH 5.3.X).
+* 🇫🇷 **Interface :** traduite en français à 95 %.
+* 📝 **Correction :** résolution de la régression des performances (GH 5.3.X).
 * 🚀 **VRAM étendue :** augmentation de la limite de VRAM allouée (6, 8, 12 et 16 Go).
 * 🎮 **Boutique en ligne :** accès direct à la bibliothèque Epic Games Store.
-* ⚡ **Architecture UMA :** configuration universelle optimisée DirectX 11/12 en appels Vulkan, pour exploiter pleinement le SoC et l'architecture à mémoire unifiée.
+* ⚡ **Architecture UMA :** configuration universelle optimisée pour la traduction de DirectX 11/12 en appels Vulkan, afin d'exploiter pleinement le SoC et l'architecture à mémoire unifiée.
 * 🪫 **Énergie :** exclusion possible des optimisations batterie restrictives d'Android.
 
 <a id="ghlp-cores"></a>
@@ -94,12 +94,12 @@ GameHubLite Plus est proposé en trois déclinaisons pour s'adapter au mieux à 
 
 Android traite **nativement** GHLP comme un jeu vidéo AAA :
 
-* **Détection intelligente :** reconnaissance automatique des moteurs de jeu (Unity, Unreal, DirectX, VKD3D) pour des profils de performance optimisés.
+* **Détection intelligente :** reconnaissance automatique des moteurs de jeu (Unity, Unreal, DirectX, [VKD3D-PROTON](https://github.com/HansKristian-Work/vkd3d-proton)) pour des profils de performance optimisés.
 * **Ressources débridées :** optimisation de l'allocation CPU/GPU/RAM pour maintenir des fréquences stables et empêcher le *thermal throttling*.
 * **Priorité native :** appliquée aux threads exécutés dynamiquement.
-* **Liberté de framerate :** empêche Android d'imposer son propre cap FPS par-dessus l'environnement Wine-Proton.
-* **Cadencement fluide :** micro-ajustements dynamiques continus réduisant saccades et latence.
-* **Efficacité énergétique :** optimisation de la consommation batterie et prolongation des sessions de jeu.
+* **Liberté de framerate :** empêche Android d'imposer sa propre limite de FPS par-dessus l'environnement [Wine](https://github.com/wine-mirror/wine)-Proton.
+* **Cadencement fluide :** micro-ajustements dynamiques continus réduisant les saccades et la latence.
+* **Efficacité énergétique :** optimisation de la consommation de la batterie et prolongation des sessions de jeu.
 
 <a id="optiframe-generation"></a>
 ### 🖼️ Opti'Frame Generation
@@ -111,13 +111,14 @@ Android traite **nativement** GHLP comme un jeu vidéo AAA :
 
 > ⚠️ **Snapdragon recommandé :** cette option peut apparaître sur des appareils non Adreno, mais la qualité de génération et les performances varient selon le pilote.
 
-> 🧪 **Précision :** ce n'est pas l'AI FrameGen de GameHub. **Opti'FrameGen est une implémentation propre à GameHubLite Plus**, pensée pour une génération d'images optimisée ARM de niveau PC, par [SpetNaz971](https://github.com/Spetnaz971).
+> 🧪 **Précision :** ce n'est pas l'AI FrameGen de GameHub. **Opti'FrameGen est une implémentation propre à GameHubLite Plus**, développée par [SpetNaz971](https://github.com/Spetnaz971) et pensée pour une génération d'images de niveau PC, optimisée pour ARM.
 
 <a id="gestionnaire-de-composants"></a>
 ### 🧰 Gestionnaire de composants
 
 *(Accessible via le menu de gauche → Composants)*
-Contrôle total sur les composants utilisés par GHLP : injection ou suppression à la volée de DXVK, VKD3D, Box64, FEXCore et des pilotes GPU (visibles dans les paramètres par jeu).
+
+Contrôle total sur les composants utilisés par GHLP : injection ou suppression à la volée de [DXVK](https://github.com/doitsujin/DXVK), [VKD3D-PROTON](https://github.com/HansKristian-Work/vkd3d-proton), [Box64](https://github.com/ptitseb/box64), [FEXCore](https://github.com/FEX-Emu/FEX) et des pilotes GPU (visibles dans les paramètres par jeu).
 
 🔗 **5 sources intégrées pour télécharger composants et pilotes :**
 * [Arihany WCPHub](https://github.com/Arihany/WinlatorWCPHub?tab=readme-ov-file)
@@ -129,7 +130,7 @@ Contrôle total sur les composants utilisés par GHLP : injection ou suppression
 <a id="support-natif-des-optimiseurs-android"></a>
 ### 👾 Support natif des optimiseurs Android
 
-GHLP est reconnu et soutenu par les systèmes suivants :
+GHLP est reconnu et pris en charge par les systèmes suivants :
 * RedMagic GameBooster
 * Samsung Game Booster (GOS)
 * Xiaomi Game Turbo
@@ -142,20 +143,20 @@ GHLP est reconnu et soutenu par les systèmes suivants :
 <a id="faq"></a>
 ## 💬 Foire aux questions (FAQ)
 
-### 🏷️ Pourquoi ce nom "GameHubLite Plus" ?
-J'ai volontairement ajouté uniquement le mot **"Plus"** au nom du projet car cela reste un fork. Je respecte énormément le travail de l'équipe originale de GameHub Lite, dont j'utilise d'ailleurs l'API officielle.
+### 🏷️ Pourquoi ce nom « GameHubLite Plus » ?
+J'ai volontairement ajouté uniquement le mot **« Plus »** au nom du projet, car il s'agit d'un fork. Je respecte énormément le travail de l'équipe originale de GameHub Lite, dont j'utilise d'ailleurs l'API officielle.
 
 ### 💰 Est-ce que GHLP est gratuit ?
-**Oui, totalement.** 👍🏾 Le projet est 100 % gratuit. Seuls les jeux que vous possédez (achetés sur Steam, Epic Games Store, etc.) restent à votre charge depuis les plateformes officielles.
+**Oui, totalement.** 👍🏾 Le projet est 100 % gratuit. Seuls les jeux que vous possédez (achetés sur Steam, Epic Games Store, etc.) restent à votre charge, via les plateformes officielles.
 
 ### 🔄 Quelle est la différence avec GH, GHL, etc. ?
-La différence se joue principalement sur trois axes, détaillés plus haut : la localisation FR à 95 %, le moteur exclusif [**GHLP Cores**](#ghlp-cores) (détection native des moteurs, gestion thermique et priorité de threads optimisées), et [**Opti'FrameGen**](#optiframe-generation), notre implémentation propre de génération d'images optimisée ARM. S'y ajoute une configuration universelle pré-optimisée, fortement recommandée sur Snapdragon.
+La différence se joue principalement sur trois axes, détaillés plus haut : la localisation FR à 95 %, le moteur exclusif [**GHLP Cores**](#ghlp-cores) (détection native des moteurs, gestion thermique et priorité des threads optimisées) et [**Opti'FrameGen**](#optiframe-generation), notre implémentation propre de génération d'images optimisée pour ARM. S'y ajoute une configuration universelle préoptimisée, fortement recommandée sur Snapdragon.
 
 ### 🎚️ Un smartphone avec 6/8 Go de RAM + RAM étendue (virtuelle) est-il suffisant ?
-**Nuance importante :** la **RAM virtuelle** n'est pas aussi rapide que la **RAM réelle**. Dans un environnement aussi lourd que celui de GHLP (WINE, FEX, Proton, DXVK, etc.), en abuser peut même s'avérer **contre-productif**.
+**Nuance importante :** la **RAM virtuelle** n'est pas aussi rapide que la **RAM réelle**. Dans un environnement aussi lourd que celui de GHLP ([Wine](https://github.com/wine-mirror/wine), [FEX](https://github.com/FEX-Emu/FEX), Proton, [DXVK](https://github.com/doitsujin/DXVK), etc.), en abuser peut même s'avérer **contre-productif**.
 
-* **Un simple filet de sécurité :** la RAM virtuelle n'est exploitée nativement que par le système d'exploitation pour éviter le crash d'applications basiques en arrière-plan.
-* **Le mythe des constructeurs :** la RAM virtuelle ne fait pas gagner en performances — c'est un argument marketing répandu par ignorance.
+* **Un simple filet de sécurité :** la RAM virtuelle n'est exploitée nativement que par le système d'exploitation, afin d'éviter le plantage des applications basiques en arrière-plan.
+* **Le mythe des constructeurs :** la RAM virtuelle ne fait pas gagner en performances ; c'est un argument marketing répandu par ignorance.
 
 > ⚠️ **Pas de miracle :** même avec toute la RAM virtuelle du monde, le moteur GHLP Cores ne pourra rien faire si votre configuration matérielle réelle ne respecte pas la configuration minimale requise.
 
@@ -188,21 +189,39 @@ Le code source de l'application est communicable sur demande via ce même Discor
 
 ---
 
+<details>
+<summary><b>ℹ️ Informations relatives à l'IA</b></summary>
+
+<br>
+
+Le code des extensions étant développé par une seule personne, les modèles Opus 5.5 et DeepSeek 4.1 Pro sont sollicités pour le débogage et l'audit.
+
+</details>
+
+---
+
 <a id="propriété-intellectuelle-crédits-et-avertissement-légal"></a>
 ## 📜 Propriété intellectuelle, crédits et avertissement légal
 
-> 📄 Les termes légaux complets et formels sont disponibles à la racine du dépôt : [`LICENSE`](LICENSE) — licence propriétaire couvrant les droits réservés sur GHLP Cores et Opti'FrameGen, le statut des composants tiers, et les conditions de consultation du code source sur demande.
+> 📄 Les termes légaux complets et formels sont disponibles à la racine du dépôt : [`LICENSE`](LICENSE) — licence propriétaire couvrant les droits réservés sur GHLP Cores et Opti'FrameGen, le statut des composants tiers et les conditions de consultation du code source sur demande.
 
 **1. Droits d'auteur spécifiques (tous droits réservés)**
-Les implémentations, scripts et algorithmes développés spécifiquement pour **GameHubLite Plus**, notamment les moteurs **GHLP Cores** et la technologie **Opti'FrameGen**, sont la propriété intellectuelle exclusive de leur auteur ([SpetNaz971](https://github.com/Spetnaz971)). Toute extraction, rétro-ingénierie, reproduction ou réutilisation de ce code à des fins publiques ou commerciales est strictement interdite sans autorisation explicite préalable.
+Les implémentations, scripts et algorithmes développés spécifiquement pour **GameHubLite Plus**, notamment le moteur **GHLP Cores** et la technologie **Opti'FrameGen**, sont la propriété intellectuelle exclusive de leur auteur ([SpetNaz971](https://github.com/Spetnaz971)). Toute extraction, rétro-ingénierie, reproduction ou réutilisation de ce code à des fins publiques ou commerciales est strictement interdite sans autorisation explicite préalable.
 
-**2. Héritage, crédits et composants tiers**
+<details>
+<summary><b>2. Héritage, crédits et composants tiers</b></summary>
+
+<br>
+
 Ce projet est distribué gratuitement, à but non lucratif, et ne génère aucun revenu. Il s'appuie sur le travail de la communauté :
 * **GameHubLite :** [Python](https://github.com/) (créateur original) et [Producdevity](https://github.com/Producdevity/gamehub-lite) (responsable actuel).
-* **Intégration Epic :** [l'équipe GameNative](https://github.com/utkarshdalal/GameNative). La pipeline de la boutique, le flux d'authentification, l'architecture de téléchargement et la synchronisation de bibliothèque sont basés sur leurs recherches et implémentation.
+* **Intégration Epic :** [l'équipe GameNative](https://github.com/utkarshdalal/GameNative). Le pipeline de la boutique, le flux d'authentification, l'architecture de téléchargement et la synchronisation de la bibliothèque sont basés sur leurs recherches et leur implémentation.
 * **Gestionnaire de composants :** inspiré de la technique de [The412Banner](https://github.com/The412Banner).
 * **GameHubLite Plus v6.0.4 :** basée sur les recherches de [Bannerhub v6](https://github.com/The412Banner/bannerhub-revanced/releases/tag/v1.1.0-608).
-* **Outils d'émulation et pilotes :** les couches de compatibilité (Wine, Proton, DXVK, VKD3D, Box64, FEXCore) ainsi que les pilotes GPU tiers demeurent la propriété stricte de leurs créateurs respectifs et sont régis par leurs propres licences d'origine.
+* **Compatibilité BCN :** inspirée des recherches de l'ingénieur [Lee Gao](https://github.com/leegao/bionic-vulkan-wrapper/).
+* **Outils d'émulation et pilotes :** les couches de compatibilité ([Wine](https://github.com/wine-mirror/wine), Proton, [DXVK](https://github.com/doitsujin/DXVK), [VKD3D-PROTON](https://github.com/HansKristian-Work/vkd3d-proton), [Box64](https://github.com/ptitseb/box64), [FEXCore](https://github.com/FEX-Emu/FEX)) ainsi que les pilotes GPU tiers demeurent la propriété stricte de leurs créateurs respectifs et sont régis par leurs propres licences d'origine.
+
+</details>
 
 **3. Clause de non-responsabilité (as-is)**
-L'application **GameHubLite Plus** s'adresse spécifiquement aux "power users". L'auteur décline toute responsabilité en cas de dommages matériels (surchauffe du SoC, usure de la batterie, brûlure d'écran). L'utilisateur assume l'entière responsabilité des risques liés à l'utilisation de ce logiciel.
+L'application **GameHubLite Plus** s'adresse spécifiquement aux « power users ». L'auteur décline toute responsabilité en cas de dommages matériels (surchauffe du SoC, usure de la batterie, brûlure d'écran). L'utilisateur assume l'entière responsabilité des risques liés à l'utilisation de ce logiciel.
