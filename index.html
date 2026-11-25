@@ -511,10 +511,6 @@ html.lenis,html.lenis body{height:auto}
         <div class="stat-label" data-i18n="statStab">Gain de stabilit&eacute;</div>
       </div>
       <div>
-        <div class="stat-val"><span class="num" data-target="35" data-suffix="min">35min</span></div>
-        <div class="stat-label" data-i18n="statBat">Batterie &eacute;conomis&eacute;e</div>
-      </div>
-      <div>
         <div class="stat-val"><img src="assets/images/cold-face-emoji.png" alt=""></div>
         <div class="stat-label" data-i18n="statCool">Refroidisseur Externe recommand&eacute;</div>
       </div>
@@ -537,7 +533,7 @@ html.lenis,html.lenis body{height:auto}
         <svg class="i go" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
       </h3>
       <div>
-        <p class="row-desc" data-i18n="f1d">Jusqu'&agrave; <span class="highlight">+30%</span> de stabilit&eacute;, <span class="plus-ref">+15-35min</span> de batterie suppl&eacute;mentaire</p>
+        <p class="row-desc" data-i18n="f1d">Jusqu'&agrave; <span class="plus-ref">+30%</span> de stabilit&eacute;</p>
         <p class="row-note" data-i18n="f1n">*Ces statistiques varient selon votre SoC, la temp&eacute;rature et le jeu ex&eacute;cut&eacute;</p>
       </div>
     </a>
@@ -626,8 +622,7 @@ html.lenis,html.lenis body{height:auto}
         <div>
           <strong class="adv-name">GHLP Cores</strong>
           <div class="adv-stats">
-            <span class="adv-stat" data-i18n="advS1">+30% stabilit&eacute;</span>
-            <span class="adv-stat" data-i18n="advS2">+15-35min batterie</span>
+            <span class="adv-stat" data-i18n="advS1">&plusmn;30% stabilit&eacute;</span>
           </div>
         </div>
       </div>
@@ -678,7 +673,6 @@ html.lenis,html.lenis body{height:auto}
         <p class="foot-disc" data-i18n="footDisc">GameHubLite Plus est un projet ind&eacute;pendant. Toutes les marques et logos appartiennent &agrave; leurs d&eacute;tenteurs respectifs. L'&eacute;mulation PC sur mobile est un domaine en &eacute;volution constante.</p>
       </div>
       <div class="foot-links">
-        <a href="#" data-i18n="footPriv">Confidentialit&eacute;</a>
         <a href="https://github.com/Spetnaz971/GameHubLite-Plus" target="_blank" rel="noopener noreferrer">GitHub</a>
         <a href="https://discord.gg/D65SgfctXm" target="_blank" rel="noopener noreferrer" data-i18n="footContact">Contact</a>
       </div>
@@ -702,10 +696,10 @@ const t = {
     cta: 'D&eacute;couvrir GameHubLite Plus',
     navFeat: 'Fonctionnalit&eacute;s', navDev: 'Appareils', navAdv: 'Avantages', navDl: 'T&eacute;l&eacute;charger',
     badgeA: 'Utilisateur avanc&eacute;', badgeB: 'Pour les plus exigeants',
-    statStab: 'Gain de stabilit&eacute;', statBat: 'Batterie &eacute;conomis&eacute;e', statCool: 'Refroidisseur Externe recommand&eacute;',
+    statStab: 'Gain de stabilit&eacute;', statCool: 'Refroidisseur Externe recommand&eacute;',
     featTitle: `Fonctionnalit&eacute;s ${P}`,
     featSub: 'Ce qui rend GameHubLite Plus unique',
-    f1d: "Jusqu'&agrave; <span class='highlight'>+30%</span> de stabilit&eacute;, <span class='plus-ref'>+15-35min</span> de batterie suppl&eacute;mentaire",
+    f1d: "Jusqu'&agrave; <span class='plus-ref'>+30%</span> de stabilit&eacute;",
     f1n: '*Ces statistiques varient selon votre SoC, la temp&eacute;rature et le jeu ex&eacute;cut&eacute;',
     f2d: "Technique de g&eacute;n&eacute;ration d'images respectant la norme PC tout en &eacute;tant optimis&eacute;e pour <span class='highlight'>ARM</span>",
     f3t: 'Configuration Universelle',
@@ -714,7 +708,7 @@ const t = {
     compSub: `GameHubLite ${P} fonctionne avec les marques suivantes`,
     advTitle: `Avantages GameHubLite ${P}`,
     adv1: 'Interface en fran&ccedil;ais',
-    advS1: '+30% stabilit&eacute;', advS2: '+15-35min batterie',
+    advS1: '&plusmn;30% stabilit&eacute;',
     adv3d: "Technique de g&eacute;n&eacute;ration d'images respectant la norme PC, optimis&eacute;e ARM",
     adv4d: "Pr&eacute;-optimis&eacute;e et fournie directement. <span class='highlight'>Snapdragon hautement recommand&eacute;</span>",
     dlTitle: `T&eacute;l&eacute;charger GameHubLite ${P}`,
@@ -724,7 +718,7 @@ const t = {
     dlNote2: 'Acc&egrave;s GRATUIT via Discord',
     dlChan: 'salon T&Eacute;L&Eacute;CHARGEMENTS',
     footDisc: "GameHubLite Plus est un projet ind&eacute;pendant. Toutes les marques et logos appartiennent &agrave; leurs d&eacute;tenteurs respectifs. L'&eacute;mulation PC sur mobile est un domaine en &eacute;volution constante.",
-    footPriv: 'Confidentialit&eacute;', footContact: 'Contact',
+    footContact: 'Contact',
     footCopy: '&copy; 2026 GameHubLite Plus. Tous droits r&eacute;serv&eacute;s.'
   },
   en: {
@@ -735,10 +729,10 @@ const t = {
     cta: 'Discover GameHubLite Plus',
     navFeat: 'Features', navDev: 'Devices', navAdv: 'Benefits', navDl: 'Download',
     badgeA: 'Advanced User', badgeB: 'For the demanding ones',
-    statStab: 'Stability boost', statBat: 'Battery saved', statCool: 'External Cooler Recommended',
+    statStab: 'Stability boost', statCool: 'External Cooler Recommended',
     featTitle: `${P} Features`,
     featSub: 'What makes GameHubLite Plus unique',
-    f1d: "Up to <span class='highlight'>+30%</span> stability, <span class='plus-ref'>+15-35min</span> extra battery",
+    f1d: "Up to <span class='plus-ref'>+30%</span> stability",
     f1n: '*These statistics vary depending on your SoC, temperature, and the game being run',
     f2d: "Frame generation technology respecting PC standards while optimized for <span class='highlight'>ARM</span>",
     f3t: 'Universal Config',
@@ -747,7 +741,7 @@ const t = {
     compSub: `GameHubLite ${P} works with the following brands`,
     advTitle: `GameHubLite ${P} advantages`,
     adv1: 'Interface in French',
-    advS1: '+30% stability', advS2: '+15-35min battery',
+    advS1: '&plusmn;30% stability',
     adv3d: 'Frame generation respecting PC standards, optimized for ARM',
     adv4d: "Pre-optimized and provided directly. <span class='highlight'>Snapdragon highly recommended</span>",
     dlTitle: `Download GameHubLite ${P}`,
@@ -757,7 +751,7 @@ const t = {
     dlNote2: 'FREE Access via Discord',
     dlChan: 'channel DOWNLOADS',
     footDisc: 'GameHubLite Plus is an independent project. All trademarks and logos belong to their respective owners. PC emulation on mobile is a constantly evolving field.',
-    footPriv: 'Privacy', footContact: 'Contact',
+    footContact: 'Contact',
     footCopy: '&copy; 2026 GameHubLite Plus. All rights reserved.'
   },
   ru: {
@@ -768,10 +762,10 @@ const t = {
     cta: 'Otkryt GameHubLite Plus',
     navFeat: 'Funktsii', navDev: 'Ustroistva', navAdv: 'Preimushchestva', navDl: 'Skachat',
     badgeA: 'Prodvinutyy polzovatel', badgeB: 'Dlya samykh trebovatelnykh',
-    statStab: 'Prirust stabilnosti', statBat: 'Ekonomiya batarei', statCool: 'Rekomenduetsya vneshniy kuler',
+    statStab: 'Prirust stabilnosti', statCool: 'Rekomenduetsya vneshniy kuler',
     featTitle: `Funktsii ${P}`,
     featSub: 'Chto delaet GameHubLite Plus unikalnym',
-    f1d: "Do <span class='highlight'>+30%</span> stabilnosti, <span class='plus-ref'>+15-35min</span> dopolnitelnogo vremeni batarei",
+    f1d: "Do <span class='plus-ref'>+30%</span> stabilnosti",
     f1n: '*Eti pokazateli zavisyat ot vashego SoC, temperatury i zapushchennoy igry',
     f2d: "Tekhnologiya generatsii kadrov, sootvetstvuyushchaya standartam PK i optimizirovannaya dlya <span class='highlight'>ARM</span>",
     f3t: 'Universalnaya konfiguratsiya',
@@ -780,7 +774,7 @@ const t = {
     compSub: `GameHubLite ${P} rabotaet so sleduyushchimi brendami`,
     advTitle: `Preimushchestva GameHubLite ${P}`,
     adv1: 'Interfeis na frantsuzskom',
-    advS1: '+30% stabilnosti', advS2: '+15-35min batarei',
+    advS1: '&plusmn;30% stabilnosti',
     adv3d: 'Generatsiya kadrov po standartam PK, optimizirovannaya dlya ARM',
     adv4d: "Predvaritelno optimizirovana. <span class='highlight'>Snapdragon nastoyatelno rekomenduetsya</span>",
     dlTitle: `Skachat GameHubLite ${P}`,
@@ -790,7 +784,7 @@ const t = {
     dlNote2: 'BESPLATNYY dostup cherez Discord',
     dlChan: 'kanal ZAGRUZKI',
     footDisc: 'GameHubLite Plus - eto nezavisimyi proekt. Vse torgovye marki i logotipy prinadlezhat ikh vladeltsam. Emulyatsiya PK na mobilnykh ustroistvakh - postoyanno razvivayushchayasya oblast.',
-    footPriv: 'Konfidentsialnost', footContact: 'Kontakt',
+    footContact: 'Kontakt',
     footCopy: '&copy; 2026 GameHubLite Plus. Vse prava zashchishcheny.'
   },
   es: {
@@ -801,10 +795,10 @@ const t = {
     cta: 'Descubrir GameHubLite Plus',
     navFeat: 'Funcionalidades', navDev: 'Dispositivos', navAdv: 'Ventajas', navDl: 'Descargar',
     badgeA: 'Usuario avanzado', badgeB: 'Para los m&aacute;s exigentes',
-    statStab: 'Mejora de estabilidad', statBat: 'Bater&iacute;a ahorrada', statCool: 'Enfriador Externo recomendado',
+    statStab: 'Mejora de estabilidad', statCool: 'Enfriador Externo recomendado',
     featTitle: `Funcionalidades ${P}`,
     featSub: 'Lo que hace &uacute;nico a GameHubLite Plus',
-    f1d: "Hasta <span class='highlight'>+30%</span> estabilidad, <span class='plus-ref'>+15-35min</span> de bater&iacute;a extra",
+    f1d: "Hasta <span class='plus-ref'>+30%</span> estabilidad",
     f1n: '*Estas estad&iacute;sticas var&iacute;an seg&uacute;n su SoC, la temperatura y el juego ejecutado',
     f2d: "Tecnolog&iacute;a de generaci&oacute;n de cuadros que respeta los est&aacute;ndares de PC optimizada para <span class='highlight'>ARM</span>",
     f3t: 'Configuraci&oacute;n Universal',
@@ -813,7 +807,7 @@ const t = {
     compSub: `GameHubLite ${P} funciona con las siguientes marcas`,
     advTitle: `Ventajas de GameHubLite ${P}`,
     adv1: 'Interfaz en franc&eacute;s',
-    advS1: '+30% estabilidad', advS2: '+15-35min bater&iacute;a',
+    advS1: '&plusmn;30% estabilidad',
     adv3d: 'Generaci&oacute;n de cuadros seg&uacute;n est&aacute;ndares PC, optimizada para ARM',
     adv4d: "Pre-optimizada y proporcionada. <span class='highlight'>Snapdragon altamente recomendado</span>",
     dlTitle: `Descargar GameHubLite ${P}`,
@@ -823,7 +817,7 @@ const t = {
     dlNote2: 'Acceso GRATIS v&iacute;a Discord',
     dlChan: 'canal DESCARGAS',
     footDisc: 'GameHubLite Plus es un proyecto independiente. Todas las marcas y logotipos pertenecen a sus respectivos due&ntilde;os. La emulaci&oacute;n de PC en dispositivos m&oacute;viles es un campo en constante evoluci&oacute;n.',
-    footPriv: 'Privacidad', footContact: 'Contacto',
+    footContact: 'Contacto',
     footCopy: '&copy; 2026 GameHubLite Plus. Todos los derechos reservados.'
   }
 };
