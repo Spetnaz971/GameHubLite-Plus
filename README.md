@@ -216,11 +216,7 @@ Le code des extensions étant développé par une seule personne, les modèles O
 **1. Droits d'auteur spécifiques (tous droits réservés)**
 Les implémentations, scripts et algorithmes développés spécifiquement pour **GameHubLite Plus**, notamment le moteur **GHLP Cores** et la technologie **Opti'FrameGen**, sont la propriété intellectuelle exclusive de leur auteur ([SpetNaz971](https://github.com/Spetnaz971)). Toute extraction, rétro-ingénierie, reproduction ou réutilisation de ce code à des fins publiques ou commerciales est strictement interdite sans autorisation explicite préalable.
 
-<details>
-<summary><b>2. Héritage, crédits et composants tiers</b></summary>
-
-<br>
-
+**2. Héritage, crédits et composants tiers**
 Ce projet est distribué gratuitement, à but non lucratif, et ne génère aucun revenu. Il s'appuie sur le travail de la communauté :
 * **GameHubLite :** [Python](https://github.com/) (créateur original) et [Producdevity](https://github.com/Producdevity/gamehub-lite) (responsable actuel).
 * **Intégration Epic :** [l'équipe GameNative](https://github.com/utkarshdalal/GameNative). Le pipeline de la boutique, le flux d'authentification, l'architecture de téléchargement et la synchronisation de la bibliothèque sont basés sur leurs recherches et leur implémentation.
@@ -228,8 +224,6 @@ Ce projet est distribué gratuitement, à but non lucratif, et ne génère aucun
 * **GameHubLite Plus v6.0.4 :** basée sur les recherches de [Bannerhub v6](https://github.com/The412Banner/bannerhub-revanced/releases/tag/v1.1.0-608).
 * **Compatibilité BCN :** inspirée des recherches de l'ingénieur [Lee Gao](https://github.com/leegao/bionic-vulkan-wrapper/).
 * **Outils d'émulation et pilotes :** les couches de compatibilité ([Wine](https://github.com/wine-mirror/wine), [Proton](https://github.com/valvesoftware/proton), [DXVK](https://github.com/doitsujin/DXVK), [VKD3D-PROTON](https://github.com/HansKristian-Work/vkd3d-proton), [Box64](https://github.com/ptitseb/box64), [FEXCore](https://github.com/FEX-Emu/FEX)) ainsi que les pilotes GPU tiers demeurent la propriété stricte de leurs créateurs respectifs et sont régis par leurs propres licences d'origine.
-
-</details>
 
 **3. Clause de non-responsabilité (as-is)**
 L'application **GameHubLite Plus** s'adresse spécifiquement aux « power users ». L'auteur décline toute responsabilité en cas de dommages matériels (surchauffe du SoC, usure de la batterie, brûlure d'écran). L'utilisateur assume l'entière responsabilité des risques liés à l'utilisation de ce logiciel.
