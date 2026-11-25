@@ -206,7 +206,10 @@ Le code des extensions étant développé par une seule personne, les modèles O
 ---
 
 <a id="propriété-intellectuelle-crédits-et-avertissement-légal"></a>
-## 📜 Propriété intellectuelle, crédits et avertissement légal
+<details>
+<summary><b>📜 Propriété intellectuelle, crédits et avertissement légal</b></summary>
+
+<br>
 
 > 📄 Les termes légaux complets et formels sont disponibles à la racine du dépôt : [`LICENSE`](LICENSE) — licence propriétaire couvrant les droits réservés sur GHLP Cores et Opti'FrameGen, le statut des composants tiers et les conditions de consultation du code source sur demande.
 
@@ -230,3 +233,5 @@ Ce projet est distribué gratuitement, à but non lucratif, et ne génère aucun
 
 **3. Clause de non-responsabilité (as-is)**
 L'application **GameHubLite Plus** s'adresse spécifiquement aux « power users ». L'auteur décline toute responsabilité en cas de dommages matériels (surchauffe du SoC, usure de la batterie, brûlure d'écran). L'utilisateur assume l'entière responsabilité des risques liés à l'utilisation de ce logiciel.
+
+</details>
