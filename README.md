@@ -94,10 +94,10 @@ GameHubLite Plus est proposé en trois déclinaisons pour s'adapter au mieux à 
 
 Android traite **nativement** GHLP comme un jeu vidéo AAA :
 
-* **Détection intelligente :** reconnaissance automatique des moteurs de jeu (Unity, Unreal, DirectX, [VKD3D-PROTON](https://github.com/HansKristian-Work/vkd3d-proton)) pour des profils de performance optimisés.
+* **Détection intelligente :** reconnaissance automatique des moteurs de jeu (Unity, Unreal, DirectX, VKD3D-PROTON) pour des profils de performance optimisés.
 * **Ressources débridées :** optimisation de l'allocation CPU/GPU/RAM pour maintenir des fréquences stables et empêcher le *thermal throttling*.
 * **Priorité native :** appliquée aux threads exécutés dynamiquement.
-* **Liberté de framerate :** empêche Android d'imposer sa propre limite de FPS par-dessus l'environnement [Wine](https://github.com/wine-mirror/wine)-Proton.
+* **Liberté de framerate :** empêche Android d'imposer sa propre limite de FPS par-dessus l'environnement Wine-Proton.
 * **Cadencement fluide :** micro-ajustements dynamiques continus réduisant les saccades et la latence.
 * **Efficacité énergétique :** optimisation de la consommation de la batterie et prolongation des sessions de jeu.
 
@@ -118,7 +118,7 @@ Android traite **nativement** GHLP comme un jeu vidéo AAA :
 
 *(Accessible via le menu de gauche → Composants)*
 
-Contrôle total sur les composants utilisés par GHLP : injection ou suppression à la volée de [DXVK](https://github.com/doitsujin/DXVK), [VKD3D-PROTON](https://github.com/HansKristian-Work/vkd3d-proton), [Box64](https://github.com/ptitseb/box64), [FEXCore](https://github.com/FEX-Emu/FEX) et des pilotes GPU (visibles dans les paramètres par jeu).
+Contrôle total sur les composants utilisés par GHLP : injection ou suppression à la volée de DXVK, VKD3D-PROTON, Box64, FEXCore et des pilotes GPU (visibles dans les paramètres par jeu).
 
 🔗 **5 sources intégrées pour télécharger composants et pilotes :**
 * [Arihany WCPHub](https://github.com/Arihany/WinlatorWCPHub?tab=readme-ov-file)
@@ -141,7 +141,10 @@ GHLP est reconnu et pris en charge par les systèmes suivants :
 ---
 
 <a id="faq"></a>
-## 💬 Foire aux questions (FAQ)
+<details>
+<summary><b>💬 Foire aux questions (FAQ)</b></summary>
+
+<br>
 
 ### 🏷️ Pourquoi ce nom « GameHubLite Plus » ?
 J'ai volontairement ajouté uniquement le mot **« Plus »** au nom du projet, car il s'agit d'un fork. Je respecte énormément le travail de l'équipe originale de GameHub Lite, dont j'utilise d'ailleurs l'API officielle.
@@ -153,7 +156,7 @@ J'ai volontairement ajouté uniquement le mot **« Plus »** au nom du projet, c
 La différence se joue principalement sur trois axes, détaillés plus haut : la localisation FR à 95 %, le moteur exclusif [**GHLP Cores**](#ghlp-cores) (détection native des moteurs, gestion thermique et priorité des threads optimisées) et [**Opti'FrameGen**](#optiframe-generation), notre implémentation propre de génération d'images optimisée pour ARM. S'y ajoute une configuration universelle préoptimisée, fortement recommandée sur Snapdragon.
 
 ### 🎚️ Un smartphone avec 6/8 Go de RAM + RAM étendue (virtuelle) est-il suffisant ?
-**Nuance importante :** la **RAM virtuelle** n'est pas aussi rapide que la **RAM réelle**. Dans un environnement aussi lourd que celui de GHLP ([Wine](https://github.com/wine-mirror/wine), [FEX](https://github.com/FEX-Emu/FEX), Proton, [DXVK](https://github.com/doitsujin/DXVK), etc.), en abuser peut même s'avérer **contre-productif**.
+**Nuance importante :** la **RAM virtuelle** n'est pas aussi rapide que la **RAM réelle**. Dans un environnement aussi lourd que celui de GHLP (Wine, FEX, Proton, DXVK, etc.), en abuser peut même s'avérer **contre-productif**.
 
 * **Un simple filet de sécurité :** la RAM virtuelle n'est exploitée nativement que par le système d'exploitation, afin d'éviter le plantage des applications basiques en arrière-plan.
 * **Le mythe des constructeurs :** la RAM virtuelle ne fait pas gagner en performances ; c'est un argument marketing répandu par ignorance.
@@ -162,6 +165,8 @@ La différence se joue principalement sur trois axes, détaillés plus haut : la
 
 ### 📥 Où puis-je télécharger GameHubLite Plus ?
 Voir la section [Téléchargement](#téléchargement) ci-dessous.
+
+</details>
 
 ---
 
@@ -219,7 +224,7 @@ Ce projet est distribué gratuitement, à but non lucratif, et ne génère aucun
 * **Gestionnaire de composants :** inspiré de la technique de [The412Banner](https://github.com/The412Banner).
 * **GameHubLite Plus v6.0.4 :** basée sur les recherches de [Bannerhub v6](https://github.com/The412Banner/bannerhub-revanced/releases/tag/v1.1.0-608).
 * **Compatibilité BCN :** inspirée des recherches de l'ingénieur [Lee Gao](https://github.com/leegao/bionic-vulkan-wrapper/).
-* **Outils d'émulation et pilotes :** les couches de compatibilité ([Wine](https://github.com/wine-mirror/wine), Proton, [DXVK](https://github.com/doitsujin/DXVK), [VKD3D-PROTON](https://github.com/HansKristian-Work/vkd3d-proton), [Box64](https://github.com/ptitseb/box64), [FEXCore](https://github.com/FEX-Emu/FEX)) ainsi que les pilotes GPU tiers demeurent la propriété stricte de leurs créateurs respectifs et sont régis par leurs propres licences d'origine.
+* **Outils d'émulation et pilotes :** les couches de compatibilité ([Wine](https://github.com/wine-mirror/wine), [Proton](https://github.com/valvesoftware/proton), [DXVK](https://github.com/doitsujin/DXVK), [VKD3D-PROTON](https://github.com/HansKristian-Work/vkd3d-proton), [Box64](https://github.com/ptitseb/box64), [FEXCore](https://github.com/FEX-Emu/FEX)) ainsi que les pilotes GPU tiers demeurent la propriété stricte de leurs créateurs respectifs et sont régis par leurs propres licences d'origine.
 
 </details>
 
