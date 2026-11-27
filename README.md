@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="Logo_GHL+_v3.png" alt="GameHubLite Plus Banner" width="100%">
+  <img src="Logo_GHL+_v3.png" alt="GameHubLite Plus Banner" width="600">
 </p>
 
 <p align="center">
