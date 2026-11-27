@@ -99,7 +99,6 @@ Android traite **nativement** GHLP comme un jeu vidéo AAA :
 * **Priorité native :** appliquée aux threads exécutés dynamiquement.
 * **Liberté de framerate :** empêche Android d'imposer sa propre limite de FPS par-dessus l'environnement Wine-Proton.
 * **Cadencement fluide :** micro-ajustements dynamiques continus réduisant les saccades et la latence.
-* **Efficacité énergétique :** optimisation de la consommation de la batterie et prolongation des sessions de jeu.
 
 <a id="optiframe-generation"></a>
 ### 🖼️ Opti'Frame Generation
